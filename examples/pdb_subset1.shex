@@ -1,0 +1,2492 @@
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://weso.es/shapes/>
+
+:pdbx_nonpoly_scheme  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 697 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme>]  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.auth_mon_id>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.mon_id>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.pdb_mon_id>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.auth_seq_num>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.entity_id>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.pdb_strand_id>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.ndb_seq_num>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.pdb_seq_num>  xsd:string  ;          # 100.0 % (697 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.asym_id>  xsd:string            # 100.0 % (697 instances).
+}
+
+
+:struct_site_gen  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 91 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen>]  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.pdbx_num_res>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_site>  @:struct_site  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.label_comp_id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.auth_comp_id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.symmetry>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.auth_seq_id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.label_asym_id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.auth_asym_id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.site_id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.id>  xsd:string  ;          # 100.0 % (91 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.label_seq_id>  xsd:string  ?
+            # 59.34065934065934 % (54 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:entity_poly_seq  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 509 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq>]  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_poly_seq_scheme>  @:pdbx_poly_seq_scheme  +;          # 100.0 % (509 instances).
+            # 96.85658153241651 % (493 instances). obj: @:pdbx_poly_seq_scheme. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.num>  xsd:string  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_chem_comp>  @:chem_comp  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity_poly>  @:entity_poly  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.mon_id>  xsd:string  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.entity_id>  xsd:string  ;          # 100.0 % (509 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.hetero>  xsd:string            # 100.0 % (509 instances).
+}
+
+
+:struct_asym  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 64 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym>]  ;          # 100.0 % (64 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.pdbx_modified>  xsd:string  ?;
+            # 50.0 % (32 instances). obj: xsd:string. Cardinality: {1}
+   owl:sameAs  @:struct_asym  ?;
+            # 50.0 % (32 instances). obj: @:struct_asym. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.pdbx_blank_PDB_chainid_flag>  xsd:string  ?;
+            # 50.0 % (32 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ?;
+            # 50.0 % (32 instances). obj: @:datablock. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ?;
+            # 50.0 % (32 instances). obj: @:entity. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.entity_id>  xsd:string  ?;
+            # 50.0 % (32 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.id>  xsd:string  ?;
+            # 50.0 % (32 instances). obj: xsd:string. Cardinality: {1}
+   rdfs:label  xsd:string  ?;
+            # 50.0 % (32 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_poly_seq_scheme>  @:pdbx_poly_seq_scheme  *
+            # 14.0625 % (9 instances). obj: @:pdbx_poly_seq_scheme. Cardinality: +
+            # 6.25 % (4 instances). obj: @:pdbx_poly_seq_scheme. Cardinality: {6}
+}
+
+
+:pdbx_poly_seq_scheme  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 525 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme>]  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.entity_id>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity_poly_seq>  @:entity_poly_seq  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.asym_id>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.pdb_seq_num>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.seq_id>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.pdb_strand_id>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.ndb_seq_num>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.mon_id>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.hetero>  xsd:string  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_asym>  @:struct_asym  ;          # 100.0 % (525 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.pdb_mon_id>  xsd:string  ?;
+            # 99.23809523809524 % (521 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.auth_mon_id>  xsd:string  ?;
+            # 99.23809523809524 % (521 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.auth_seq_num>  xsd:string  ?
+            # 99.23809523809524 % (521 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:entityCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entityCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity>  @:entity  +          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: @:entity. Cardinality: {3}
+            # 14.285714285714285 % (1 instance). obj: @:entity. Cardinality: {4}
+            # 14.285714285714285 % (1 instance). obj: @:entity. Cardinality: {5}
+}
+
+
+:ndb_struct_na_base_pair_step  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 24 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step>]  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.tilt>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_asym_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_asym_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.helical_twist>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.y_displacement>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_asym_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_symmetry_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.x_displacement>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.model_number>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.rise>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.twist>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.helical_rise>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.shift>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.inclination>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.step_number>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_comp_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.roll>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_symmetry_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_seq_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_seq_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_symmetry_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_asym_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_seq_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_asym_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_seq_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_comp_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_seq_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_asym_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_comp_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.tip>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.step_name>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.slide>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_seq_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_asym_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_symmetry_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_seq_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_asym_id_1>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_comp_id_2>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_seq_id_2>  xsd:string            # 100.0 % (24 instances).
+}
+
+
+:citation_authorCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_authorCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation_author>  @:citation_author  +          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: @:citation_author. Cardinality: {7}
+            # 14.285714285714285 % (1 instance). obj: @:citation_author. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:citation_author. Cardinality: {12}
+            # 14.285714285714285 % (1 instance). obj: @:citation_author. Cardinality: {10}
+            # 14.285714285714285 % (1 instance). obj: @:citation_author. Cardinality: {5}
+}
+
+
+:entity_poly_seqCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seqCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_poly_seq>  @:entity_poly_seq  +          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: @:entity_poly_seq. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {163}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {164}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {154}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {10}
+}
+
+
+:database_2  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 18 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2>]  ;          # 100.0 % (18 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.database_code>  xsd:string  ;          # 100.0 % (18 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (18 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.database_id>  xsd:string  ;          # 100.0 % (18 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.pdbx_DOI>  xsd:string  ?;
+            # 11.11111111111111 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.pdbx_database_accession>  xsd:string  ?
+            # 11.11111111111111 % (2 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_conn  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 105 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn>]  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_auth_seq_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_atom_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.conn_type_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_auth_comp_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_comp_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_auth_comp_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_symmetry>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_asym_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_atom_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_asym_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_auth_seq_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_symmetry>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_conn_type>  @:struct_conn_type  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_auth_asym_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_auth_asym_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_comp_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_seq_id>  xsd:string  ?;
+            # 91.42857142857143 % (96 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_seq_id>  xsd:string  ?;
+            # 88.57142857142857 % (93 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.details>  xsd:string  ?;
+            # 72.38095238095238 % (76 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.pdbx_dist_value>  xsd:string  ?;
+            # 27.61904761904762 % (29 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.pdbx_leaving_atom_flag>  xsd:string  ?
+            # 9.523809523809524 % (10 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_validate_rmsd_angle  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 59 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle>]  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_seq_id_1>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_comp_id_3>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_asym_id_1>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_comp_id_1>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.id>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.linker_flag>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_seq_id_3>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_seq_id_2>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_standard_deviation>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_atom_id_2>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_comp_id_2>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_value>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_atom_id_3>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_asym_id_2>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_asym_id_3>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_deviation>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.PDB_model_num>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_target_value>  xsd:string  ;          # 100.0 % (59 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_atom_id_1>  xsd:string            # 100.0 % (59 instances).
+}
+
+
+:atom_type  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 32 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_type>]  ;          # 100.0 % (32 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (32 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_type.symbol>  xsd:string            # 100.0 % (32 instances).
+}
+
+
+:audit_author  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 35 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_author>]  ;          # 100.0 % (35 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (35 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_author.name>  xsd:string  ;          # 100.0 % (35 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_author.pdbx_ordinal>  xsd:string            # 100.0 % (35 instances).
+}
+
+
+:refine_histCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_histCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_hist>  @:refine_hist            # 100.0 % (7 instances).
+}
+
+
+:citation_author  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 49 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author>]  ;          # 100.0 % (49 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author.name>  xsd:string  ;          # 100.0 % (49 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author.ordinal>  xsd:string  ;          # 100.0 % (49 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (49 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author.citation_id>  xsd:string  ;          # 100.0 % (49 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_citation>  @:citation            # 100.0 % (49 instances).
+}
+
+
+:refine_ls_restr  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 105 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr>]  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.pdbx_refine_id>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.type>  xsd:string  ;          # 100.0 % (105 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.dev_ideal>  xsd:string  ?;
+            # 37.142857142857146 % (39 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.dev_ideal_target>  xsd:string  ?
+            # 14.285714285714285 % (15 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:chem_comp  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 89 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp>]  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_chem_comp>  IRI  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.formula_weight>  xsd:string  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.id>  xsd:string  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.formula>  xsd:string  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.type>  xsd:string  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.name>  xsd:string  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (89 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.mon_nstd_flag>  xsd:string  ?;
+            # 80.89887640449437 % (72 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_poly_seq>  @:entity_poly_seq  *;
+            # 78.65168539325843 % (70 instances). obj: @:entity_poly_seq. Cardinality: +
+            # 13.48314606741573 % (12 instances). obj: @:entity_poly_seq. Cardinality: {3}
+            # 10.112359550561797 % (9 instances). obj: @:entity_poly_seq. Cardinality: {5}
+            # 6.741573033707865 % (6 instances). obj: @:entity_poly_seq. Cardinality: {6}
+            # 6.741573033707865 % (6 instances). obj: @:entity_poly_seq. Cardinality: {1}
+            # 5.617977528089887 % (5 instances). obj: @:entity_poly_seq. Cardinality: {2}
+            # 5.617977528089887 % (5 instances). obj: @:entity_poly_seq. Cardinality: {12}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_unobs_or_zero_occ_residues>  @:pdbx_unobs_or_zero_occ_residues  *
+            # 5.617977528089887 % (5 instances). obj: @:pdbx_unobs_or_zero_occ_residues. Cardinality: +
+}
+
+
+:struct_site  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 16 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site>]  ;          # 100.0 % (16 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (16 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.id>  xsd:string  ;          # 100.0 % (16 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_site_gen>  @:struct_site_gen  *;
+            # 93.75 % (15 instances). obj: @:struct_site_gen. Cardinality: +
+            # 25.0 % (4 instances). obj: @:struct_site_gen. Cardinality: {5}
+            # 18.75 % (3 instances). obj: @:struct_site_gen. Cardinality: {6}
+            # 12.5 % (2 instances). obj: @:struct_site_gen. Cardinality: {2}
+            # 12.5 % (2 instances). obj: @:struct_site_gen. Cardinality: {8}
+            # 6.25 % (1 instance). obj: @:struct_site_gen. Cardinality: {1}
+            # 6.25 % (1 instance). obj: @:struct_site_gen. Cardinality: {4}
+            # 6.25 % (1 instance). obj: @:struct_site_gen. Cardinality: {17}
+            # 6.25 % (1 instance). obj: @:struct_site_gen. Cardinality: {11}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_num_residues>  xsd:string  ?;
+            # 93.75 % (15 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.details>  xsd:string  ?;
+            # 93.75 % (15 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_evidence_code>  xsd:string  ?;
+            # 93.75 % (15 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_auth_seq_id>  xsd:string  ?;
+            # 31.25 % (5 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_auth_comp_id>  xsd:string  ?;
+            # 31.25 % (5 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_auth_asym_id>  xsd:string  ?;
+            # 31.25 % (5 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_site_keywords>  @:struct_site_keywords  ?
+            # 6.25 % (1 instance). obj: @:struct_site_keywords. Cardinality: {1}
+}
+
+
+:struct_conf  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 26 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_auth_asym_id>  xsd:string  ;          # 100.0 % (26 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf>]  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.pdbx_PDB_helix_length>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_label_seq_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_label_asym_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_label_seq_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_auth_asym_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_auth_comp_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_conf_type>  @:struct_conf_type  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_label_comp_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.pdbx_PDB_helix_class>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.conf_type_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_label_asym_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_auth_comp_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_label_comp_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_auth_seq_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_auth_seq_id>  xsd:string  ;          # 100.0 % (26 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.pdbx_PDB_helix_id>  xsd:string            # 100.0 % (26 instances).
+}
+
+
+:pdbx_struct_assemblyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly>  @:pdbx_struct_assembly  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assemblyCategory>]            # 100.0 % (7 instances).
+}
+
+
+:atom_typeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_typeCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_type>  @:atom_type  +          # 100.0 % (7 instances).
+            # 57.14285714285714 % (4 instances). obj: @:atom_type. Cardinality: {4}
+            # 28.57142857142857 % (2 instances). obj: @:atom_type. Cardinality: {5}
+            # 14.285714285714285 % (1 instance). obj: @:atom_type. Cardinality: {6}
+}
+
+
+:exptl_crystal_grow  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.crystal_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.pdbx_details>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_exptl_crystal>  @:exptl_crystal  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.pH>  xsd:string  ?;
+            # 75.0 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.method>  xsd:string  ?;
+            # 75.0 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.temp_details>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.temp>  xsd:string  ?
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_struct_conn_angle  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 33 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle>]  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_atom_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_label_asym_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_comp_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_auth_comp_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_comp_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_auth_comp_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_auth_comp_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_label_comp_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_auth_asym_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_symmetry>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_auth_asym_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_auth_seq_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_label_atom_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_asym_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.value>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_auth_seq_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_atom_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_symmetry>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_asym_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_symmetry>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_auth_asym_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_auth_seq_id>  xsd:string  ;          # 100.0 % (33 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_seq_id>  xsd:string  ?
+            # 36.36363636363637 % (12 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_biolCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_biolCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_biol>  @:struct_biol            # 100.0 % (7 instances).
+}
+
+
+:refine_hist  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_number_atoms_nucleic_acid>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_refine_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_number_atoms_protein>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.d_res_high>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_number_atoms_ligand>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.cycle_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.number_atoms_total>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.number_atoms_solvent>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.d_res_low>  xsd:string  ?
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_audit_revision_history  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 27 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history>]  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.ordinal>  xsd:string  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.data_content_type>  xsd:string  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.major_revision>  xsd:string  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.minor_revision>  xsd:string  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.revision_date>  xsd:string  ;          # 100.0 % (27 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_group>  @:pdbx_audit_revision_group  *;
+            # 74.07407407407408 % (20 instances). obj: @:pdbx_audit_revision_group. Cardinality: +
+            # 55.55555555555556 % (15 instances). obj: @:pdbx_audit_revision_group. Cardinality: {1}
+            # 11.11111111111111 % (3 instances). obj: @:pdbx_audit_revision_group. Cardinality: {2}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_details>  @:pdbx_audit_revision_details  ?;
+            # 25.925925925925924 % (7 instances). obj: @:pdbx_audit_revision_details. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_category>  @:pdbx_audit_revision_category  *;
+            # 22.22222222222222 % (6 instances). obj: @:pdbx_audit_revision_category. Cardinality: +
+            # 7.4074074074074066 % (2 instances). obj: @:pdbx_audit_revision_category. Cardinality: {4}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_item>  @:pdbx_audit_revision_item  *
+            # 22.22222222222222 % (6 instances). obj: @:pdbx_audit_revision_item. Cardinality: +
+            # 7.4074074074074066 % (2 instances). obj: @:pdbx_audit_revision_item. Cardinality: {2}
+            # 7.4074074074074066 % (2 instances). obj: @:pdbx_audit_revision_item. Cardinality: {1}
+}
+
+
+:pdbx_sifts_xref_db_segments  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 95 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.instance_id>  xsd:string  ;          # 100.0 % (95 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments>]  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.xref_db_acc>  xsd:string  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.entity_id>  xsd:string  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_asym>  @:struct_asym  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.seq_id_end>  xsd:string  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.segment_id>  xsd:string  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.asym_id>  xsd:string  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.xref_db>  xsd:string  ;          # 100.0 % (95 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.seq_id_start>  xsd:string  ;          # 100.0 % (95 instances).
+   rdfs:seeAlso  IRI  ?;
+            # 96.84210526315789 % (92 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_go>  IRI  ?;
+            # 58.94736842105262 % (56 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_interpro>  IRI  ?;
+            # 28.421052631578945 % (27 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_scop>  IRI  ?
+            # 6.315789473684211 % (6 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:diffrn_radiationCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiationCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiation>  @:diffrn_radiation  +          # 100.0 % (7 instances).
+            # 85.71428571428571 % (6 instances). obj: @:diffrn_radiation. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:diffrn_radiation. Cardinality: {4}
+}
+
+
+:pdbx_nonpoly_schemeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nonpoly_scheme>  @:pdbx_nonpoly_scheme  +;          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_nonpoly_scheme. Cardinality: {141}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_nonpoly_scheme. Cardinality: {46}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_nonpoly_scheme. Cardinality: {182}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_nonpoly_scheme. Cardinality: {25}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_nonpoly_scheme. Cardinality: {112}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_nonpoly_scheme. Cardinality: {50}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_schemeCategory>]            # 100.0 % (7 instances).
+}
+
+
+:refine_occupancy  [<http://rdf.wwpdb.org/pdb/110D/refine_occupancy/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy.treatment>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy.pdbx_refine_id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy.class>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (2 instances).
+}
+
+
+:pdbx_validate_rmsd_bond  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 13 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_standard_deviation>  xsd:string  ;          # 100.0 % (13 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond>]  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.id>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_comp_id_1>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_atom_id_2>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_seq_id_1>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_asym_id_2>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_value>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_target_value>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_seq_id_2>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.linker_flag>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_comp_id_2>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_atom_id_1>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_asym_id_1>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_deviation>  xsd:string  ;          # 100.0 % (13 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.PDB_model_num>  xsd:string            # 100.0 % (13 instances).
+}
+
+
+:struct_sheet_range  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 5 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_auth_comp_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (5 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range>]  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_label_comp_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.sheet_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_label_seq_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_label_comp_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_label_seq_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_label_asym_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_sheet>  @:struct_sheet  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_label_asym_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_auth_comp_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_auth_seq_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_auth_asym_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_auth_asym_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_auth_seq_id>  xsd:string            # 100.0 % (5 instances).
+}
+
+
+:entity  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 24 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity>]  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_number_of_molecules>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_asym>  @:struct_asym  +;          # 100.0 % (24 instances).
+            # 66.66666666666666 % (16 instances). obj: @:struct_asym. Cardinality: {1}
+            # 33.33333333333333 % (8 instances). obj: @:struct_asym. Cardinality: {2}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.type>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.formula_weight>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.id>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.src_method>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_description>  xsd:string  ;          # 100.0 % (24 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_entity_nonpoly>  @:pdbx_entity_nonpoly  ?;
+            # 70.83333333333334 % (17 instances). obj: @:pdbx_entity_nonpoly. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_poly>  @:entity_poly  ?;
+            # 29.166666666666668 % (7 instances). obj: @:entity_poly. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_ref>  @:struct_ref  ?;
+            # 29.166666666666668 % (7 instances). obj: @:struct_ref. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_src_gen>  @:entity_src_gen  ?;
+            # 16.666666666666664 % (4 instances). obj: @:entity_src_gen. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_mutation>  xsd:string  ?;
+            # 8.333333333333332 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_ec>  xsd:string  ?;
+            # 8.333333333333332 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_enzyme>  IRI  ?;
+            # 8.333333333333332 % (2 instances). obj: IRI. Cardinality: {1}
+   rdfs:seeAlso  IRI  ?
+            # 8.333333333333332 % (2 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:pdbx_struct_mod_residue  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 15 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue>]  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.parent_comp_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.label_asym_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.auth_seq_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.label_seq_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.auth_asym_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.auth_comp_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.label_comp_id>  xsd:string  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (15 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.details>  xsd:string  ?
+            # 86.66666666666667 % (13 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_conn_type  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 10 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn_type.id>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_conn>  @:struct_conn  +;          # 100.0 % (10 instances).
+            # 20.0 % (2 instances). obj: @:struct_conn. Cardinality: {18}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {10}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {4}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {9}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {3}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {26}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {14}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {1}
+            # 10.0 % (1 instance). obj: @:struct_conn. Cardinality: {2}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn_type>]  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (10 instances).
+}
+
+
+:audit_authorCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_author>  @:audit_author  +;          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:audit_author. Cardinality: {5}
+            # 28.57142857142857 % (2 instances). obj: @:audit_author. Cardinality: {7}
+            # 14.285714285714285 % (1 instance). obj: @:audit_author. Cardinality: {3}
+            # 14.285714285714285 % (1 instance). obj: @:audit_author. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:audit_author. Cardinality: {2}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_authorCategory>]            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_categoryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 5 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_categoryCategory>]  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_category>  @:pdbx_audit_revision_category  +          # 100.0 % (5 instances).
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_category. Cardinality: {1}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_category. Cardinality: {5}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_category. Cardinality: {3}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_category. Cardinality: {4}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_category. Cardinality: {6}
+}
+
+
+:exptl  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl.method>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl.crystals_number>  xsd:string  ?
+            # 42.857142857142854 % (3 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:software  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 17 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#software>]  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.classification>  xsd:string  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.pdbx_ordinal>  xsd:string  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.name>  xsd:string  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.version>  xsd:string  ?
+            # 23.52941176470588 % (4 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:datablock  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   dc:identifier  xsd:string  ;                                # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_biolCategory>  @:struct_biolCategory  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#datablock>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_poly_seq_schemeCategory>  @:pdbx_poly_seq_schemeCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entryCategory>  @:entryCategory  ;          # 100.0 % (7 instances).
+   rdfs:seeAlso  IRI  +;                                       # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#datablockName>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_cellCategory>  @:cellCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_typeCategory>  @:atom_typeCategory  ;          # 100.0 % (7 instances).
+   owl:sameAs  IRI  ;                                          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_groupCategory>  @:pdbx_audit_revision_groupCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_refCategory>  @:struct_refCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sitesCategory>  @:atom_sitesCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_asymCategory>  @:struct_asymCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_authorCategory>  @:audit_authorCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdbml>  IRI  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiationCategory>  @:diffrn_radiationCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citationCategory>  @:citationCategory  ;          # 100.0 % (7 instances).
+   <http://purl.org/dc/elements/1.1/title>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_softwareCategory>  @:softwareCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entityCategory>  @:entityCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_siteCategory>  @:struct_siteCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_polyCategory>  @:entity_polyCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_oper_listCategory>  @:pdbx_struct_oper_listCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_vrpt>  IRI  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refineCategory>  @:refineCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly_genCategory>  @:pdbx_struct_assembly_genCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nonpoly_schemeCategory>  @:pdbx_nonpoly_schemeCategory  ;          # 100.0 % (7 instances).
+   skos:altLabel  xsd:string  ;                                # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_histCategory>  @:refine_histCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seqCategory>  @:struct_ref_seqCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdbml_noatom>  IRI  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdbml_extatom>  IRI  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiation_wavelengthCategory>  @:diffrn_radiation_wavelengthCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_symmetryCategory>  @:symmetryCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_poly_seqCategory>  @:entity_poly_seqCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_chem_compCategory>  @:chem_compCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_statusCategory>  @:pdbx_database_statusCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_PDB_matrixCategory>  @:database_PDB_matrixCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assemblyCategory>  @:pdbx_struct_assemblyCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrnCategory>  @:diffrnCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptlCategory>  @:exptlCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_keywordsCategory>  @:struct_keywordsCategory  ;          # 100.0 % (7 instances).
+   dc:references  IRI  ;                                       # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_detailsCategory>  @:pdbx_audit_revision_detailsCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entity_nonpolyCategory>  @:pdbx_entity_nonpolyCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_conformCategory>  @:audit_conformCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_restrCategory>  @:refine_ls_restrCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_structCategory>  @:structCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_historyCategory>  @:pdbx_audit_revision_historyCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation_authorCategory>  @:citation_authorCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_2Category>  @:database_2Category  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_genCategory>  @:struct_site_genCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystalCategory>  @:exptl_crystalCategory  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflnsCategory>  @:reflnsCategory  ?;
+            # 85.71428571428571 % (6 instances). obj: @:reflnsCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_sourceCategory>  @:diffrn_sourceCategory  ?;
+            # 85.71428571428571 % (6 instances). obj: @:diffrn_sourceCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_detectorCategory>  @:diffrn_detectorCategory  ?;
+            # 85.71428571428571 % (6 instances). obj: @:diffrn_detectorCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conn_typeCategory>  @:struct_conn_typeCategory  ?;
+            # 85.71428571428571 % (6 instances). obj: @:struct_conn_typeCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_connCategory>  @:struct_connCategory  ?;
+            # 85.71428571428571 % (6 instances). obj: @:struct_connCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_itemCategory>  @:pdbx_audit_revision_itemCategory  ?;
+            # 71.42857142857143 % (5 instances). obj: @:pdbx_audit_revision_itemCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_categoryCategory>  @:pdbx_audit_revision_categoryCategory  ?;
+            # 71.42857142857143 % (5 instances). obj: @:pdbx_audit_revision_categoryCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_src_genCategory>  @:entity_src_genCategory  ?;
+            # 57.14285714285714 % (4 instances). obj: @:entity_src_genCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_growCategory>  @:exptl_crystal_growCategory  ?;
+            # 57.14285714285714 % (4 instances). obj: @:exptl_crystal_growCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pairCategory>  @:ndb_struct_na_base_pairCategory  ?;
+            # 57.14285714285714 % (4 instances). obj: @:ndb_struct_na_base_pairCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pair_stepCategory>  @:ndb_struct_na_base_pair_stepCategory  ?;
+            # 57.14285714285714 % (4 instances). obj: @:ndb_struct_na_base_pair_stepCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_conf_naCategory>  @:ndb_struct_conf_naCategory  ?;
+            # 57.14285714285714 % (4 instances). obj: @:ndb_struct_conf_naCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_angleCategory>  @:pdbx_validate_rmsd_angleCategory  ?;
+            # 57.14285714285714 % (4 instances). obj: @:pdbx_validate_rmsd_angleCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_unp_segmentsCategory>  @:pdbx_sifts_unp_segmentsCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_sifts_unp_segmentsCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_xref_db_segmentsCategory>  @:pdbx_sifts_xref_db_segmentsCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_sifts_xref_db_segmentsCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conf_typeCategory>  @:struct_conf_typeCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:struct_conf_typeCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_torsionCategory>  @:pdbx_validate_torsionCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_validate_torsionCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_confCategory>  @:struct_confCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:struct_confCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seq_difCategory>  @:struct_ref_seq_difCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:struct_ref_seq_difCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_grow_compCategory>  @:exptl_crystal_grow_compCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:exptl_crystal_grow_compCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_unobs_or_zero_occ_residuesCategory>  @:pdbx_unobs_or_zero_occ_residuesCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_unobs_or_zero_occ_residuesCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_mod_residueCategory>  @:pdbx_struct_mod_residueCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_struct_mod_residueCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_bondCategory>  @:pdbx_validate_rmsd_bondCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_validate_rmsd_bondCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_symm_contactCategory>  @:pdbx_validate_symm_contactCategory  ?;
+            # 42.857142857142854 % (3 instances). obj: @:pdbx_validate_symm_contactCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_conn_angleCategory>  @:pdbx_struct_conn_angleCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_struct_conn_angleCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflns_shellCategory>  @:reflns_shellCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:reflns_shellCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_analyzeCategory>  @:refine_analyzeCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:refine_analyzeCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_orderCategory>  @:struct_sheet_orderCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:struct_sheet_orderCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_rangeCategory>  @:struct_sheet_rangeCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:struct_sheet_rangeCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheetCategory>  @:struct_sheetCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:struct_sheetCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_sheet_hbondCategory>  @:pdbx_struct_sheet_hbondCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_struct_sheet_hbondCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_refineCategory>  @:pdbx_refineCategory  ?;
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_refineCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_xplor_fileCategory>  @:pdbx_xplor_fileCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_xplor_fileCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_shellCategory>  @:refine_ls_shellCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:refine_ls_shellCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_planesCategory>  @:pdbx_validate_planesCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_validate_planesCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_relatedCategory>  @:pdbx_database_relatedCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_database_relatedCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_special_symmetryCategory>  @:pdbx_struct_special_symmetryCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_struct_special_symmetryCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_remarkCategory>  @:pdbx_database_remarkCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_database_remarkCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sites_footnoteCategory>  @:atom_sites_footnoteCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:atom_sites_footnoteCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_occupancyCategory>  @:refine_occupancyCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:refine_occupancyCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_keywordsCategory>  @:struct_site_keywordsCategory  ?;
+            # 14.285714285714285 % (1 instance). obj: @:struct_site_keywordsCategory. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_B_isoCategory>  @:refine_B_isoCategory  ?
+            # 14.285714285714285 % (1 instance). obj: @:refine_B_isoCategory. Cardinality: {1}
+}
+
+
+:diffrn  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 10 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn>]  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn_radiation>  @:diffrn_radiation  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.id>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.crystal_id>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_exptl_crystal>  @:exptl_crystal  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn_source>  @:diffrn_source  ?;
+            # 90.0 % (9 instances). obj: @:diffrn_source. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn_detector>  @:diffrn_detector  ?;
+            # 90.0 % (9 instances). obj: @:diffrn_detector. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.ambient_temp>  xsd:string  ?;
+            # 40.0 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.ambient_temp_details>  xsd:string  ?
+            # 10.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_struct_sheet_hbondCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbondCategory>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_sheet_hbond>  @:pdbx_struct_sheet_hbond  +          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:pdbx_struct_sheet_hbond. Cardinality: {1}
+            # 50.0 % (1 instance). obj: @:pdbx_struct_sheet_hbond. Cardinality: {2}
+}
+
+
+:diffrn_radiation_wavelengthCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelengthCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiation_wavelength>  @:diffrn_radiation_wavelength  +          # 100.0 % (7 instances).
+            # 85.71428571428571 % (6 instances). obj: @:diffrn_radiation_wavelength. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:diffrn_radiation_wavelength. Cardinality: {4}
+}
+
+
+:cellCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#cellCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_cell>  @:cell            # 100.0 % (7 instances).
+}
+
+
+:entity_poly  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_poly_seq>  @:entity_poly_seq  +;          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: @:entity_poly_seq. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {163}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {164}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {154}
+            # 14.285714285714285 % (1 instance). obj: @:entity_poly_seq. Cardinality: {10}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.nstd_monomer>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.pdbx_seq_one_letter_code>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.pdbx_strand_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.entity_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.type>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.pdbx_seq_one_letter_code_can>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.nstd_linkage>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:struct_sheet_orderCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_orderCategory>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_order>  @:struct_sheet_order  +          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:struct_sheet_order. Cardinality: {2}
+            # 50.0 % (1 instance). obj: @:struct_sheet_order. Cardinality: {1}
+}
+
+
+:database_PDB_matrix  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx12>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx_vector3>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx13>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx31>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx23>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx33>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx21>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx11>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx_vector2>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx32>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx_vector1>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx22>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:struct_conf_type  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf_type>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_conf>  @:struct_conf  +;          # 100.0 % (3 instances).
+            # 66.66666666666666 % (2 instances). obj: @:struct_conf. Cardinality: {8}
+            # 33.33333333333333 % (1 instance). obj: @:struct_conf. Cardinality: {10}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf_type.id>  xsd:string            # 100.0 % (3 instances).
+}
+
+
+:ndb_struct_na_base_pair  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 28 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.stretch>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.opening>  xsd:string  ;          # 100.0 % (28 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair>]  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_symmetry>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.model_number>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_label_seq_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_auth_seq_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.buckle>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.propeller>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.stagger>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_auth_seq_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_label_comp_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.pair_name>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_symmetry>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.shear>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_label_comp_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_label_asym_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_auth_asym_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.pair_number>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_auth_asym_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_label_seq_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_label_asym_id>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.hbond_type_12>  xsd:string  ?;
+            # 92.85714285714286 % (26 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.hbond_type_28>  xsd:string  ?
+            # 92.85714285714286 % (26 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_ref  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.db_code>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.pdbx_db_accession>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.db_name>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_ref_seq>  @:struct_ref_seq  +;          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: @:struct_ref_seq. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: @:struct_ref_seq. Cardinality: {2}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.entity_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.pdbx_align_begin>  xsd:string  ?;
+            # 57.14285714285714 % (4 instances). obj: xsd:string. Cardinality: {1}
+   rdfs:seeAlso  IRI  ?;
+            # 42.857142857142854 % (3 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_uniprot>  IRI  ?;
+            # 42.857142857142854 % (3 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.pdbx_seq_one_letter_code>  xsd:string  ?
+            # 42.857142857142854 % (3 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:symmetry  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.space_group_name_H-M>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.Int_Tables_number>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.cell_setting>  xsd:string  ?
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:database_2Category  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2Category>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_2>  @:database_2  +          # 100.0 % (7 instances).
+            # 57.14285714285714 % (4 instances). obj: @:database_2. Cardinality: {3}
+            # 42.857142857142854 % (3 instances). obj: @:database_2. Cardinality: {2}
+}
+
+
+:diffrn_source  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 9 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.diffrn_id>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_diffrn>  @:diffrn  ;          # 100.0 % (9 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source>]  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.source>  xsd:string  ?;
+            # 55.55555555555556 % (5 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.type>  xsd:string  ?;
+            # 44.44444444444444 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.pdbx_wavelength>  xsd:string  ?;
+            # 22.22222222222222 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.pdbx_synchrotron_beamline>  xsd:string  ?;
+            # 11.11111111111111 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.pdbx_synchrotron_site>  xsd:string  ?
+            # 11.11111111111111 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_sheetCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheetCategory>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet>  @:struct_sheet            # 100.0 % (2 instances).
+}
+
+
+:chem_compCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_chem_comp>  @:chem_comp  +;          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:chem_comp. Cardinality: {23}
+            # 28.57142857142857 % (2 instances). obj: @:chem_comp. Cardinality: {4}
+            # 14.285714285714285 % (1 instance). obj: @:chem_comp. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:chem_comp. Cardinality: {7}
+            # 14.285714285714285 % (1 instance). obj: @:chem_comp. Cardinality: {22}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_compCategory>]            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_group  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 28 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.revision_ordinal>  xsd:string  ;          # 100.0 % (28 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group>]  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.ordinal>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.group>  xsd:string  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (28 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.data_content_type>  xsd:string            # 100.0 % (28 instances).
+}
+
+
+:pdbx_audit_revision_category  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 19 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category>]  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.data_content_type>  xsd:string  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.ordinal>  xsd:string  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.category>  xsd:string  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.revision_ordinal>  xsd:string            # 100.0 % (19 instances).
+}
+
+
+:citation  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 12 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (12 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.id>  xsd:string  ;          # 100.0 % (12 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation>]  ;          # 100.0 % (12 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.title>  xsd:string  ;          # 100.0 % (12 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_abbrev>  xsd:string  ;          # 100.0 % (12 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_citation_author>  @:citation_author  +;          # 100.0 % (12 instances).
+            # 25.0 % (3 instances). obj: @:citation_author. Cardinality: {2}
+            # 16.666666666666664 % (2 instances). obj: @:citation_author. Cardinality: {7}
+            # 16.666666666666664 % (2 instances). obj: @:citation_author. Cardinality: {6}
+            # 16.666666666666664 % (2 instances). obj: @:citation_author. Cardinality: {4}
+            # 8.333333333333332 % (1 instance). obj: @:citation_author. Cardinality: {5}
+            # 8.333333333333332 % (1 instance). obj: @:citation_author. Cardinality: {3}
+            # 8.333333333333332 % (1 instance). obj: @:citation_author. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_id_CSD>  xsd:string  ;          # 100.0 % (12 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.year>  xsd:string  ?;
+            # 91.66666666666666 % (11 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.country>  xsd:string  ?;
+            # 91.66666666666666 % (11 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_volume>  xsd:string  ?;
+            # 83.33333333333334 % (10 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_id_ASTM>  xsd:string  ?;
+            # 83.33333333333334 % (10 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_id_ISSN>  xsd:string  ?;
+            # 83.33333333333334 % (10 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.page_first>  xsd:string  ?;
+            # 83.33333333333334 % (10 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pubmed>  IRI  ?;
+            # 58.333333333333336 % (7 instances). obj: IRI. Cardinality: {1}
+   dc:references  IRI  ?;
+            # 58.333333333333336 % (7 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.pdbx_database_id_PubMed>  xsd:string  ?;
+            # 58.333333333333336 % (7 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.page_last>  xsd:string  ?;
+            # 50.0 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.pdbx_database_id_DOI>  xsd:string  ?;
+            # 33.33333333333333 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_doi>  IRI  ?
+            # 33.33333333333333 % (4 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:pdbx_audit_revision_details  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.data_content_type>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.type>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.ordinal>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.provider>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.revision_ordinal>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:pdbx_struct_oper_list  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 9 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list>]  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.type>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.vector3>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix12>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix22>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix21>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.vector1>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.name>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix31>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix11>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix23>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix32>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix13>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix33>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.vector2>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.id>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.symmetry_operation>  xsd:string            # 100.0 % (9 instances).
+}
+
+
+:diffrn_sourceCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_sourceCategory>]  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_source>  @:diffrn_source  +          # 100.0 % (6 instances).
+            # 83.33333333333334 % (5 instances). obj: @:diffrn_source. Cardinality: {1}
+            # 16.666666666666664 % (1 instance). obj: @:diffrn_source. Cardinality: {4}
+}
+
+
+:refine  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_refine_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_diffrn_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_d_res_high>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_obs>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_reflns_obs>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_ls_sigma_F>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_d_res_low>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_percent_reflns_obs>  xsd:string  ?;
+            # 71.42857142857143 % (5 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_R_work>  xsd:string  ?;
+            # 57.14285714285714 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_reflns_all>  xsd:string  ?;
+            # 42.857142857142854 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_starting_model>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_method_to_determine_struct>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_ls_cross_valid_method>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_reflns_R_free>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_R_free>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_percent_reflns_R_free>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_R_Free_selection_details>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.details>  xsd:string  ?;
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_restraints>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.solvent_model_details>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_parameters>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_stereochemistry_target_values>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_all>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.B_iso_mean>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_isotropic_thermal_model>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_R_free_error>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_data_cutoff_low_absF>  xsd:string  ?;
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_data_cutoff_high_absF>  xsd:string  ?
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_keywordsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_keywords>  @:struct_keywords  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywordsCategory>]            # 100.0 % (7 instances).
+}
+
+
+:pdbx_unobs_or_zero_occ_residues  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (6 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues>]  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.label_asym_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.auth_seq_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.PDB_model_num>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.label_comp_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.polymer_flag>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.occupancy_flag>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_chem_comp>  @:chem_comp  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.auth_asym_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.auth_comp_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.label_seq_id>  xsd:string  ?
+            # 66.66666666666666 % (4 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_database_relatedCategory  [<http://rdf.wwpdb.org/pdb/210L/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_relatedCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_related>  @:pdbx_database_related  +          # 100.0 % (1 instance).
+}
+
+
+:audit_conform  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform.dict_version>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform.dict_name>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform.dict_location>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:entity_src_gen  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (4 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_taxonomy_source>  IRI  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_alt_source_flag>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.entity_id>  xsd:string  ;          # 100.0 % (4 instances).
+   rdfs:seeAlso  IRI  +;                                       # 100.0 % (4 instances).
+            # 50.0 % (2 instances). obj: IRI. Cardinality: {2}
+            # 50.0 % (2 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_scientific_name>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_ncbi_taxonomy_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_src_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_genus>  xsd:string  ?;
+            # 75.0 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.plasmid_name>  xsd:string  ?;
+            # 75.0 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_ncbi_taxonomy_id>  xsd:string  ?;
+            # 50.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_scientific_name>  xsd:string  ?;
+            # 50.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_vector_type>  xsd:string  ?;
+            # 50.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.host_org_genus>  xsd:string  ?;
+            # 50.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_taxonomy_host>  IRI  ?;
+            # 50.0 % (2 instances). obj: IRI. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_species>  xsd:string  ?;
+            # 50.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_organ>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_tissue>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_strain>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_cellular_location>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_common_name>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_end_seq_num>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_seq_type>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_beg_seq_num>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_gene>  xsd:string  ?;
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_gene>  xsd:string  ?
+            # 25.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_connCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_connCategory>]  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conn>  @:struct_conn  +          # 100.0 % (6 instances).
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn. Cardinality: {1}
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn. Cardinality: {17}
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn. Cardinality: {2}
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn. Cardinality: {37}
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn. Cardinality: {30}
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn. Cardinality: {18}
+}
+
+
+:diffrn_radiation_wavelength  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 10 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength>]  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength.wt>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength.id>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength.wavelength>  xsd:string  ?
+            # 20.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_refCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_refCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref>  @:struct_ref            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_groupCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_groupCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_group>  @:pdbx_audit_revision_group  +          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_audit_revision_group. Cardinality: {2}
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_audit_revision_group. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_audit_revision_group. Cardinality: {5}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_audit_revision_group. Cardinality: {4}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_audit_revision_group. Cardinality: {3}
+}
+
+
+:softwareCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#softwareCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_software>  @:software  +          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: @:software. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:software. Cardinality: {2}
+            # 14.285714285714285 % (1 instance). obj: @:software. Cardinality: {3}
+            # 14.285714285714285 % (1 instance). obj: @:software. Cardinality: {4}
+            # 14.285714285714285 % (1 instance). obj: @:software. Cardinality: {5}
+}
+
+
+:audit_conformCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conformCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_conform>  @:audit_conform            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_detailsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_detailsCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_details>  @:pdbx_audit_revision_details            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_item  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 31 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item>]  ;          # 100.0 % (31 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.item>  xsd:string  ;          # 100.0 % (31 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.ordinal>  xsd:string  ;          # 100.0 % (31 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;          # 100.0 % (31 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (31 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.data_content_type>  xsd:string  ;          # 100.0 % (31 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.revision_ordinal>  xsd:string            # 100.0 % (31 instances).
+}
+
+
+:struct_ref_seq  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 9 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_PDB_id_code>  xsd:string  ;          # 100.0 % (9 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq>]  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.align_id>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.db_align_end>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_strand_id>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_ref>  @:struct_ref  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.ref_id>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.seq_align_end>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_auth_seq_align_end>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.db_align_beg>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_db_accession>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.seq_align_beg>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_auth_seq_align_beg>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_ref_seq_dif>  @:struct_ref_seq_dif  *
+            # 33.33333333333333 % (3 instances). obj: @:struct_ref_seq_dif. Cardinality: +
+            # 22.22222222222222 % (2 instances). obj: @:struct_ref_seq_dif. Cardinality: {3}
+            # 11.11111111111111 % (1 instance). obj: @:struct_ref_seq_dif. Cardinality: {1}
+}
+
+
+:diffrn_radiation  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 10 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation>]  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_diffrn>  @:diffrn  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.pdbx_scattering_type>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.diffrn_id>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.wavelength_id>  xsd:string  ;          # 100.0 % (10 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.pdbx_monochromatic_or_laue_m_l>  xsd:string  ?;
+            # 70.0 % (7 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.monochromator>  xsd:string  ?
+            # 20.0 % (2 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:refineCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refineCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine>  @:refine            # 100.0 % (7 instances).
+}
+
+
+:pdbx_struct_assembly  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.oligomeric_details>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.oligomeric_count>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_struct_assembly_gen>  @:pdbx_struct_assembly_gen  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.details>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:pdbx_entity_nonpoly  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 17 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly>]  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly.name>  xsd:string  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly.comp_id>  xsd:string  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;          # 100.0 % (17 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly.entity_id>  xsd:string            # 100.0 % (17 instances).
+}
+
+
+:entity_polyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_polyCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_poly>  @:entity_poly            # 100.0 % (7 instances).
+}
+
+
+:ndb_struct_na_base_pairCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pair>  @:ndb_struct_na_base_pair  +;          # 100.0 % (4 instances).
+            # 75.0 % (3 instances). obj: @:ndb_struct_na_base_pair. Cardinality: {6}
+            # 25.0 % (1 instance). obj: @:ndb_struct_na_base_pair. Cardinality: {10}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pairCategory>]            # 100.0 % (4 instances).
+}
+
+
+:pdbx_struct_mod_residueCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residueCategory>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_mod_residue>  @:pdbx_struct_mod_residue  +          # 100.0 % (3 instances).
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_struct_mod_residue. Cardinality: {1}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_struct_mod_residue. Cardinality: {2}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_struct_mod_residue. Cardinality: {12}
+}
+
+
+:struct_siteCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_siteCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site>  @:struct_site  +          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: @:struct_site. Cardinality: {2}
+            # 28.57142857142857 % (2 instances). obj: @:struct_site. Cardinality: {4}
+            # 28.57142857142857 % (2 instances). obj: @:struct_site. Cardinality: {1}
+}
+
+
+:pdbx_struct_assembly_genCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_genCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly_gen>  @:pdbx_struct_assembly_gen            # 100.0 % (7 instances).
+}
+
+
+:ndb_struct_na_base_pair_stepCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pair_step>  @:ndb_struct_na_base_pair_step  +;          # 100.0 % (4 instances).
+            # 75.0 % (3 instances). obj: @:ndb_struct_na_base_pair_step. Cardinality: {5}
+            # 25.0 % (1 instance). obj: @:ndb_struct_na_base_pair_step. Cardinality: {9}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_stepCategory>]            # 100.0 % (4 instances).
+}
+
+
+:pdbx_validate_rmsd_angleCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_angle>  @:pdbx_validate_rmsd_angle  +;          # 100.0 % (4 instances).
+            # 25.0 % (1 instance). obj: @:pdbx_validate_rmsd_angle. Cardinality: {2}
+            # 25.0 % (1 instance). obj: @:pdbx_validate_rmsd_angle. Cardinality: {11}
+            # 25.0 % (1 instance). obj: @:pdbx_validate_rmsd_angle. Cardinality: {9}
+            # 25.0 % (1 instance). obj: @:pdbx_validate_rmsd_angle. Cardinality: {37}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angleCategory>]            # 100.0 % (4 instances).
+}
+
+
+:pdbx_database_status  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.recvd_initial_deposition_date>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.process_site>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.status_code>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.pdb_format_compatible>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.status_code_sf>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.deposit_site>  xsd:string  ?
+            # 57.14285714285714 % (4 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:diffrn_detectorCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_detector>  @:diffrn_detector  +;          # 100.0 % (6 instances).
+            # 83.33333333333334 % (5 instances). obj: @:diffrn_detector. Cardinality: {1}
+            # 16.666666666666664 % (1 instance). obj: @:diffrn_detector. Cardinality: {4}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detectorCategory>]            # 100.0 % (6 instances).
+}
+
+
+:reflnsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflns>  @:reflns  ;          # 100.0 % (6 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflnsCategory>]            # 100.0 % (6 instances).
+}
+
+
+:citationCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citationCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation>  @:citation  +          # 100.0 % (7 instances).
+            # 57.14285714285714 % (4 instances). obj: @:citation. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: @:citation. Cardinality: {3}
+            # 14.285714285714285 % (1 instance). obj: @:citation. Cardinality: {2}
+}
+
+
+:struct  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct.title>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct.pdbx_descriptor>  xsd:string  ?
+            # 71.42857142857143 % (5 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_xplor_file  [<http://rdf.wwpdb.org/pdb/110M/pdbx_xplor_file/>~]  AND   # 4 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.topol_file>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.serial_no>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.pdbx_refine_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.param_file>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (4 instances).
+}
+
+
+:pdbx_validate_torsionCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_torsion>  @:pdbx_validate_torsion  +;          # 100.0 % (3 instances).
+            # 66.66666666666666 % (2 instances). obj: @:pdbx_validate_torsion. Cardinality: {2}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_validate_torsion. Cardinality: {3}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsionCategory>]            # 100.0 % (3 instances).
+}
+
+
+:pdbx_entity_nonpolyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpolyCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entity_nonpoly>  @:pdbx_entity_nonpoly  +          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: @:pdbx_entity_nonpoly. Cardinality: {2}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_entity_nonpoly. Cardinality: {4}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_entity_nonpoly. Cardinality: {3}
+}
+
+
+:pdbx_struct_special_symmetry  [<http://rdf.wwpdb.org/pdb/310D/pdbx_struct_special_symmetry/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.PDB_model_num>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.auth_asym_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.id>  xsd:string  ;          # 100.0 % (4 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.label_comp_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.label_asym_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.auth_seq_id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.auth_comp_id>  xsd:string            # 100.0 % (4 instances).
+}
+
+
+:symmetryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetryCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_symmetry>  @:symmetry            # 100.0 % (7 instances).
+}
+
+
+:struct_ref_seqCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seqCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seq>  @:struct_ref_seq  +          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: @:struct_ref_seq. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: @:struct_ref_seq. Cardinality: {2}
+}
+
+
+:pdbx_struct_oper_listCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_listCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_oper_list>  @:pdbx_struct_oper_list  +          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: @:pdbx_struct_oper_list. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_struct_oper_list. Cardinality: {2}
+}
+
+
+:ndb_struct_conf_na  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 5 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_na.feature>  xsd:string  ;          # 100.0 % (5 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_na>]  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_na.entry_id>  xsd:string  ;          # 100.0 % (5 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (5 instances).
+}
+
+
+:reflns  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns>]  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.d_resolution_high>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.number_obs>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_ordinal>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_diffrn_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.entry_id>  xsd:string  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.percent_possible_obs>  xsd:string  ?;
+            # 66.66666666666666 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_Rmerge_I_obs>  xsd:string  ?;
+            # 66.66666666666666 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.d_resolution_low>  xsd:string  ?;
+            # 66.66666666666666 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_redundancy>  xsd:string  ?;
+            # 66.66666666666666 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.observed_criterion_sigma_I>  xsd:string  ?;
+            # 50.0 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.number_all>  xsd:string  ?;
+            # 50.0 % (3 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.observed_criterion_sigma_F>  xsd:string  ?;
+            # 33.33333333333333 % (2 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_netI_over_sigmaI>  xsd:string  ?;
+            # 16.666666666666664 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.B_iso_Wilson_estimate>  xsd:string  ?
+            # 16.666666666666664 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:exptl_crystal  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.density_percent_sol>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.density_Matthews>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn>  @:diffrn  +;          # 100.0 % (7 instances).
+            # 85.71428571428571 % (6 instances). obj: @:diffrn. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:diffrn. Cardinality: {4}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_exptl_crystal_grow>  @:exptl_crystal_grow  ?;
+            # 57.14285714285714 % (4 instances). obj: @:exptl_crystal_grow. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_exptl_crystal_grow_comp>  @:exptl_crystal_grow_comp  *;
+            # 42.857142857142854 % (3 instances). obj: @:exptl_crystal_grow_comp. Cardinality: +
+            # 28.57142857142857 % (2 instances). obj: @:exptl_crystal_grow_comp. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:exptl_crystal_grow_comp. Cardinality: {7}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.density_meas>  xsd:string  ?
+            # 14.285714285714285 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:cell  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.length_c>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.length_b>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.angle_alpha>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.angle_gamma>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.angle_beta>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.length_a>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.Z_PDB>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:struct_conn_typeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 6 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn_typeCategory>]  ;          # 100.0 % (6 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conn_type>  @:struct_conn_type  +          # 100.0 % (6 instances).
+            # 50.0 % (3 instances). obj: @:struct_conn_type. Cardinality: {1}
+            # 33.33333333333333 % (2 instances). obj: @:struct_conn_type. Cardinality: {2}
+            # 16.666666666666664 % (1 instance). obj: @:struct_conn_type. Cardinality: {3}
+}
+
+
+:exptl_crystal_growCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_grow>  @:exptl_crystal_grow  ;          # 100.0 % (4 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_growCategory>]            # 100.0 % (4 instances).
+}
+
+
+:exptl_crystal_grow_comp  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 19 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.name>  xsd:string  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.id>  xsd:string  ;          # 100.0 % (19 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp>]  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.crystal_id>  xsd:string  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.sol_id>  xsd:string  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_exptl_crystal>  @:exptl_crystal  ;          # 100.0 % (19 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (19 instances).
+}
+
+
+:diffrn_detector  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 9 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector>]  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.diffrn_id>  xsd:string  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_diffrn>  @:diffrn  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (9 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.type>  xsd:string  ?;
+            # 66.66666666666666 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.detector>  xsd:string  ?;
+            # 66.66666666666666 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.pdbx_collection_date>  xsd:string  ?;
+            # 44.44444444444444 % (4 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.details>  xsd:string  ?
+            # 22.22222222222222 % (2 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_validate_symm_contactCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contactCategory>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_symm_contact>  @:pdbx_validate_symm_contact  +          # 100.0 % (3 instances).
+            # 66.66666666666666 % (2 instances). obj: @:pdbx_validate_symm_contact. Cardinality: {1}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_validate_symm_contact. Cardinality: {2}
+}
+
+
+:pdbx_sifts_unp_segmentsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segmentsCategory>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_unp_segments>  @:pdbx_sifts_unp_segments            # 100.0 % (3 instances).
+}
+
+
+:entity_src_genCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_genCategory>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_src_gen>  @:entity_src_gen            # 100.0 % (4 instances).
+}
+
+
+:structCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#structCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct>  @:struct            # 100.0 % (7 instances).
+}
+
+
+:refine_ls_restrCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_restr>  @:refine_ls_restr  +;          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: @:refine_ls_restr. Cardinality: {19}
+            # 28.57142857142857 % (2 instances). obj: @:refine_ls_restr. Cardinality: {9}
+            # 14.285714285714285 % (1 instance). obj: @:refine_ls_restr. Cardinality: {10}
+            # 14.285714285714285 % (1 instance). obj: @:refine_ls_restr. Cardinality: {20}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restrCategory>]            # 100.0 % (7 instances).
+}
+
+
+:struct_sheet_rangeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_rangeCategory>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_range>  @:struct_sheet_range  +          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:struct_sheet_range. Cardinality: {3}
+            # 50.0 % (1 instance). obj: @:struct_sheet_range. Cardinality: {2}
+}
+
+
+:atom_sitesCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sitesCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sites>  @:atom_sites            # 100.0 % (7 instances).
+}
+
+
+:struct_asymCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asymCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_asym>  @:struct_asym  +          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:struct_asym. Cardinality: {6}
+            # 28.57142857142857 % (2 instances). obj: @:struct_asym. Cardinality: {5}
+            # 28.57142857142857 % (2 instances). obj: @:struct_asym. Cardinality: {3}
+            # 14.285714285714285 % (1 instance). obj: @:struct_asym. Cardinality: {4}
+}
+
+
+:pdbx_sifts_xref_db_segmentsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_xref_db_segments>  @:pdbx_sifts_xref_db_segments  +;          # 100.0 % (3 instances).
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_sifts_xref_db_segments. Cardinality: {39}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_sifts_xref_db_segments. Cardinality: {20}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_sifts_xref_db_segments. Cardinality: {36}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segmentsCategory>]            # 100.0 % (3 instances).
+}
+
+
+:entry  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entry.id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct>  @:struct  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_database_PDB_matrix>  @:database_PDB_matrix  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_database_status>  @:pdbx_database_status  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entry>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_symmetry>  @:symmetry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_refine>  @:refine  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_exptl>  @:exptl  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_keywords>  @:struct_keywords  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_atom_sites>  @:atom_sites  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_cell>  @:cell  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_reflns>  @:reflns  ?;
+            # 85.71428571428571 % (6 instances). obj: @:reflns. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_ndb_struct_conf_na>  @:ndb_struct_conf_na  *;
+            # 57.14285714285714 % (4 instances). obj: @:ndb_struct_conf_na. Cardinality: +
+            # 42.857142857142854 % (3 instances). obj: @:ndb_struct_conf_na. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:ndb_struct_conf_na. Cardinality: {2}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_refine_analyze>  @:refine_analyze  ?;
+            # 28.57142857142857 % (2 instances). obj: @:refine_analyze. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_refine>  @:pdbx_refine  ?
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_refine. Cardinality: {1}
+}
+
+
+:struct_ref_seq_dif  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_pdb_id_code>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.align_id>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_seq_db_seq_num>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_seq_db_name>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.details>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_pdb_strand_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_ordinal>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_seq_db_accession_code>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.db_mon_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_ref_seq>  @:struct_ref_seq  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.seq_num>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_auth_seq_num>  xsd:string  ?;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.mon_id>  xsd:string  ?
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_keywords  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords.text>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords.pdbx_keywords>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:struct_biol  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_biol>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_biol.id>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:pdbx_database_statusCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_statusCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_status>  @:pdbx_database_status            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_historyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  +;          # 100.0 % (7 instances).
+            # 57.14285714285714 % (4 instances). obj: @:pdbx_audit_revision_history. Cardinality: {4}
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_audit_revision_history. Cardinality: {3}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_audit_revision_history. Cardinality: {5}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_historyCategory>]            # 100.0 % (7 instances).
+}
+
+
+:pdbx_validate_torsion  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.auth_asym_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.PDB_model_num>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.auth_seq_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.psi>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.phi>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.auth_comp_id>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:struct_site_genCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_gen>  @:struct_site_gen  +;          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:struct_site_gen. Cardinality: {11}
+            # 28.57142857142857 % (2 instances). obj: @:struct_site_gen. Cardinality: {8}
+            # 14.285714285714285 % (1 instance). obj: @:struct_site_gen. Cardinality: {13}
+            # 14.285714285714285 % (1 instance). obj: @:struct_site_gen. Cardinality: {28}
+            # 14.285714285714285 % (1 instance). obj: @:struct_site_gen. Cardinality: {12}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_genCategory>]            # 100.0 % (7 instances).
+}
+
+
+:ndb_struct_conf_naCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_naCategory>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_conf_na>  @:ndb_struct_conf_na  +          # 100.0 % (4 instances).
+            # 75.0 % (3 instances). obj: @:ndb_struct_conf_na. Cardinality: {1}
+            # 25.0 % (1 instance). obj: @:ndb_struct_conf_na. Cardinality: {2}
+}
+
+
+:struct_site_keywordsCategory  [<http://rdf.wwpdb.org/pdb/110D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_keywords>  @:struct_site_keywords  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywordsCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_struct_sheet_hbond  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_seq_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_comp_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_atom_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_sheet>  @:struct_sheet  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_seq_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_seq_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_atom_id>  xsd:string  ;          # 100.0 % (3 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_comp_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_atom_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_id_2>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.sheet_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_atom_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_comp_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_comp_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_asym_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_asym_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_asym_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_seq_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_id_1>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_asym_id>  xsd:string            # 100.0 % (3 instances).
+}
+
+
+:struct_sheet_order  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.sense>  xsd:string  ;          # 100.0 % (3 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.range_id_1>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.sheet_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_sheet>  @:struct_sheet  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.range_id_2>  xsd:string            # 100.0 % (3 instances).
+}
+
+
+:pdbx_poly_seq_schemeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_poly_seq_scheme>  @:pdbx_poly_seq_scheme  +;          # 100.0 % (7 instances).
+            # 28.57142857142857 % (2 instances). obj: @:pdbx_poly_seq_scheme. Cardinality: {6}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_poly_seq_scheme. Cardinality: {12}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_poly_seq_scheme. Cardinality: {164}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_poly_seq_scheme. Cardinality: {154}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_poly_seq_scheme. Cardinality: {20}
+            # 14.285714285714285 % (1 instance). obj: @:pdbx_poly_seq_scheme. Cardinality: {163}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_schemeCategory>]            # 100.0 % (7 instances).
+}
+
+
+:database_PDB_matrixCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrixCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_PDB_matrix>  @:database_PDB_matrix            # 100.0 % (7 instances).
+}
+
+
+:entryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entryCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entry>  @:entry            # 100.0 % (7 instances).
+}
+
+
+:pdbx_refine  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.pdbx_refine_id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.R_factor_obs_no_cutoff>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.entry_id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.R_factor_obs_4sig_cutoff>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.number_reflns_obs_4sig_cutoff>  xsd:string  ?
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:struct_conf_typeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf_typeCategory>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conf_type>  @:struct_conf_type            # 100.0 % (3 instances).
+}
+
+
+:refine_ls_shellCategory  [<http://rdf.wwpdb.org/pdb/110M/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shellCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_shell>  @:refine_ls_shell            # 100.0 % (1 instance).
+}
+
+
+:atom_sites  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.entry_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix21>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix12>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix32>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix33>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_vector1>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_vector3>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_vector2>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix23>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix22>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix13>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix11>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix31>  xsd:string            # 100.0 % (7 instances).
+}
+
+
+:reflns_shellCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflns_shell>  @:reflns_shell  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shellCategory>]            # 100.0 % (2 instances).
+}
+
+
+:pdbx_database_remarkCategory  [<http://rdf.wwpdb.org/pdb/110L/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remarkCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_remark>  @:pdbx_database_remark            # 100.0 % (1 instance).
+}
+
+
+:diffrnCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrnCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn>  @:diffrn  +          # 100.0 % (7 instances).
+            # 85.71428571428571 % (6 instances). obj: @:diffrn. Cardinality: {1}
+            # 14.285714285714285 % (1 instance). obj: @:diffrn. Cardinality: {4}
+}
+
+
+:pdbx_sifts_unp_segments  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.instance_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.segment_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.best_mapping>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.unp_start>  xsd:string  ;          # 100.0 % (3 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.seq_id_end>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.seq_id_start>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.unp_acc>  xsd:string  ;          # 100.0 % (3 instances).
+   rdfs:seeAlso  IRI  ;                                        # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.entity_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_uniprot>  IRI  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.identity>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.asym_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_asym>  @:struct_asym  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.unp_end>  xsd:string            # 100.0 % (3 instances).
+}
+
+
+:exptl_crystal_grow_compCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_grow_comp>  @:exptl_crystal_grow_comp  +;          # 100.0 % (3 instances).
+            # 66.66666666666666 % (2 instances). obj: @:exptl_crystal_grow_comp. Cardinality: {6}
+            # 33.33333333333333 % (1 instance). obj: @:exptl_crystal_grow_comp. Cardinality: {7}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_compCategory>]            # 100.0 % (3 instances).
+}
+
+
+:struct_sheet  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_sheet_range>  @:struct_sheet_range  +;          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:struct_sheet_range. Cardinality: {3}
+            # 50.0 % (1 instance). obj: @:struct_sheet_range. Cardinality: {2}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet.number_strands>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_struct_sheet_hbond>  @:pdbx_struct_sheet_hbond  +;          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:pdbx_struct_sheet_hbond. Cardinality: {2}
+            # 50.0 % (1 instance). obj: @:pdbx_struct_sheet_hbond. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_sheet_order>  @:struct_sheet_order  +;          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:struct_sheet_order. Cardinality: {2}
+            # 50.0 % (1 instance). obj: @:struct_sheet_order. Cardinality: {1}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet.id>  xsd:string            # 100.0 % (2 instances).
+}
+
+
+:exptl_crystalCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystalCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal>  @:exptl_crystal            # 100.0 % (7 instances).
+}
+
+
+:exptlCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptlCategory>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl>  @:exptl            # 100.0 % (7 instances).
+}
+
+
+:refine_occupancyCategory  [<http://rdf.wwpdb.org/pdb/110D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_occupancy>  @:refine_occupancy  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancyCategory>]            # 100.0 % (1 instance).
+}
+
+
+:refine_ls_shell  [<http://rdf.wwpdb.org/pdb/110M/refine_ls_shell/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.pdbx_refine_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.R_factor_R_work>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.d_res_low>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.R_factor_R_free>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.percent_reflns_R_free>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.d_res_high>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.number_reflns_R_free>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.R_factor_R_free_error>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.number_reflns_R_work>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.pdbx_total_number_of_bins_used>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.percent_reflns_obs>  xsd:string            # 100.0 % (1 instance).
+}
+
+
+:pdbx_struct_assembly_gen  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 7 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen.assembly_id>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen.oper_expression>  xsd:string  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen.asym_id_list>  xsd:string  ;          # 100.0 % (7 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen>]  ;          # 100.0 % (7 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_struct_assembly>  @:pdbx_struct_assembly            # 100.0 % (7 instances).
+}
+
+
+:pdbx_audit_revision_itemCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 5 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_item>  @:pdbx_audit_revision_item  +;          # 100.0 % (5 instances).
+            # 40.0 % (2 instances). obj: @:pdbx_audit_revision_item. Cardinality: {1}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_item. Cardinality: {7}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_item. Cardinality: {20}
+            # 20.0 % (1 instance). obj: @:pdbx_audit_revision_item. Cardinality: {2}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_itemCategory>]            # 100.0 % (5 instances).
+}
+
+
+:struct_ref_seq_difCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seq_dif>  @:struct_ref_seq_dif  +;          # 100.0 % (3 instances).
+            # 66.66666666666666 % (2 instances). obj: @:struct_ref_seq_dif. Cardinality: {3}
+            # 33.33333333333333 % (1 instance). obj: @:struct_ref_seq_dif. Cardinality: {1}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_difCategory>]            # 100.0 % (3 instances).
+}
+
+
+:pdbx_validate_rmsd_bondCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_bond>  @:pdbx_validate_rmsd_bond  +;          # 100.0 % (3 instances).
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_validate_rmsd_bond. Cardinality: {9}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_validate_rmsd_bond. Cardinality: {1}
+            # 33.33333333333333 % (1 instance). obj: @:pdbx_validate_rmsd_bond. Cardinality: {3}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bondCategory>]            # 100.0 % (3 instances).
+}
+
+
+:pdbx_unobs_or_zero_occ_residuesCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residuesCategory>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_unobs_or_zero_occ_residues>  @:pdbx_unobs_or_zero_occ_residues  +          # 100.0 % (3 instances).
+}
+
+
+:refine_B_iso  [<http://rdf.wwpdb.org/pdb/110D/refine_B_iso/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.details>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.class>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.pdbx_refine_id>  xsd:string  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.treatment>  xsd:string            # 100.0 % (2 instances).
+}
+
+
+:atom_sites_footnote  [<http://rdf.wwpdb.org/pdb/110L/atom_sites_footnote/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnote.text>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnote.id>  xsd:string  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnote>]            # 100.0 % (2 instances).
+}
+
+
+:struct_confCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 3 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conf>  @:struct_conf  +;          # 100.0 % (3 instances).
+            # 66.66666666666666 % (2 instances). obj: @:struct_conf. Cardinality: {8}
+            # 33.33333333333333 % (1 instance). obj: @:struct_conf. Cardinality: {10}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_confCategory>]            # 100.0 % (3 instances).
+}
+
+
+:struct_site_keywords  [<http://rdf.wwpdb.org/pdb/110D/struct_site_keywords/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywords.site_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywords>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywords.text>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_site>  @:struct_site            # 100.0 % (1 instance).
+}
+
+
+:refine_analyzeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_analyze>  @:refine_analyze  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyzeCategory>]            # 100.0 % (2 instances).
+}
+
+
+:pdbx_validate_planesCategory  [<http://rdf.wwpdb.org/pdb/210L/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planesCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_planes>  @:pdbx_validate_planes            # 100.0 % (1 instance).
+}
+
+
+:pdbx_database_related  [<http://rdf.wwpdb.org/pdb/210L/pdbx_database_related/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.db_id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.details>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdb>  IRI  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.content_type>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.db_name>  xsd:string            # 100.0 % (2 instances).
+}
+
+
+:refine_analyze  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.entry_id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.pdbx_refine_id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_coordinate_error_free>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_sigma_a_free>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_d_res_low_obs>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_coordinate_error_obs>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_sigma_a_obs>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.number_disordered_residues>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.occupancy_sum_non_hydrogen>  xsd:string  ?;
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.occupancy_sum_hydrogen>  xsd:string  ?
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:pdbx_struct_conn_angleCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_conn_angle>  @:pdbx_struct_conn_angle  +;          # 100.0 % (2 instances).
+            # 50.0 % (1 instance). obj: @:pdbx_struct_conn_angle. Cardinality: {15}
+            # 50.0 % (1 instance). obj: @:pdbx_struct_conn_angle. Cardinality: {18}
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angleCategory>]            # 100.0 % (2 instances).
+}
+
+
+:reflns_shell  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.pdbx_ordinal>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.d_res_low>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.Rmerge_I_obs>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.percent_possible_all>  xsd:string  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.d_res_high>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.pdbx_redundancy>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.meanI_over_sigI_obs>  xsd:string  ?
+            # 50.0 % (1 instance). obj: xsd:string. Cardinality: {1}
+}
+
+
+:refine_B_isoCategory  [<http://rdf.wwpdb.org/pdb/110D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_B_iso>  @:refine_B_iso  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_isoCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_validate_symm_contact  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 4 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.PDB_model_num>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_seq_id_1>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_asym_id_2>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_seq_id_2>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.id>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.site_symmetry_2>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_atom_id_2>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_comp_id_1>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.dist>  xsd:string  ;          # 100.0 % (4 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact>]  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_comp_id_2>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_atom_id_1>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_asym_id_1>  xsd:string  ;          # 100.0 % (4 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.site_symmetry_1>  xsd:string            # 100.0 % (4 instances).
+}
+
+
+:atom_sites_footnoteCategory  [<http://rdf.wwpdb.org/pdb/110L/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sites_footnote>  @:atom_sites_footnote  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnoteCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_database_remark  [<http://rdf.wwpdb.org/pdb/110L/pdbx_database_remark/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remark.text>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remark>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remark.id>  xsd:string            # 100.0 % (1 instance).
+}
+
+
+:pdbx_refineCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refineCategory>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_refine>  @:pdbx_refine            # 100.0 % (2 instances).
+}
+
+
+:pdbx_xplor_fileCategory  [<http://rdf.wwpdb.org/pdb/110M/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_xplor_file>  @:pdbx_xplor_file  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_fileCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_struct_special_symmetryCategory  [<http://rdf.wwpdb.org/pdb/310D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_special_symmetry>  @:pdbx_struct_special_symmetry  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetryCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_validate_planes  [<http://rdf.wwpdb.org/pdb/210L/pdbx_validate_planes/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.PDB_model_num>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.auth_asym_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.auth_seq_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.rmsd>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.auth_comp_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.type>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes>]            # 100.0 % (1 instance).
+}
+
+
