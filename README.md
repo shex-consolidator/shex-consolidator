@@ -1,0 +1,2 @@
+# shex-consolidator
+ShEx consolidator
