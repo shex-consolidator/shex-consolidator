@@ -10,7 +10,7 @@ class Constraint(object):
         self._original_lines = constraint_lines
         self._predicate, self._node_constraint, self._cardinality = \
             self._parse_predicate_and_node_constraint(constraint_lines[0]) \
-                if constraint_lines is not None else None, None, None
+                if constraint_lines is not None else (None, None, None)
 
     @property
     def predicate(self):
@@ -55,15 +55,18 @@ class Constraint(object):
     def _look_for_or_node_constraint(self, str_pieces: list):
         return " ".join(str_pieces[1:self._r_index_or(str_pieces) + 1])
 
-    def __eq__(self, other):
-        if type(other) != type(self):
-            return False
-        return self._predicate == other.predicate and \
-            self._cardinality == other.cardinality and \
-            self._node_constraint == other.node_constraint
-
-    def __ne__(self, other):
-        return not (self == other)
+    # def __eq__(self, other):
+    #     if type(other) != type(self):
+    #         return False
+    #     return self._predicate == other.predicate and \
+    #         self._cardinality == other.cardinality and \
+    #         self._node_constraint == other.node_constraint
+    #
+    # def __ne__(self, other):
+    #     return not (self == other)
+    #
+    # def __hash__(self):
+    #     return hash(self.__attrs())
 
 
 class Shape(object):
@@ -86,6 +89,14 @@ class Shape(object):
 
     def add_constraint(self, constraint: Constraint):
         self._constraints.append(constraint)
+
+    def exact_constraint(self, target_constraint):
+        for a_c in self._constraints:
+            if target_constraint.predicate == a_c.predicate and \
+                    target_constraint.node_constraint == a_c.node_constraint and \
+                    target_constraint.cardinality == a_c.cardinality:
+                return a_c
+        return None
 
     def constraint_only_different_cardinality(self, target_constraint):
         for a_c in self._constraints:
@@ -242,9 +253,11 @@ def merge_shapes(shape1, shape2):
     result_shape = Shape(shape_lines=None, shape_label=shape1.label)
     merged_constraints = set()
     for a_constraint in shape1.yield_constraints():
-        if shape2.contains_exact_constraint(a_constraint):
+        target = shape2.exact_constraint(a_constraint)
+        if target is not None:
             result_shape.add_constraint(a_constraint)
             merged_constraints.add(a_constraint)
+            merged_constraints.add(target)
         else:
             target = shape2.constraint_only_different_cardinality(a_constraint)
             if target is not None:
@@ -253,9 +266,13 @@ def merge_shapes(shape1, shape2):
                 merged_constraints.add(target)
             else:
                 target = shape2.constraint_only_common_predicate(a_constraint)
-                result_shape.add_constraint(constraint_with_zero_case(a_constraint))
-                merged_constraints.add(a_constraint)
-                merged_constraints.add(target)
+                if target is not None:
+                    result_shape.add_constraint(constraint_with_zero_case(a_constraint))
+                    merged_constraints.add(a_constraint)
+                    merged_constraints.add(target)
+                else:
+                    result_shape.add_constraint(constraint_with_zero_case(a_constraint))
+                    merged_constraints.add(a_constraint)
 
     for a_constraint in [a_c for a_c in shape2.yield_constraints() if a_c not in merged_constraints]:
         result_shape.add_constraint(constraint_with_zero_case(a_constraint))
@@ -269,7 +286,9 @@ def consolidate_shapes(list_of_shapes_groups: list):
         for a_shape in a_gropup:
             if a_shape.label not in result_dict:
                 result_dict[a_shape.label] = a_shape
+                print("clean!")
             else:
+                print("hit!!!!!!!!")
                 result_dict[a_shape.label] = merge_shapes(result_dict[a_shape.label], a_shape)
     return list(result_dict.values())
 
@@ -285,11 +304,12 @@ def consolidate_files(list_of_shex_files: list):
     for a_file in list_of_shex_files:
         targets.append(parse_file(a_file))
     prefixes, shapes = consolidate_prefix_shape_tuples(targets)
-    a = 5
+    return prefixes, shapes
 
 
 if __name__ == "__main__":
     template = r"C:\Users\Dani\repos_git\consolidator-shex\examples\pdb_subset{}.shex"
     files = [template.format(i) for i in range(10)]
-    prefixes, shapes = parse_file(r"C:\Users\Dani\repos_git\consolidator-shex\examples\pdb_subset0.shex")
+    # prefixes, shapes = parse_file(r"C:\Users\Dani\repos_git\consolidator-shex\examples\pdb_subset0.shex")
+    prefixes, shapes = consolidate_files(files)
     print("Done")
