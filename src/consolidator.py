@@ -13,6 +13,10 @@ class Constraint(object):
                 if constraint_lines is not None else (None, None, None)
 
     @property
+    def original_lines(self):
+        return self._original_lines
+
+    @property
     def predicate(self):
         return self._predicate
 
@@ -80,8 +84,20 @@ class Shape(object):
         self._constraints = self._parse_constraints(shape_lines[1:]) if shape_lines is not None else []
 
     @property
+    def original_lines(self):
+        return self._original_lines
+
+    @property
     def label(self):
         return self._label
+
+    @property
+    def template(self):
+        return self._template
+
+    @template.setter
+    def template(self, value):
+        self._template = value
 
     def yield_constraints(self):
         for a_constraint in self._constraints:
@@ -123,11 +139,13 @@ class Shape(object):
                     result.append(Constraint(current_group))
                     current_group = []
                 current_group.append(a_line)
+        if len(current_group) != 0:
+            result.append(Constraint(current_group))
         return result
 
     def _parse_label_and_template(self, heading_line: str):
         shape_label = heading_line[:heading_line.find(" ") if " " in heading_line else -1].strip()
-        template = None if "[" not in heading_line else heading_line[heading_line.find("[") + 1:heading_line.find("]")]
+        template = None if "[" not in heading_line else heading_line[heading_line.find("[") + 2:heading_line.find("]")-2]
         return shape_label, template
 
 
@@ -249,8 +267,35 @@ def constraint_with_most_general_cardinality(cons1, cons2):
     result.cardinality = most_general_cardinality(cons1.cardinality, cons2.cardinality)
     return result
 
-def merge_shapes(shape1, shape2):
-    result_shape = Shape(shape_lines=None, shape_label=shape1.label)
+def longest_common_prefix(uri1, uri2):
+    """
+    It returns an str containing the longest possible common initial part of uri1 and uri2
+
+    :param uri1:
+    :param uri2:
+
+    :return:
+    """
+    if len(uri1) == 0 or len(uri2) == 0:
+        return ""
+    shortest = len(uri1) if len(uri1) < len(uri2) else len(uri2)
+    for i in range(shortest):
+        if uri1[i] != uri2[i]:
+            return uri1[:i]
+    return uri1[:shortest]
+
+def compute_longest_common_template(template1, template2):
+    candidate = longest_common_prefix(template1, template2)
+    if candidate == "":
+        return None
+    further_slash = candidate.rfind("/")
+    further_sharp = candidate.rfind("#")
+    candidate = candidate[:(further_slash if further_slash > further_sharp else further_sharp)+1]
+    if len(candidate) > 10:
+        return candidate
+    return None
+
+def add_merged_constraints_to_shape(result_shape, shape1, shape2):
     merged_constraints = set()
     for a_constraint in shape1.yield_constraints():
         target = shape2.exact_constraint(a_constraint)
@@ -277,6 +322,17 @@ def merge_shapes(shape1, shape2):
     for a_constraint in [a_c for a_c in shape2.yield_constraints() if a_c not in merged_constraints]:
         result_shape.add_constraint(constraint_with_zero_case(a_constraint))
 
+def merge_shapes(shape1, shape2):
+    result_shape = Shape(shape_lines=None, shape_label=shape1.label)
+    if shape1.template is not None and shape2.template is not None:
+        if shape1.template == shape2.template:
+            result_shape.template = shape1.template
+        else:
+            result_shape.template = compute_longest_common_template(shape1.template, shape2.template)
+    add_merged_constraints_to_shape(result_shape=result_shape,
+                                    shape1=shape1,
+                                    shape2=shape2)
+
     return result_shape
 
 
@@ -286,9 +342,7 @@ def consolidate_shapes(list_of_shapes_groups: list):
         for a_shape in a_gropup:
             if a_shape.label not in result_dict:
                 result_dict[a_shape.label] = a_shape
-                print("clean!")
             else:
-                print("hit!!!!!!!!")
                 result_dict[a_shape.label] = merge_shapes(result_dict[a_shape.label], a_shape)
     return list(result_dict.values())
 
@@ -298,18 +352,63 @@ def consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list):
     shapes = consolidate_shapes([a_tuple[1] for a_tuple in prefixes_shapes_tuples])
     return prefixes, shapes
 
+_PREFIX_TEMPLATE = "PREFIX {}: <{}>\n"
+def serialize_prefixes(prefixes, out_stream):
+    for a_prefix in prefixes:
+        out_stream.write(_PREFIX_TEMPLATE.format(a_prefix.prefix, a_prefix.url))
 
-def consolidate_files(list_of_shex_files: list):
+_HEADING_TEMPLATE = "{}  [<{}>~]  AND"
+def heading_of_a_shape(a_shape):
+    if a_shape.template is not None:
+        return _HEADING_TEMPLATE.format(a_shape.label, a_shape.template)
+    return a_shape.label
+
+_CONSTRAINT_TEMPLATE_CARD_ARB = "    {}  {}  {}"
+_CONSTRAINT_TEMPLATE_CARD_1 = "    {}  {}  "
+def str_constraints_of_a_shape(a_shape):
+    result_constraints = []
+    for a_constraint in a_shape.yield_constraints():
+        if a_constraint.cardinality != "{1}":
+            result_constraints.append(_CONSTRAINT_TEMPLATE_CARD_ARB.format(a_constraint.predicate,
+                                                                           a_constraint.node_constraint,
+                                                                           a_constraint.cardinality))
+        else:
+            result_constraints.append(_CONSTRAINT_TEMPLATE_CARD_1.format(a_constraint.predicate,
+                                                                         a_constraint.node_constraint))
+    return ";\n".join(result_constraints)
+
+
+def serialization_of_merged_shape(a_shape):
+    result = heading_of_a_shape(a_shape)
+    result += "\n{\n"
+    result += str_constraints_of_a_shape(a_shape)
+    result += "\n}\n"
+    return result
+
+def serialize_shapes(shapes, out_stream):
+    for a_shape in shapes:
+        if a_shape.original_lines is not None:
+            out_stream.write("".join(a_shape.original_lines))
+        else:
+            out_stream.write(serialization_of_merged_shape(a_shape))
+        out_stream.write("\n\n")
+
+def serialize(prefixes, shapes, out_file):
+    with open(out_file, "w") as out_stream:
+        serialize_prefixes(prefixes, out_stream)
+        serialize_shapes(shapes, out_stream)
+
+def consolidate_files(list_of_shex_files: list, output_file):
     targets = []
     for a_file in list_of_shex_files:
         targets.append(parse_file(a_file))
     prefixes, shapes = consolidate_prefix_shape_tuples(targets)
-    return prefixes, shapes
+    serialize(prefixes, shapes, output_file)
+    # return prefixes, shapes
 
 
 if __name__ == "__main__":
     template = r"C:\Users\Dani\repos_git\consolidator-shex\examples\pdb_subset{}.shex"
     files = [template.format(i) for i in range(10)]
-    # prefixes, shapes = parse_file(r"C:\Users\Dani\repos_git\consolidator-shex\examples\pdb_subset0.shex")
-    prefixes, shapes = consolidate_files(files)
-    print("Done")
+    consolidate_files(files, "result.shex")
+    print("Done!")

@@ -1,0 +1,2511 @@
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://weso.es/shapes/>
+:pdbx_sifts_xref_db_segments  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.xref_db_acc>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.xref_db>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.seq_id_end>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.instance_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.segment_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segments.seq_id_start>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_asym>  @:struct_asym  ;
+    rdfs:seeAlso  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_go>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_interpro>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_scop>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_ensembl>  IRI  ?
+}
+
+
+:entity_poly_seq  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_poly_seq_scheme>  @:pdbx_poly_seq_scheme  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity_poly>  @:entity_poly  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_chem_comp>  @:chem_comp  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.mon_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seq.hetero>  xsd:string  
+}
+
+
+:pdbx_validate_rmsd_angle  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.linker_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_comp_id_3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_atom_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_comp_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_deviation>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_comp_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_value>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_target_value>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.angle_standard_deviation>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_asym_id_3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_atom_id_3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_seq_id_3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_atom_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angle.auth_seq_id_2>  xsd:string  
+}
+
+
+:pdbx_poly_seq_scheme  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_asym>  @:struct_asym  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity_poly_seq>  @:entity_poly_seq  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.hetero>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.pdb_seq_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.pdb_strand_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.mon_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.ndb_seq_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.pdb_mon_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.auth_mon_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_scheme.auth_seq_num>  xsd:string  ?
+}
+
+
+:ndb_struct_na_base_pair  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.pair_name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.pair_number>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.stagger>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.shear>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.propeller>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.buckle>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.stretch>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.i_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.opening>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.model_number>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.j_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.hbond_type_12>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair.hbond_type_28>  xsd:string  ?
+}
+
+
+:pdbx_nonpoly_scheme  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.pdb_strand_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.pdb_seq_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.auth_mon_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.mon_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.ndb_seq_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.auth_seq_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.pdb_mon_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_scheme.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:struct_conf  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.conf_type_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.pdbx_PDB_helix_length>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.pdbx_PDB_helix_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.pdbx_PDB_helix_class>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.beg_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_conf_type>  @:struct_conf_type  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.end_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf.details>  xsd:string  ?
+}
+
+
+:struct_conn  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_conn_type>  @:struct_conn_type  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.conn_type_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_label_seq_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr2_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.ptnr1_label_seq_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.pdbx_dist_value>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn.pdbx_leaving_atom_flag>  xsd:string  ?
+}
+
+
+:symmetry  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.Int_Tables_number>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.space_group_name_H-M>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetry.cell_setting>  xsd:string  ?
+}
+
+
+:pdbx_struct_oper_listCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_listCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_oper_list>  @:pdbx_struct_oper_list  +
+}
+
+
+:struct_site_gen  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_site>  @:struct_site  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.site_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.pdbx_num_res>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_gen.label_seq_id>  xsd:string  ?
+}
+
+
+:atom_type  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_type>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_type.symbol>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:reflnsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflnsCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflns>  @:reflns  
+}
+
+
+:pdbx_validate_rmsd_bond  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_atom_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_standard_deviation>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_comp_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.linker_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_atom_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_target_value>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_deviation>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.auth_comp_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bond.bond_value>  xsd:string  
+}
+
+
+:refine_ls_restr  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.dev_ideal>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.dev_ideal_target>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.number>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restr.weight>  xsd:string  ?
+}
+
+
+:chem_comp  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.type>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_chem_comp>  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.formula_weight>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.formula>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_comp.mon_nstd_flag>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_poly_seq>  @:entity_poly_seq  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_unobs_or_zero_occ_residues>  @:pdbx_unobs_or_zero_occ_residues  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_unobs_or_zero_occ_atoms>  @:pdbx_unobs_or_zero_occ_atoms  *
+}
+
+
+:pdbx_database_status  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.status_code>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.pdb_format_compatible>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.recvd_initial_deposition_date>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.process_site>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.status_code_sf>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.deposit_site>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_status.status_code_mr>  xsd:string  ?
+}
+
+
+:database_2  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.database_code>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.database_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.pdbx_DOI>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2.pdbx_database_accession>  xsd:string  ?
+}
+
+
+:refineCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refineCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine>  @:refine  
+}
+
+
+:entity_src_genCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_genCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_src_gen>  @:entity_src_gen  
+}
+
+
+:exptl_crystal_grow  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.pdbx_details>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.crystal_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_exptl_crystal>  @:exptl_crystal  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.pH>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.method>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.temp_details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.temp>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow.pdbx_pH_range>  xsd:string  ?
+}
+
+
+:exptl_crystal_grow_comp  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_exptl_crystal>  @:exptl_crystal  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.sol_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_comp.crystal_id>  xsd:string  
+}
+
+
+:pdbx_audit_revision_itemCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_itemCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_item>  @:pdbx_audit_revision_item  +
+}
+
+
+:struct_ref_seq  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.align_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_strand_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_PDB_id_code>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.ref_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_ref>  @:struct_ref  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.db_align_beg>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.db_align_end>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.seq_align_end>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_db_accession>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.seq_align_beg>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_auth_seq_align_end>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq.pdbx_auth_seq_align_beg>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_ref_seq_dif>  @:struct_ref_seq_dif  *
+}
+
+
+:struct_conf_type  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf_type>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_conf>  @:struct_conf  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf_type.id>  xsd:string  
+}
+
+
+:struct_asymCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asymCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_asym>  @:struct_asym  +
+}
+
+
+:chem_compCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_chem_comp>  @:chem_comp  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#chem_compCategory>]  
+}
+
+
+:struct_asym  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.entity_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.pdbx_blank_PDB_chainid_flag>  xsd:string  ?;
+    owl:sameAs  @:struct_asym  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.pdbx_modified>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_asym.id>  xsd:string  ?;
+    rdfs:label  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_poly_seq_scheme>  @:pdbx_poly_seq_scheme  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_sifts_xref_db_segments>  @:pdbx_sifts_xref_db_segments  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_sifts_unp_segments>  @:pdbx_sifts_unp_segments  ?
+}
+
+
+:struct_sheet  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_sheet_order>  @:struct_sheet_order  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet.number_strands>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_struct_sheet_hbond>  @:pdbx_struct_sheet_hbond  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_sheet_range>  @:struct_sheet_range  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:entity_poly_seqCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_poly_seq>  @:entity_poly_seq  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly_seqCategory>]  
+}
+
+
+:pdbx_validate_torsion  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.psi>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.phi>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsion.auth_seq_id>  xsd:string  
+}
+
+
+:pdbx_nonpoly_schemeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nonpoly_schemeCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nonpoly_scheme>  @:pdbx_nonpoly_scheme  +
+}
+
+
+:ndb_struct_conf_na  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_na>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_na.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_na.feature>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:atom_typeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_type>  @:atom_type  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_typeCategory>]  
+}
+
+
+:entry  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_atom_sites>  @:atom_sites  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entry>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct>  @:struct  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_keywords>  @:struct_keywords  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_database_status>  @:pdbx_database_status  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_symmetry>  @:symmetry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_refine>  @:refine  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_cell>  @:cell  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_exptl>  @:exptl  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_reflns>  @:reflns  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entry.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_database_PDB_matrix>  @:database_PDB_matrix  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_ndb_struct_conf_na>  @:ndb_struct_conf_na  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_refine_analyze>  @:refine_analyze  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_refine>  @:pdbx_refine  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_entry_details>  @:pdbx_entry_details  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_nmr_refine>  @:pdbx_nmr_refine  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_nmr_ensemble>  @:pdbx_nmr_ensemble  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_nmr_details>  @:pdbx_nmr_details  ?
+}
+
+
+:struct_ref_seqCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seqCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seq>  @:struct_ref_seq  +
+}
+
+
+:pdbx_struct_assembly_gen  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen.asym_id_list>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen.assembly_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_struct_assembly>  @:pdbx_struct_assembly  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_gen.oper_expression>  xsd:string  
+}
+
+
+:audit_author  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_author>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_author.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_author.pdbx_ordinal>  xsd:string  
+}
+
+
+:entity_poly  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.pdbx_strand_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_poly_seq>  @:entity_poly_seq  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.nstd_linkage>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.pdbx_seq_one_letter_code_can>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.nstd_monomer>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_poly.pdbx_seq_one_letter_code>  xsd:string  
+}
+
+
+:ndb_struct_conf_naCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_conf_naCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_conf_na>  @:ndb_struct_conf_na  +
+}
+
+
+:pdbx_struct_mod_residue  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.label_comp_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.parent_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residue.details>  xsd:string  ?
+}
+
+
+:pdbx_audit_revision_details  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.provider>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.revision_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_details.data_content_type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:database_PDB_matrix  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx22>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx13>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx_vector1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx_vector3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx32>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx31>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx33>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx12>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx23>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx_vector2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx11>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrix.origx21>  xsd:string  
+}
+
+
+:citation  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_citation_author>  @:citation_author  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.year>  xsd:string  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_id_ISSN>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_volume>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_abbrev>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.page_first>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.title>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_id_CSD>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.country>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.journal_id_ASTM>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.pdbx_database_id_PubMed>  xsd:string  ?;
+    dc:references  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_doi>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.page_last>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.pdbx_database_id_DOI>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pubmed>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation.book_publisher>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_citation_editor>  @:citation_editor  ?
+}
+
+
+:diffrn_radiation  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_diffrn>  @:diffrn  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.diffrn_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.pdbx_scattering_type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.wavelength_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.pdbx_monochromatic_or_laue_m_l>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.monochromator>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation.pdbx_diffrn_protocol>  xsd:string  ?
+}
+
+
+:exptl_crystal  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.density_Matthews>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_exptl_crystal_grow>  @:exptl_crystal_grow  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn>  @:diffrn  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.density_percent_sol>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_exptl_crystal_grow_comp>  @:exptl_crystal_grow_comp  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.density_meas>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal.description>  xsd:string  ?
+}
+
+
+:cell  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.angle_beta>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.angle_alpha>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.angle_gamma>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.length_b>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.Z_PDB>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.length_c>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#cell.length_a>  xsd:string  
+}
+
+
+:pdbx_validate_close_contact  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_comp_id_2>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_comp_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_atom_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_atom_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.dist>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contact.auth_asym_id_1>  xsd:string  
+}
+
+
+:struct_ref_seq_dif  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.db_mon_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.seq_num>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_pdb_strand_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_seq_db_seq_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_pdb_id_code>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_seq_db_accession_code>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.mon_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.details>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_ref_seq>  @:struct_ref_seq  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_seq_db_name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.pdbx_auth_seq_num>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_dif.align_id>  xsd:string  
+}
+
+
+:refine  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_ls_sigma_F>  xsd:string  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_d_res_high>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_reflns_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_diffrn_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_R_work>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_d_res_low>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_percent_reflns_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_R_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_isotropic_thermal_model>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_percent_reflns_R_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.occupancy_min>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.occupancy_max>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_reflns_all>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_starting_model>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_method_to_determine_struct>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_ls_cross_valid_method>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_reflns_R_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_R_Free_selection_details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_restraints>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.solvent_model_details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_number_parameters>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_stereochemistry_target_values>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_all>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.B_iso_mean>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.ls_R_factor_R_free_error>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_data_cutoff_low_absF>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_data_cutoff_high_absF>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.solvent_model_param_bsol>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.solvent_model_param_ksol>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.aniso_B11>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.aniso_B23>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.aniso_B22>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.aniso_B13>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.aniso_B12>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.aniso_B33>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_ls_sigma_I>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine.pdbx_stereochem_target_val_spec_case>  xsd:string  ?
+}
+
+
+:datablock  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citationCategory>  @:citationCategory  ;
+    <http://purl.org/dc/elements/1.1/title>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiation_wavelengthCategory>  @:diffrn_radiation_wavelengthCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_restrCategory>  @:refine_ls_restrCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrnCategory>  @:diffrnCategory  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#datablock>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nonpoly_schemeCategory>  @:pdbx_nonpoly_schemeCategory  ?;
+    rdfs:seeAlso  IRI  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_histCategory>  @:refine_histCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_poly_seqCategory>  @:entity_poly_seqCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_polyCategory>  @:entity_polyCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_poly_seq_schemeCategory>  @:pdbx_poly_seq_schemeCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_keywordsCategory>  @:struct_keywordsCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdbml_noatom>  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seqCategory>  @:struct_ref_seqCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_asymCategory>  @:struct_asymCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#datablockName>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflnsCategory>  @:reflnsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_typeCategory>  @:atom_typeCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_detailsCategory>  @:pdbx_audit_revision_detailsCategory  ;
+    dc:identifier  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_authorCategory>  @:audit_authorCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entity_nonpolyCategory>  @:pdbx_entity_nonpolyCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly_genCategory>  @:pdbx_struct_assembly_genCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptlCategory>  @:exptlCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_PDB_matrixCategory>  @:database_PDB_matrixCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assemblyCategory>  @:pdbx_struct_assemblyCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_structCategory>  @:structCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entryCategory>  @:entryCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_chem_compCategory>  @:chem_compCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiationCategory>  @:diffrn_radiationCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdbml_extatom>  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_oper_listCategory>  @:pdbx_struct_oper_listCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_refCategory>  @:struct_refCategory  ;
+    skos:altLabel  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_groupCategory>  @:pdbx_audit_revision_groupCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_growCategory>  @:exptl_crystal_growCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_conformCategory>  @:audit_conformCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sitesCategory>  @:atom_sitesCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refineCategory>  @:refineCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdbml>  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystalCategory>  @:exptl_crystalCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_historyCategory>  @:pdbx_audit_revision_historyCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_2Category>  @:database_2Category  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_symmetryCategory>  @:symmetryCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entityCategory>  @:entityCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation_authorCategory>  @:citation_authorCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_statusCategory>  @:pdbx_database_statusCategory  ;
+    owl:sameAs  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_vrpt>  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_sourceCategory>  @:diffrn_sourceCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_cellCategory>  @:cellCategory  ;
+    dc:references  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_detectorCategory>  @:diffrn_detectorCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_softwareCategory>  @:softwareCategory  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_planesCategory>  @:pdbx_validate_planesCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_angleCategory>  @:pdbx_validate_rmsd_angleCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_connCategory>  @:struct_connCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_conf_naCategory>  @:ndb_struct_conf_naCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pair_stepCategory>  @:ndb_struct_na_base_pair_stepCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pairCategory>  @:ndb_struct_na_base_pairCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_biolCategory>  @:struct_biolCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conn_typeCategory>  @:struct_conn_typeCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_siteCategory>  @:struct_siteCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_grow_compCategory>  @:exptl_crystal_grow_compCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_genCategory>  @:struct_site_genCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_B_isoCategory>  @:refine_B_isoCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_bondCategory>  @:pdbx_validate_rmsd_bondCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_occupancyCategory>  @:refine_occupancyCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_xplor_fileCategory>  @:pdbx_xplor_fileCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_categoryCategory>  @:pdbx_audit_revision_categoryCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_itemCategory>  @:pdbx_audit_revision_itemCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_close_contactCategory>  @:pdbx_validate_close_contactCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_conn_angleCategory>  @:pdbx_struct_conn_angleCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entity_src_synCategory>  @:pdbx_entity_src_synCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_shellCategory>  @:refine_ls_shellCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_mod_residueCategory>  @:pdbx_struct_mod_residueCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_xref_db_segmentsCategory>  @:pdbx_sifts_xref_db_segmentsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_src_genCategory>  @:entity_src_genCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_symm_contactCategory>  @:pdbx_validate_symm_contactCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheetCategory>  @:struct_sheetCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_unp_segmentsCategory>  @:pdbx_sifts_unp_segmentsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_orderCategory>  @:struct_sheet_orderCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_sheet_hbondCategory>  @:pdbx_struct_sheet_hbondCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seq_difCategory>  @:struct_ref_seq_difCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_confCategory>  @:struct_confCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_torsionCategory>  @:pdbx_validate_torsionCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_rangeCategory>  @:struct_sheet_rangeCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conf_typeCategory>  @:struct_conf_typeCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_unobs_or_zero_occ_residuesCategory>  @:pdbx_unobs_or_zero_occ_residuesCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflns_shellCategory>  @:reflns_shellCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_analyzeCategory>  @:refine_analyzeCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_refineCategory>  @:pdbx_refineCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_relatedCategory>  @:pdbx_database_relatedCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_special_symmetryCategory>  @:pdbx_struct_special_symmetryCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_remarkCategory>  @:pdbx_database_remarkCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sites_footnoteCategory>  @:atom_sites_footnoteCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_keywordsCategory>  @:struct_site_keywordsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entry_detailsCategory>  @:pdbx_entry_detailsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_name_comCategory>  @:entity_name_comCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_unobs_or_zero_occ_atomsCategory>  @:pdbx_unobs_or_zero_occ_atomsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_keywordsCategory>  @:entity_keywordsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_exptl_sampleCategory>  @:pdbx_nmr_exptl_sampleCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_chiralCategory>  @:pdbx_validate_chiralCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_refineCategory>  @:pdbx_nmr_refineCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_ensembleCategory>  @:pdbx_nmr_ensembleCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_sample_detailsCategory>  @:pdbx_nmr_sample_detailsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_exptl_sample_conditionsCategory>  @:pdbx_nmr_exptl_sample_conditionsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_softwareCategory>  @:pdbx_nmr_softwareCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_detailsCategory>  @:pdbx_nmr_detailsCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation_editorCategory>  @:citation_editorCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ncs_operCategory>  @:struct_ncs_operCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_name_sysCategory>  @:entity_name_sysCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_main_chain_planeCategory>  @:pdbx_validate_main_chain_planeCategory  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly_propCategory>  @:pdbx_struct_assembly_propCategory  ?
+}
+
+
+:ndb_struct_na_base_pair_step  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.model_number>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_comp_id_1>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_comp_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.twist>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.shift>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.helical_rise>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.x_displacement>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.y_displacement>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.tilt>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_symmetry_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_symmetry_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_comp_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.helical_twist>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.step_name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.inclination>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_auth_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_comp_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_symmetry_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.step_number>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.roll>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.rise>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_symmetry_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.tip>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.slide>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_auth_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.i_label_seq_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_step.j_label_asym_id_2>  xsd:string  
+}
+
+
+:struct_site  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_site_gen>  @:struct_site_gen  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_num_residues>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_evidence_code>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_auth_seq_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_auth_comp_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site.pdbx_auth_asym_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_site_keywords>  @:struct_site_keywords  ?
+}
+
+
+:pdbx_struct_assembly  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_struct_assembly_gen>  @:pdbx_struct_assembly_gen  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.details>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.oligomeric_details>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.oligomeric_count>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly.method_details>  xsd:string  ?
+}
+
+
+:pdbx_audit_revision_detailsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_detailsCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_details>  @:pdbx_audit_revision_details  
+}
+
+
+:pdbx_validate_planes  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.rmsd>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planes.PDB_ins_code>  xsd:string  ?
+}
+
+
+:struct_conn_typeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn_typeCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conn_type>  @:struct_conn_type  +
+}
+
+
+:audit_conformCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conformCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_conform>  @:audit_conform  
+}
+
+
+:ndb_struct_na_base_pair_stepCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pair_step>  @:ndb_struct_na_base_pair_step  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pair_stepCategory>]  
+}
+
+
+:struct_sheet_orderCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_orderCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_order>  @:struct_sheet_order  +
+}
+
+
+:entryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entry>  @:entry  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entryCategory>]  
+}
+
+
+:struct_sheet_rangeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_rangeCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet_range>  @:struct_sheet_range  +
+}
+
+
+:entity_polyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_polyCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_poly>  @:entity_poly  +
+}
+
+
+:struct_refCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_refCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref>  @:struct_ref  +
+}
+
+
+:exptlCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptlCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl>  @:exptl  
+}
+
+
+:pdbx_entity_nonpoly  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly.comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpoly.name>  xsd:string  
+}
+
+
+:diffrn_source  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_diffrn>  @:diffrn  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.diffrn_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.source>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.type>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.pdbx_wavelength>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.pdbx_synchrotron_beamline>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_source.pdbx_synchrotron_site>  xsd:string  ?
+}
+
+
+:citation_author  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_citation>  @:citation  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_author.citation_id>  xsd:string  
+}
+
+
+:pdbx_sifts_xref_db_segmentsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_xref_db_segments>  @:pdbx_sifts_xref_db_segments  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_xref_db_segmentsCategory>]  
+}
+
+
+:pdbx_struct_oper_list  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix13>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.vector1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix21>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.vector2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix22>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix33>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix32>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.vector3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix11>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.symmetry_operation>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix31>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix12>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_oper_list.matrix23>  xsd:string  
+}
+
+
+:struct_sheetCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_sheet>  @:struct_sheet  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheetCategory>]  
+}
+
+
+:cellCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#cellCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_cell>  @:cell  
+}
+
+
+:pdbx_audit_revision_categoryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_category>  @:pdbx_audit_revision_category  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_categoryCategory>]  
+}
+
+
+:struct_biol  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_biol>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_biol.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:refine_B_isoCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_isoCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_B_iso>  @:refine_B_iso  +
+}
+
+
+:pdbx_entity_nonpolyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_nonpolyCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entity_nonpoly>  @:pdbx_entity_nonpoly  +
+}
+
+
+:audit_authorCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_authorCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_audit_author>  @:audit_author  +
+}
+
+
+:pdbx_poly_seq_schemeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_poly_seq_scheme>  @:pdbx_poly_seq_scheme  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_poly_seq_schemeCategory>]  
+}
+
+
+:exptl  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl.method>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl.crystals_number>  xsd:string  ?
+}
+
+
+:struct_conn_type  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn_type>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_conn>  @:struct_conn  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conn_type.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:pdbx_audit_revision_category  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.category>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.revision_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.data_content_type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_category.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  
+}
+
+
+:pdbx_struct_assembly_genCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_genCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly_gen>  @:pdbx_struct_assembly_gen  +
+}
+
+
+:diffrn_detector  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.type>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.diffrn_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_diffrn>  @:diffrn  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.detector>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.pdbx_collection_date>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detector.details>  xsd:string  ?
+}
+
+
+:citation_authorCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation_author>  @:citation_author  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_authorCategory>]  
+}
+
+
+:atom_sitesCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sites>  @:atom_sites  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sitesCategory>]  
+}
+
+
+:struct_ref  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_ref_seq>  @:struct_ref_seq  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.pdbx_db_accession>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.db_code>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.db_name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.pdbx_seq_one_letter_code>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_uniprot>  IRI  ?;
+    rdfs:seeAlso  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref.pdbx_align_begin>  xsd:string  ?
+}
+
+
+:pdbx_audit_revision_group  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.revision_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.data_content_type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_group.group>  xsd:string  
+}
+
+
+:pdbx_struct_assemblyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly>  @:pdbx_struct_assembly  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assemblyCategory>]  
+}
+
+
+:symmetryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#symmetryCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_symmetry>  @:symmetry  
+}
+
+
+:refine_occupancy  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy.class>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancy.treatment>  xsd:string  ?
+}
+
+
+:pdbx_audit_revision_item  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.item>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.revision_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_item.data_content_type>  xsd:string  
+}
+
+
+:softwareCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#softwareCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_software>  @:software  +
+}
+
+
+:refine_ls_restrCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_restr>  @:refine_ls_restr  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_restrCategory>]  
+}
+
+
+:diffrn_radiation_wavelength  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength.wt>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength.id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelength.wavelength>  xsd:string  ?
+}
+
+
+:exptl_crystal_growCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_growCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_grow>  @:exptl_crystal_grow  
+}
+
+
+:entity  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_number_of_molecules>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_asym>  @:struct_asym  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.src_method>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_description>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.formula_weight>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_entity_nonpoly>  @:pdbx_entity_nonpoly  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_struct_ref>  @:struct_ref  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_poly>  @:entity_poly  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_entity_src_syn>  @:pdbx_entity_src_syn  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_ec>  xsd:string  ?;
+    rdfs:seeAlso  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_src_gen>  @:entity_src_gen  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_mutation>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_enzyme>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_entity_name_sys>  @:entity_name_sys  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity.pdbx_fragment>  xsd:string  ?
+}
+
+
+:database_PDB_matrixCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_PDB_matrixCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_PDB_matrix>  @:database_PDB_matrix  
+}
+
+
+:diffrn_radiation_wavelengthCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiation_wavelengthCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiation_wavelength>  @:diffrn_radiation_wavelength  +
+}
+
+
+:diffrn_detectorCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_detectorCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_detector>  @:diffrn_detector  +
+}
+
+
+:pdbx_xplor_file  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.param_file>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.topol_file>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.pdbx_refine_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_file.serial_no>  xsd:string  
+}
+
+
+:database_2Category  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#database_2Category>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_database_2>  @:database_2  +
+}
+
+
+:pdbx_validate_rmsd_angleCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_angle>  @:pdbx_validate_rmsd_angle  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_angleCategory>]  
+}
+
+
+:struct_keywordsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywordsCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_keywords>  @:struct_keywords  
+}
+
+
+:exptl_crystalCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystalCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal>  @:exptl_crystal  
+}
+
+
+:pdbx_audit_revision_history  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.data_content_type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.minor_revision>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.revision_date>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_history.major_revision>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_group>  @:pdbx_audit_revision_group  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_details>  @:pdbx_audit_revision_details  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_category>  @:pdbx_audit_revision_category  *;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_pdbx_audit_revision_item>  @:pdbx_audit_revision_item  *
+}
+
+
+:atom_sites  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix32>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_vector3>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix31>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix11>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_vector1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix21>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_vector2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix12>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix13>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix33>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix23>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites.fract_transf_matrix22>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  
+}
+
+
+:citationCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citationCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation>  @:citation  +
+}
+
+
+:software  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.classification>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.pdbx_ordinal>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#software>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#software.version>  xsd:string  ?
+}
+
+
+:diffrn  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn_radiation>  @:diffrn_radiation  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn_source>  @:diffrn_source  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.crystal_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.ambient_temp>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_exptl_crystal>  @:exptl_crystal  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#referenced_by_diffrn_detector>  @:diffrn_detector  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn.ambient_temp_details>  xsd:string  ?
+}
+
+
+:ndb_struct_na_base_pairCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_ndb_struct_na_base_pair>  @:ndb_struct_na_base_pair  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#ndb_struct_na_base_pairCategory>]  
+}
+
+
+:struct_keywords  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords.pdbx_keywords>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_keywords.text>  xsd:string  
+}
+
+
+:pdbx_database_statusCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_statusCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_status>  @:pdbx_database_status  
+}
+
+
+:pdbx_validate_symm_contactCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_symm_contact>  @:pdbx_validate_symm_contact  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contactCategory>]  
+}
+
+
+:pdbx_validate_symm_contact  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_comp_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_asym_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.site_symmetry_2>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_comp_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.site_symmetry_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_atom_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_seq_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_atom_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_asym_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.dist>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_symm_contact.auth_seq_id_1>  xsd:string  
+}
+
+
+:diffrnCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn>  @:diffrn  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrnCategory>]  
+}
+
+
+:pdbx_entity_src_synCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_synCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entity_src_syn>  @:pdbx_entity_src_syn  +
+}
+
+
+:pdbx_struct_conn_angleCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angleCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_conn_angle>  @:pdbx_struct_conn_angle  +
+}
+
+
+:pdbx_unobs_or_zero_occ_residues  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.occupancy_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.auth_comp_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.label_seq_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_chem_comp>  @:chem_comp  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.polymer_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residues.label_comp_id>  xsd:string  
+}
+
+
+:struct  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct.pdbx_descriptor>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct.title>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  
+}
+
+
+:diffrn_sourceCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_source>  @:diffrn_source  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_sourceCategory>]  
+}
+
+
+:struct_biolCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_biolCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_biol>  @:struct_biol  +
+}
+
+
+:struct_conf_typeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_conf_typeCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conf_type>  @:struct_conf_type  
+}
+
+
+:struct_connCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conn>  @:struct_conn  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_connCategory>]  
+}
+
+
+:refine_histCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_hist>  @:refine_hist  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_histCategory>]  
+}
+
+
+:pdbx_struct_mod_residueCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_mod_residue>  @:pdbx_struct_mod_residue  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_mod_residueCategory>]  
+}
+
+
+:structCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct>  @:struct  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#structCategory>]  
+}
+
+
+:refine_B_iso  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.pdbx_refine_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.class>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.treatment>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_B_iso.details>  xsd:string  ?
+}
+
+
+:pdbx_audit_revision_historyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_history>  @:pdbx_audit_revision_history  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_historyCategory>]  
+}
+
+
+:struct_sheet_range  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_sheet>  @:struct_sheet  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_label_seq_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.sheet_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.end_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_range.beg_label_comp_id>  xsd:string  
+}
+
+
+:struct_ref_seq_difCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ref_seq_dif>  @:struct_ref_seq_dif  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ref_seq_difCategory>]  
+}
+
+
+:refine_occupancyCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_occupancyCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_occupancy>  @:refine_occupancy  +
+}
+
+
+:pdbx_validate_planesCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_planes>  @:pdbx_validate_planes  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_planesCategory>]  
+}
+
+
+:pdbx_validate_rmsd_bondCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_rmsd_bond>  @:pdbx_validate_rmsd_bond  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_rmsd_bondCategory>]  
+}
+
+
+:entityCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity>  @:entity  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entityCategory>]  
+}
+
+
+:struct_site_genCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_gen>  @:struct_site_gen  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_genCategory>]  
+}
+
+
+:reflns  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_diffrn_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_Rmerge_I_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.number_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_redundancy>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.d_resolution_high>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.observed_criterion_sigma_I>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.number_all>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.d_resolution_low>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.percent_possible_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_netI_over_sigmaI>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.observed_criterion_sigma_F>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.B_iso_Wilson_estimate>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns.pdbx_Rsym_value>  xsd:string  ?
+}
+
+
+:refine_hist  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_number_atoms_nucleic_acid>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_number_atoms_protein>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.pdbx_number_atoms_ligand>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.d_res_high>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.number_atoms_total>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.cycle_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.number_atoms_solvent>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_hist.d_res_low>  xsd:string  ?
+}
+
+
+:pdbx_struct_conn_angle  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_seq_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_label_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_atom_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.value>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_label_seq_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr2_symmetry>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr3_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_conn_angle.ptnr1_label_comp_id>  xsd:string  
+}
+
+
+:pdbx_audit_revision_groupCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_audit_revision_groupCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_audit_revision_group>  @:pdbx_audit_revision_group  +
+}
+
+
+:audit_conform  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform.dict_version>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform.dict_location>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#audit_conform.dict_name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  
+}
+
+
+:refine_ls_shell  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.R_factor_R_work>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.R_factor_R_free>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.number_reflns_R_work>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.d_res_high>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.percent_reflns_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.d_res_low>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.percent_reflns_R_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.pdbx_total_number_of_bins_used>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.number_reflns_R_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shell.R_factor_R_free_error>  xsd:string  ?
+}
+
+
+:exptl_crystal_grow_compCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_exptl_crystal_grow_comp>  @:exptl_crystal_grow_comp  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#exptl_crystal_grow_compCategory>]  
+}
+
+
+:struct_siteCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site>  @:struct_site  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_siteCategory>]  
+}
+
+
+:diffrn_radiationCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_diffrn_radiation>  @:diffrn_radiation  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#diffrn_radiationCategory>]  
+}
+
+
+:entity_src_gen  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdfs:seeAlso  IRI  +;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_variant>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_scientific_name>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_taxonomy_source>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_src_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_alt_source_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.host_org_genus>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_description>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_species>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.plasmid_name>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_scientific_name>  xsd:string  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_genus>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_ncbi_taxonomy_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_ncbi_taxonomy_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_taxonomy_host>  IRI  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_vector_type>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_organ>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_tissue>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_strain>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_cellular_location>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.gene_src_common_name>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_end_seq_num>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_seq_type>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_beg_seq_num>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_gene>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_gene>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_vector>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_gene_src_cell_line>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.pdbx_host_org_cellular_location>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_src_gen.host_org_species>  xsd:string  ?
+}
+
+
+:refine_ls_shellCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_ls_shell>  @:refine_ls_shell  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_ls_shellCategory>]  
+}
+
+
+:pdbx_struct_sheet_hbondCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_sheet_hbond>  @:pdbx_struct_sheet_hbond  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbondCategory>]  
+}
+
+
+:pdbx_validate_close_contactCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_close_contact>  @:pdbx_validate_close_contact  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_close_contactCategory>]  
+}
+
+
+:struct_confCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_conf>  @:struct_conf  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_confCategory>]  
+}
+
+
+:pdbx_validate_torsionCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_torsion>  @:pdbx_validate_torsion  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_torsionCategory>]  
+}
+
+
+:pdbx_sifts_unp_segmentsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_sifts_unp_segments>  @:pdbx_sifts_unp_segments  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segmentsCategory>]  
+}
+
+
+:pdbx_entity_src_syn  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn.pdbx_src_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn.ncbi_taxonomy_id>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn.organism_scientific>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn.pdbx_alt_source_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entity_src_syn.details>  xsd:string  ?
+}
+
+
+:pdbx_xplor_fileCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_xplor_file>  @:pdbx_xplor_file  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_xplor_fileCategory>]  
+}
+
+
+:pdbx_sifts_unp_segments  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdfs:seeAlso  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.unp_end>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.instance_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.identity>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.seq_id_start>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.seq_id_end>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.best_mapping>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_asym>  @:struct_asym  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.unp_start>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.entity_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.segment_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_sifts_unp_segments.unp_acc>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_uniprot>  IRI  
+}
+
+
+:struct_sheet_order  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_sheet>  @:struct_sheet  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.range_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.sense>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.sheet_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_sheet_order.range_id_2>  xsd:string  
+}
+
+
+:pdbx_struct_sheet_hbond  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_label_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.sheet_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_id_2>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_sheet>  @:struct_sheet  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_id_1>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_1_label_atom_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_sheet_hbond.range_2_auth_asym_id>  xsd:string  
+}
+
+
+:pdbx_unobs_or_zero_occ_residuesCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_unobs_or_zero_occ_residues>  @:pdbx_unobs_or_zero_occ_residues  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_residuesCategory>]  
+}
+
+
+:pdbx_database_relatedCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_relatedCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_related>  @:pdbx_database_related  +
+}
+
+
+:pdbx_struct_special_symmetry  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetry.auth_comp_id>  xsd:string  
+}
+
+
+:struct_site_keywordsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_site_keywords>  @:struct_site_keywords  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywordsCategory>]  
+}
+
+
+:pdbx_refine  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.R_factor_obs_no_cutoff>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.R_factor_obs_4sig_cutoff>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.number_reflns_obs_4sig_cutoff>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.free_R_val_test_set_size_perc_4sig_cutoff>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.free_R_val_test_set_ct_4sig_cutoff>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.R_factor_all_4sig_cutoff>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refine.free_R_factor_4sig_cutoff>  xsd:string  ?
+}
+
+
+:reflns_shellCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_reflns_shell>  @:reflns_shell  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shellCategory>]  
+}
+
+
+:pdbx_database_remarkCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remarkCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_database_remark>  @:pdbx_database_remark  
+}
+
+
+:atom_sites_footnote  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnote.text>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnote.id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnote>]  
+}
+
+
+:struct_site_keywords  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywords.site_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywords>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_site_keywords.text>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_struct_site>  @:struct_site  
+}
+
+
+:refine_analyzeCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_refine_analyze>  @:refine_analyze  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyzeCategory>]  
+}
+
+
+:pdbx_database_related  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.db_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#link_to_pdb>  IRI  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.content_type>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_related.db_name>  xsd:string  
+}
+
+
+:refine_analyze  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.pdbx_refine_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_coordinate_error_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_sigma_a_free>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_d_res_low_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_coordinate_error_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.Luzzati_sigma_a_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.number_disordered_residues>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.occupancy_sum_non_hydrogen>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#refine_analyze.occupancy_sum_hydrogen>  xsd:string  ?
+}
+
+
+:reflns_shell  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.pdbx_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.d_res_low>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.Rmerge_I_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.percent_possible_all>  xsd:string  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.d_res_high>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.pdbx_redundancy>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.meanI_over_sigI_obs>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.pdbx_Rsym_value>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reflns_shell.pdbx_diffrn_id>  xsd:string  ?
+}
+
+
+:atom_sites_footnoteCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_atom_sites_footnote>  @:atom_sites_footnote  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#atom_sites_footnoteCategory>]  
+}
+
+
+:pdbx_database_remark  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remark.text>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remark>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_database_remark.id>  xsd:string  
+}
+
+
+:pdbx_refineCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_refineCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_refine>  @:pdbx_refine  
+}
+
+
+:pdbx_struct_special_symmetryCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_special_symmetry>  @:pdbx_struct_special_symmetry  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_special_symmetryCategory>]  
+}
+
+
+:pdbx_entry_details  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entry_details.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entry_details.compound_details>  xsd:string  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entry_details>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entry_details.nonpolymer_details>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entry_details.sequence_details>  xsd:string  ?
+}
+
+
+:pdbx_entry_detailsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_entry_detailsCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_entry_details>  @:pdbx_entry_details  
+}
+
+
+:pdbx_validate_chiralCategory  [<http://rdf.wwpdb.org/pdb/230D/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiralCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_chiral>  @:pdbx_validate_chiral            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_refineCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_refineCategory>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_refine>  @:pdbx_nmr_refine  
+}
+
+
+:entity_keywordsCategory  [<http://rdf.wwpdb.org/pdb/230D/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_keywordsCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_keywords>  @:entity_keywords            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_exptl_sample  [<http://rdf.wwpdb.org/pdb/230D/pdbx_nmr_exptl_sample/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample.component>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample.solution_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample.concentration_units>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample.concentration>  xsd:string            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_exptl_sample_conditionsCategory  [<http://rdf.wwpdb.org/pdb/230D/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample_conditionsCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_exptl_sample_conditions>  @:pdbx_nmr_exptl_sample_conditions            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_exptl_sample_conditions  [<http://rdf.wwpdb.org/pdb/230D/pdbx_nmr_exptl_sample_conditions/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample_conditions.ionic_strength>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample_conditions>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample_conditions.temperature_units>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample_conditions.conditions_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sample_conditions.pH>  xsd:string            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_sample_detailsCategory  [<http://rdf.wwpdb.org/pdb/230D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_sample_details>  @:pdbx_nmr_sample_details  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_sample_detailsCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_unobs_or_zero_occ_atomsCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_unobs_or_zero_occ_atoms>  @:pdbx_unobs_or_zero_occ_atoms  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atomsCategory>]  
+}
+
+
+:entity_keywords  [<http://rdf.wwpdb.org/pdb/230D/entity_keywords/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_keywords.entity_id>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_keywords>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_keywords.text>  xsd:string            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_softwareCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_software>  @:pdbx_nmr_software  +;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_softwareCategory>]  
+}
+
+
+:entity_name_comCategory  [<http://rdf.wwpdb.org/pdb/830C/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_name_com>  @:entity_name_com  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_comCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_sample_details  [<http://rdf.wwpdb.org/pdb/230D/pdbx_nmr_sample_details/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_sample_details.solvent_system>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_sample_details.solution_id>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_sample_details>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_unobs_or_zero_occ_atoms  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.label_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.auth_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.auth_seq_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.PDB_model_num>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.polymer_flag>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.auth_atom_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.label_atom_id>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.auth_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.label_asym_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_chem_comp>  @:chem_comp  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.label_comp_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_unobs_or_zero_occ_atoms.occupancy_flag>  xsd:string  
+}
+
+
+:pdbx_validate_chiral  [<http://rdf.wwpdb.org/pdb/230D/pdbx_validate_chiral/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.auth_atom_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.details>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.auth_seq_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.auth_asym_id>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.PDB_model_num>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_chiral.auth_comp_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_ensemble  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_ensemble.conformer_selection_criteria>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_ensemble.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_ensemble.conformers_calculated_total_number>  xsd:string  ?;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_ensemble>]  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_ensemble.conformers_submitted_total_number>  xsd:string  
+}
+
+
+:pdbx_nmr_refine  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_refine.software_ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_refine.entry_id>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_refine.details>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_refine.method>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_refine>]  
+}
+
+
+:entity_name_com  [<http://rdf.wwpdb.org/pdb/830C/entity_name_com/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_com.entity_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_com.name>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_com>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_ensembleCategory  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_ensemble>  @:pdbx_nmr_ensemble  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_ensembleCategory>]  
+}
+
+
+:pdbx_nmr_exptl_sampleCategory  [<http://rdf.wwpdb.org/pdb/230D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_exptl_sample>  @:pdbx_nmr_exptl_sample  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_exptl_sampleCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_software  [<http://rdf.wwpdb.org/pdb/>~]  AND
+{
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_software.name>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_software.ordinal>  xsd:string  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_software.version>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_software.authors>  xsd:string  ?;
+    <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_software.classification>  xsd:string  ;
+    rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_software>]  
+}
+
+
+:pdbx_nmr_details  [<http://rdf.wwpdb.org/pdb/140D/pdbx_nmr_details/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_details.entry_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entry>  @:entry  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_details>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_details.text>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (1 instance).
+}
+
+
+:citation_editorCategory  [<http://rdf.wwpdb.org/pdb/140L/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_citation_editor>  @:citation_editor  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_editorCategory>]            # 100.0 % (1 instance).
+}
+
+
+:citation_editor  [<http://rdf.wwpdb.org/pdb/140L/citation_editor/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_citation>  @:citation  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_editor.name>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_editor.citation_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_editor.ordinal>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#citation_editor>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_nmr_detailsCategory  [<http://rdf.wwpdb.org/pdb/140D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_nmr_details>  @:pdbx_nmr_details  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_nmr_detailsCategory>]            # 100.0 % (1 instance).
+}
+
+
+:struct_ncs_oper  [<http://rdf.wwpdb.org/pdb/250D/struct_ncs_oper/>~]  AND   # 2 instances
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix12>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.code>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix13>  xsd:string  ;          # 100.0 % (2 instances).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper>]  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix22>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.id>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.vector2>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.vector3>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix33>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix23>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix11>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.vector1>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix32>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix31>  xsd:string  ;          # 100.0 % (2 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_oper.matrix21>  xsd:string            # 100.0 % (2 instances).
+}
+
+
+:struct_ncs_operCategory  [<http://rdf.wwpdb.org/pdb/250D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_struct_ncs_oper>  @:struct_ncs_oper  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#struct_ncs_operCategory>]            # 100.0 % (1 instance).
+}
+
+
+:entity_name_sysCategory  [<http://rdf.wwpdb.org/pdb/260L/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_sysCategory>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_entity_name_sys>  @:entity_name_sys            # 100.0 % (1 instance).
+}
+
+
+:entity_name_sys  [<http://rdf.wwpdb.org/pdb/260L/entity_name_sys/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_sys.entity_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_sys.name>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#entity_name_sys>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#reference_to_entity>  @:entity            # 100.0 % (1 instance).
+}
+
+
+:pdbx_validate_main_chain_plane  [<http://rdf.wwpdb.org/pdb/180L/pdbx_validate_main_chain_plane/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane.auth_seq_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane.auth_asym_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane.PDB_model_num>  xsd:string  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane>]  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane.auth_comp_id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane.improper_torsion_angle>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_plane.id>  xsd:string  ;          # 100.0 % (1 instance).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock            # 100.0 % (1 instance).
+}
+
+
+:pdbx_validate_main_chain_planeCategory  [<http://rdf.wwpdb.org/pdb/180L/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_validate_main_chain_plane>  @:pdbx_validate_main_chain_plane  ;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_validate_main_chain_planeCategory>]            # 100.0 % (1 instance).
+}
+
+
+:pdbx_struct_assembly_prop  [<http://rdf.wwpdb.org/pdb/190D/pdbx_struct_assembly_prop/>~]  AND   # 3 instances
+{
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_prop>]  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#of_datablock>  @:datablock  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_prop.biol_id>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_prop.value>  xsd:string  ;          # 100.0 % (3 instances).
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_prop.type>  xsd:string            # 100.0 % (3 instances).
+}
+
+
+:pdbx_struct_assembly_propCategory  [<http://rdf.wwpdb.org/pdb/190D/>~]  AND   # 1 instance
+{
+   <http://rdf.wwpdb.org/schema/pdbx-v50.owl#has_pdbx_struct_assembly_prop>  @:pdbx_struct_assembly_prop  +;          # 100.0 % (1 instance).
+   rdf:type  [<http://rdf.wwpdb.org/schema/pdbx-v50.owl#pdbx_struct_assembly_propCategory>]            # 100.0 % (1 instance).
+}
+
+
