@@ -11,6 +11,8 @@ class Constraint(object):
         self._predicate, self._node_constraint, self._cardinality = \
             self._parse_predicate_and_node_constraint(constraint_lines[0]) \
                 if constraint_lines is not None else (None, None, None)
+        self._instances = self._parse_instances(constraint_lines) \
+            if constraint_lines is not None else None
 
     @property
     def original_lines(self):
@@ -39,6 +41,29 @@ class Constraint(object):
     @node_constraint.setter
     def node_constraint(self, value):
         self._node_constraint = value
+
+    @property
+    def instances(self):
+        return self._instances
+
+    @instances.setter
+    def instances(self, value):
+        self._instances = value
+
+    def _parse_instances(self, original_lines):
+        pieces = original_lines[0].replace(")", " ").replace("(", " ").split(" ")
+        try:
+            pos_instances = pieces.index("instances")
+        except ValueError:
+            if len(original_lines) == 1:
+                return None
+            pieces = original_lines[1].replace(")", " ").replace("(", " ").split(" ")
+            try:
+                pos_instances = pieces.index("instances")
+            except ValueError:
+                return None
+            return int(pieces[pos_instances - 1])
+        return int(pieces[pos_instances - 1])
 
     def _parse_predicate_and_node_constraint(self, target_line: str):
         target_line = _BLANKS.sub(" ", target_line).strip()
@@ -79,8 +104,9 @@ class Shape(object):
 
         self._original_lines = shape_lines
 
-        self._label, self._template = self._parse_label_and_template(shape_lines[0]) if shape_lines is not None else (
-        shape_label, None)
+        self._label, self._template, self._instances = self._parse_label_and_template(
+            shape_lines[0]) if shape_lines is not None else (
+            shape_label, None, None)
         self._constraints = self._parse_constraints(shape_lines[1:]) if shape_lines is not None else []
 
     @property
@@ -98,6 +124,18 @@ class Shape(object):
     @template.setter
     def template(self, value):
         self._template = value
+
+    @property
+    def instances(self):
+        return self._instances
+
+    @instances.setter
+    def instances(self, value):
+        self._instances = value
+
+    @property
+    def n_constraints(self):
+        return len(self._constraints)
 
     def yield_constraints(self):
         for a_constraint in self._constraints:
@@ -145,8 +183,11 @@ class Shape(object):
 
     def _parse_label_and_template(self, heading_line: str):
         shape_label = heading_line[:heading_line.find(" ") if " " in heading_line else -1].strip()
-        template = None if "[" not in heading_line else heading_line[heading_line.find("[") + 2:heading_line.find("]")-2]
-        return shape_label, template
+        template = None if "[" not in heading_line else heading_line[
+                                                        heading_line.find("[") + 2:heading_line.find("]") - 2]
+        pieces = heading_line.strip().split(" ")
+        instances = None if "instances" not in pieces else int(pieces[pieces.index("instances") - 1])
+        return shape_label, template, instances
 
 
 class Namespace(object):
@@ -233,19 +274,23 @@ def consolidate_prefixes(list_of_prefixes_groups: list):
 def add_zero_case_to_cardinality(target_cardinality):
     if target_cardinality in ["*", "+"]:
         return "*"
-    elif target_cardinality  in ["?", "{1}"]:
+    elif target_cardinality in ["?", "{1}"]:
         return "?"
     elif target_cardinality.startswith("{"):
         return "*"
     else:
         raise ValueError("Trying to add zero case to an unknown cardinality: {}".format(target_cardinality))
 
+
 def constraint_with_zero_case(target_constraint):
     result = Constraint(constraint_lines=None)
     result.predicate = target_constraint.predicate
     result.node_constraint = target_constraint.node_constraint
     result.cardinality = add_zero_case_to_cardinality(target_constraint.cardinality)
+    if target_constraint.instances is not None:
+        result.instances = target_constraint.instances
     return result
+
 
 def most_general_cardinality(card1, card2):
     grouped_cards = [card1, card2]
@@ -259,13 +304,26 @@ def most_general_cardinality(card1, card2):
         return "+"
 
 
+def constraint_exact_match(cons1, cons2):
+    result = Constraint(constraint_lines=None)
+    result.predicate = cons1.predicate
+    result.node_constraint = cons1.node_constraint
+    result.cardinality = cons1.cardinality
+    if cons1.instances is not None and cons2.instances is not None:
+        result.instances = cons1.instances + cons2.instances
+    return result
+
+
 def constraint_with_most_general_cardinality(cons1, cons2):
     # Here I'm assuming that both constraints have the same predicade and node_constraint
     result = Constraint(constraint_lines=None)
     result.predicate = cons1.predicate
     result.node_constraint = cons1.node_constraint
     result.cardinality = most_general_cardinality(cons1.cardinality, cons2.cardinality)
+    if cons1.instances is not None and cons2.instances is not None:
+        result.instances = cons1.instances + cons2.instances
     return result
+
 
 def longest_common_prefix(uri1, uri2):
     """
@@ -284,23 +342,25 @@ def longest_common_prefix(uri1, uri2):
             return uri1[:i]
     return uri1[:shortest]
 
+
 def compute_longest_common_template(template1, template2):
     candidate = longest_common_prefix(template1, template2)
     if candidate == "":
         return None
     further_slash = candidate.rfind("/")
     further_sharp = candidate.rfind("#")
-    candidate = candidate[:(further_slash if further_slash > further_sharp else further_sharp)+1]
+    candidate = candidate[:(further_slash if further_slash > further_sharp else further_sharp) + 1]
     if len(candidate) > 10:
         return candidate
     return None
+
 
 def add_merged_constraints_to_shape(result_shape, shape1, shape2):
     merged_constraints = set()
     for a_constraint in shape1.yield_constraints():
         target = shape2.exact_constraint(a_constraint)
         if target is not None:
-            result_shape.add_constraint(a_constraint)
+            result_shape.add_constraint(constraint_exact_match(a_constraint, target))
             merged_constraints.add(a_constraint)
             merged_constraints.add(target)
         else:
@@ -322,6 +382,7 @@ def add_merged_constraints_to_shape(result_shape, shape1, shape2):
     for a_constraint in [a_c for a_c in shape2.yield_constraints() if a_c not in merged_constraints]:
         result_shape.add_constraint(constraint_with_zero_case(a_constraint))
 
+
 def merge_shapes(shape1, shape2):
     result_shape = Shape(shape_lines=None, shape_label=shape1.label)
     if shape1.template is not None and shape2.template is not None:
@@ -329,6 +390,8 @@ def merge_shapes(shape1, shape2):
             result_shape.template = shape1.template
         else:
             result_shape.template = compute_longest_common_template(shape1.template, shape2.template)
+        if shape1.instances is not None and shape2.instances is not None:
+            result_shape.instances = shape1.instances + shape2.instances
     add_merged_constraints_to_shape(result_shape=result_shape,
                                     shape1=shape1,
                                     shape2=shape2)
@@ -352,30 +415,52 @@ def consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list):
     shapes = consolidate_shapes([a_tuple[1] for a_tuple in prefixes_shapes_tuples])
     return prefixes, shapes
 
+
 _PREFIX_TEMPLATE = "PREFIX {}: <{}>\n"
+
+
 def serialize_prefixes(prefixes, out_stream):
     for a_prefix in prefixes:
         out_stream.write(_PREFIX_TEMPLATE.format(a_prefix.prefix, a_prefix.url))
 
+
 _HEADING_TEMPLATE = "{}  [<{}>~]  AND"
+_SHAPE_INSTANCES_TEMPLATE = "         #  {} instances"
+
+
 def heading_of_a_shape(a_shape):
     if a_shape.template is not None:
-        return _HEADING_TEMPLATE.format(a_shape.label, a_shape.template)
-    return a_shape.label
+        base_result = _HEADING_TEMPLATE.format(a_shape.label, a_shape.template)
+    else:
+        base_result = a_shape.label
+    if a_shape.instances is not None:
+        base_result += _SHAPE_INSTANCES_TEMPLATE.format(a_shape.instances)
+    return base_result
+
 
 _CONSTRAINT_TEMPLATE_CARD_ARB = "    {}  {}  {}"
 _CONSTRAINT_TEMPLATE_CARD_1 = "    {}  {}  "
+
+_CONSTRAINT_TEMPLATE_INSTANCES = "        #   {}  % ({} instances)"
 def str_constraints_of_a_shape(a_shape):
     result_constraints = []
+    counter = 0
     for a_constraint in a_shape.yield_constraints():
+        counter +=1
         if a_constraint.cardinality != "{1}":
-            result_constraints.append(_CONSTRAINT_TEMPLATE_CARD_ARB.format(a_constraint.predicate,
+            base_str = _CONSTRAINT_TEMPLATE_CARD_ARB.format(a_constraint.predicate,
                                                                            a_constraint.node_constraint,
-                                                                           a_constraint.cardinality))
+                                                                           a_constraint.cardinality)
         else:
-            result_constraints.append(_CONSTRAINT_TEMPLATE_CARD_1.format(a_constraint.predicate,
-                                                                         a_constraint.node_constraint))
-    return ";\n".join(result_constraints)
+            base_str = _CONSTRAINT_TEMPLATE_CARD_1.format(a_constraint.predicate,
+                                                                         a_constraint.node_constraint)
+        if counter < a_shape.n_constraints:
+            base_str += ";"
+        if a_constraint.instances is not None:
+            base_str += _CONSTRAINT_TEMPLATE_INSTANCES.format(round(a_constraint.instances/a_shape.instances*100, 3),
+                                                              a_constraint.instances)
+        result_constraints.append(base_str)
+    return "\n".join(result_constraints)
 
 
 def serialization_of_merged_shape(a_shape):
@@ -385,6 +470,7 @@ def serialization_of_merged_shape(a_shape):
     result += "\n}\n"
     return result
 
+
 def serialize_shapes(shapes, out_stream):
     for a_shape in shapes:
         if a_shape.original_lines is not None:
@@ -393,12 +479,14 @@ def serialize_shapes(shapes, out_stream):
             out_stream.write(serialization_of_merged_shape(a_shape))
         out_stream.write("\n\n")
 
+
 def serialize(prefixes, shapes, out_file):
     with open(out_file, "w") as out_stream:
         serialize_prefixes(prefixes, out_stream)
         serialize_shapes(shapes, out_stream)
 
-def consolidate_files(list_of_shex_files: list, output_file):
+
+def consolidate_files(list_of_shex_files: list, output_file: str):
     targets = []
     for a_file in list_of_shex_files:
         targets.append(parse_file(a_file))
