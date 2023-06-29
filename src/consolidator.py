@@ -51,15 +51,15 @@ class Constraint(object):
         self._instances = value
 
     def _parse_instances(self, original_lines):
-        pieces = original_lines[0].replace(")", " ").replace("(", " ").split(" ")
+        pieces = original_lines[0].replace(")", " ").replace("(", " ").replace("instances", "instance").split(" ")
         try:
-            pos_instances = pieces.index("instances")
+            pos_instances = pieces.index("instance")
         except ValueError:
             if len(original_lines) == 1:
                 return None
-            pieces = original_lines[1].replace(")", " ").replace("(", " ").split(" ")
+            pieces = original_lines[1].replace(")", " ").replace("(", " ").replace("instances", "instance").split(" ")
             try:
-                pos_instances = pieces.index("instances")
+                pos_instances = pieces.index("instance")
             except ValueError:
                 return None
             return int(pieces[pos_instances - 1])
@@ -185,8 +185,8 @@ class Shape(object):
         shape_label = heading_line[:heading_line.find(" ") if " " in heading_line else -1].strip()
         template = None if "[" not in heading_line else heading_line[
                                                         heading_line.find("[") + 2:heading_line.find("]") - 2]
-        pieces = heading_line.strip().split(" ")
-        instances = None if "instances" not in pieces else int(pieces[pieces.index("instances") - 1])
+        pieces = heading_line.replace("instances","instance").strip().split(" ")
+        instances = None if "instance" not in pieces else int(pieces[pieces.index("instance") - 1])
         return shape_label, template, instances
 
 
@@ -289,6 +289,8 @@ def constraint_with_zero_case(target_constraint):
     result.cardinality = add_zero_case_to_cardinality(target_constraint.cardinality)
     if target_constraint.instances is not None:
         result.instances = target_constraint.instances
+    else:
+        a=2
     return result
 
 
@@ -311,6 +313,8 @@ def constraint_exact_match(cons1, cons2):
     result.cardinality = cons1.cardinality
     if cons1.instances is not None and cons2.instances is not None:
         result.instances = cons1.instances + cons2.instances
+    else:
+        a=2
     return result
 
 
@@ -322,6 +326,8 @@ def constraint_with_most_general_cardinality(cons1, cons2):
     result.cardinality = most_general_cardinality(cons1.cardinality, cons2.cardinality)
     if cons1.instances is not None and cons2.instances is not None:
         result.instances = cons1.instances + cons2.instances
+    else:
+        a=2
     return result
 
 
@@ -392,6 +398,7 @@ def merge_shapes(shape1, shape2):
             result_shape.template = compute_longest_common_template(shape1.template, shape2.template)
         if shape1.instances is not None and shape2.instances is not None:
             result_shape.instances = shape1.instances + shape2.instances
+
     add_merged_constraints_to_shape(result_shape=result_shape,
                                     shape1=shape1,
                                     shape2=shape2)
