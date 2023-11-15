@@ -88,6 +88,21 @@ class Shape(object):
         shape_label = heading_line[:heading_line.find(" ") if " " in heading_line else -1].strip()
         template = None if "[" not in heading_line else heading_line[
                                                         heading_line.find("[") + 2:heading_line.find("]") - 2]
-        pieces = heading_line.replace("instances","instance").strip().split(" ")
+        pieces = heading_line.replace("instances", "instance").strip().split(" ")
         instances = None if "instance" not in pieces else int(pieces[pieces.index("instance") - 1])
         return shape_label, template, instances
+
+    def has_completely_equal_constraint(self, a_constraint: Constraint):
+        candidate_constraint = self.exact_constraint(a_constraint)
+        if candidate_constraint is None:
+            return False
+        return candidate_constraint.instances == self._instances
+
+    def has_constraint_equal_no_stats(self, a_constraint: Constraint):
+        return self.exact_constraint(a_constraint) is not None
+
+    def has_p_o_equal_constraint(self, a_constraint: Constraint):
+        return self.constraint_only_different_cardinality(a_constraint) is not None
+
+    def has_roperty_equal_constraint(self, a_constraint: Constraint):
+        return self.constraint_only_common_predicate(a_constraint) is not None
