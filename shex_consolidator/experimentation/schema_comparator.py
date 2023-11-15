@@ -121,6 +121,15 @@ def _run_shape_likeliness_comparison(schema1: Schema, schema2: Schema, stats_dic
     _run_ratio_shape_likeliness(stats_dict)
 
 
+def _init_constraint_likeliness_entries(stats_dict):
+    pass  # todo
+
+
+def _run_constraint_likeliness_comparison(schema1: Schema, schema2: Schema, stats_dict: dict):
+    _init_constraint_likeliness_entries(stats_dict)
+    pass  # TODO; continue
+
+
 def comparison_stats_report(schema1: Schema, schema2: Schema):
     """
     1º - Shapes shared
@@ -146,7 +155,7 @@ def comparison_stats_report(schema1: Schema, schema2: Schema):
     result = {}
     _run_shared_shapes_comparison(schema1, schema2, result)
     _run_shape_likeliness_comparison(schema1, schema2, result)
-    # TODO: STEP 3
+    _run_constraint_likeliness_comparison(schema1, schema2, result)
     return result
 
 
