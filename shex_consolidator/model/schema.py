@@ -15,6 +15,10 @@ class Schema(object):
     def shapes(self):
         return self._shapes
 
+    @property
+    def n_shapes(self):
+        return len(self._shapes)
+
     def yield_shapes(self):
         for a_shape in self._shapes:
             yield a_shape
