@@ -1,0 +1,1 @@
+from shex_consolidator.consolidator import consolidate_files
