@@ -104,5 +104,5 @@ class Shape(object):
     def has_p_o_equal_constraint(self, a_constraint: Constraint):
         return self.constraint_only_different_cardinality(a_constraint) is not None
 
-    def has_roperty_equal_constraint(self, a_constraint: Constraint):
+    def has_property_equal_constraint(self, a_constraint: Constraint):
         return self.constraint_only_common_predicate(a_constraint) is not None

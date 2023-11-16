@@ -2,7 +2,7 @@ from model import Constraint, Shape, Namespace
 from utils.shape_parser import parse_file
 from utils.shape_serializer import serialize
 
-def _consolidate_prefixes(list_of_prefixes_groups: list):
+def _consolidate_prefixes(list_of_prefixes_groups: list) -> list:
     if len(list_of_prefixes_groups) == 0:
         return []
     dict_result = {}
@@ -25,7 +25,7 @@ def _consolidate_prefixes(list_of_prefixes_groups: list):
         return [Namespace("PREFIX {}: <{}>".format(a_prefix, an_url))]
 
 
-def _add_zero_case_to_cardinality(target_cardinality):
+def _add_zero_case_to_cardinality(target_cardinality) -> str:
     if target_cardinality in ["*", "+"]:
         return "*"
     elif target_cardinality in ["?", "{1}"]:
@@ -36,19 +36,17 @@ def _add_zero_case_to_cardinality(target_cardinality):
         raise ValueError("Trying to add zero case to an unknown cardinality: {}".format(target_cardinality))
 
 
-def _constraint_with_zero_case(target_constraint):
+def _constraint_with_zero_case(target_constraint) -> Constraint:
     result = Constraint(constraint_lines=None)
     result.predicate = target_constraint.predicate
     result.node_constraint = target_constraint.node_constraint
     result.cardinality = _add_zero_case_to_cardinality(target_constraint.cardinality)
     if target_constraint.instances is not None:
         result.instances = target_constraint.instances
-    else:
-        a=2
     return result
 
 
-def _most_general_cardinality(card1, card2):
+def _most_general_cardinality(card1, card2) -> str:
     grouped_cards = [card1, card2]
     if card1 == card2:
         return card1
@@ -60,19 +58,17 @@ def _most_general_cardinality(card1, card2):
         return "+"
 
 
-def _constraint_exact_match(cons1, cons2):
+def _constraint_exact_match(cons1, cons2) -> Constraint:
     result = Constraint(constraint_lines=None)
     result.predicate = cons1.predicate
     result.node_constraint = cons1.node_constraint
     result.cardinality = cons1.cardinality
     if cons1.instances is not None and cons2.instances is not None:
         result.instances = cons1.instances + cons2.instances
-    else:
-        a=2
     return result
 
 
-def _constraint_with_most_general_cardinality(cons1, cons2):
+def _constraint_with_most_general_cardinality(cons1, cons2) -> Constraint:
     # Here I'm assuming that both constraints have the same predicade and node_constraint
     result = Constraint(constraint_lines=None)
     result.predicate = cons1.predicate
@@ -80,12 +76,10 @@ def _constraint_with_most_general_cardinality(cons1, cons2):
     result.cardinality = _most_general_cardinality(cons1.cardinality, cons2.cardinality)
     if cons1.instances is not None and cons2.instances is not None:
         result.instances = cons1.instances + cons2.instances
-    else:
-        a=2
     return result
 
 
-def _longest_common_prefix(uri1, uri2):
+def _longest_common_prefix(uri1, uri2) -> str:
     """
     It returns a str containing the longest possible common initial part of uri1 and uri2
 
@@ -103,7 +97,7 @@ def _longest_common_prefix(uri1, uri2):
     return uri1[:shortest]
 
 
-def _compute_longest_common_template(template1, template2):
+def _compute_longest_common_template(template1, template2) -> [None, str]:
     candidate = _longest_common_prefix(template1, template2)
     if candidate == "":
         return None
@@ -115,7 +109,7 @@ def _compute_longest_common_template(template1, template2):
     return None
 
 
-def _add_merged_constraints_to_shape(result_shape, shape1, shape2):
+def _add_merged_constraints_to_shape(result_shape, shape1, shape2) -> None:
     merged_constraints = set()
     for a_constraint in shape1.yield_constraints():
         target = shape2.exact_constraint(a_constraint)
@@ -143,7 +137,7 @@ def _add_merged_constraints_to_shape(result_shape, shape1, shape2):
         result_shape.add_constraint(_constraint_with_zero_case(a_constraint))
 
 
-def _merge_shapes(shape1, shape2):
+def _merge_shapes(shape1, shape2) -> Shape:
     result_shape = Shape(shape_lines=None, shape_label=shape1.label)
     if shape1.template is not None and shape2.template is not None:
         if shape1.template == shape2.template:
@@ -160,7 +154,7 @@ def _merge_shapes(shape1, shape2):
     return result_shape
 
 
-def _consolidate_shapes(list_of_shapes_groups: list):
+def _consolidate_shapes(list_of_shapes_groups: list) -> list:
     result_dict = {}
     for a_gropup in list_of_shapes_groups:
         for a_shape in a_gropup:
@@ -171,19 +165,18 @@ def _consolidate_shapes(list_of_shapes_groups: list):
     return list(result_dict.values())
 
 
-def _consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list):
+def _consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list) -> (list, list):
     prefixes = _consolidate_prefixes([a_tuple[0] for a_tuple in prefixes_shapes_tuples])
     shapes = _consolidate_shapes([a_tuple[1] for a_tuple in prefixes_shapes_tuples])
     return prefixes, shapes
 
 
-def consolidate_files(list_of_shex_files: list, output_file: str):
+def consolidate_files(list_of_shex_files: list, output_file: str) -> None:
     targets = []
     for a_file in list_of_shex_files:
         targets.append(parse_file(a_file))
     prefixes, shapes = _consolidate_prefix_shape_tuples(targets)
     serialize(prefixes, shapes, output_file)
-    # return prefixes, shapes
 
 
 
