@@ -25,7 +25,7 @@ def _str_constraints_of_a_shape(a_shape):
                                                                          a_constraint.node_constraint)
         if counter < a_shape.n_constraints:
             base_str += ";"
-        if a_constraint.instances is not None:
+        if a_constraint.instances is not None and a_shape.instances is not None:
             base_str += _CONSTRAINT_TEMPLATE_INSTANCES.format(round(a_constraint.instances/a_shape.instances*100, 3),
                                                               a_constraint.instances)
         result_constraints.append(base_str)

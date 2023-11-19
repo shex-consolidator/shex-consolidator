@@ -76,6 +76,8 @@ def _count_shared_shapes(schema1: Schema, schema2: Schema) -> int:
     for a_shape in schema1.yield_shapes():
         if schema2.contains_shape(a_shape):
             shared += 1
+        else:
+            a=2
     return shared
 
 
@@ -158,7 +160,7 @@ def _run_shape_likeliness_comparison(schema1: Schema, schema2: Schema, stats_dic
 
 
 def _init_constraint_likeliness_entries(stats_dict: dict) -> None:
-    for a_key in _CONSTRAINT_LIKELINESS_KEYS:
+    for a_key in _CONSTRAINT_LIKELINESS_KEYS + _CONSTRAINT_PER_SHAPE_LIKELINESS_KEYS:
         stats_dict[a_key] = {_ABS: 0, _RATIO: 0}
     stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] = 0
 
