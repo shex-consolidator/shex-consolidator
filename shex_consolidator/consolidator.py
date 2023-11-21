@@ -153,21 +153,54 @@ def _merge_shapes(shape1, shape2) -> Shape:
 
     return result_shape
 
+def _can_a_constraint_promote(a_constraint: Constraint, shape_instances: int, number_of_files: int, minimum_ratio_to_promote: float):
+    if a_constraint.instances in [None, 0] or shape_instances in [None, 0]:
+        return False
+    return a_constraint.incluides_zero_case() and \
+           a_constraint.instances >= shape_instances - number_of_files and \
+           a_constraint.instances / shape_instances > minimum_ratio_to_promote
 
-def _consolidate_shapes(list_of_shapes_groups: list) -> list:
-    result_dict = {}
+def _promote_constraint(a_constraint: Constraint, shape_instances: int):
+    a_constraint.instances = shape_instances
+    a_constraint.cardinality = "+" if a_constraint.cardinality == "*" else ""  # from opt (?) to exactly one ( )
+
+def _handle_noisy_cardinalities(list_of_shapes: list,
+                                number_of_files: int,
+                                minimum_ratio_to_promote: float) -> None:
+    for a_shape in list_of_shapes:
+        for a_constraint in a_shape.yield_constraints():
+            if _can_a_constraint_promote(a_constraint=a_constraint,
+                                         number_of_files=number_of_files,
+                                         minimum_ratio_to_promote=minimum_ratio_to_promote,
+                                         shape_instances=a_shape.instances):
+                _promote_constraint(a_constraint=a_constraint,
+                                    shape_instances=a_shape.instances)
+
+def _consolidate_shapes(list_of_shapes_groups: list,
+                        number_of_files: int,
+                        minimum_ratio_to_promote: float) -> list:
+    result = {}
     for a_gropup in list_of_shapes_groups:
         for a_shape in a_gropup:
-            if a_shape.label not in result_dict:
-                result_dict[a_shape.label] = a_shape
+            if a_shape.label not in result:
+                result[a_shape.label] = a_shape
             else:
-                result_dict[a_shape.label] = _merge_shapes(result_dict[a_shape.label], a_shape)
-    return list(result_dict.values())
+                result[a_shape.label] = _merge_shapes(result[a_shape.label], a_shape)
+
+    result = list(result.values())
+    _handle_noisy_cardinalities(result,
+                                number_of_files,
+                                minimum_ratio_to_promote)
+    return result
 
 
-def _consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list) -> (list, list):
+def _consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list,
+                                     number_of_files: int,
+                                     minimun_ratio_to_promote: float) -> (list, list):
     prefixes = _consolidate_prefixes([a_tuple[0] for a_tuple in prefixes_shapes_tuples])
-    shapes = _consolidate_shapes([a_tuple[1] for a_tuple in prefixes_shapes_tuples])
+    shapes = _consolidate_shapes([a_tuple[1] for a_tuple in prefixes_shapes_tuples],
+                                 number_of_files,
+                                 minimun_ratio_to_promote)
     return prefixes, shapes
 
 
@@ -175,7 +208,7 @@ def consolidate_files(list_of_shex_files: list, output_file: str) -> None:
     targets = []
     for a_file in list_of_shex_files:
         targets.append(parse_file(a_file))
-    prefixes, shapes = _consolidate_prefix_shape_tuples(targets)
+    prefixes, shapes = _consolidate_prefix_shape_tuples(targets, len(targets), 0.97)
     serialize(prefixes, shapes, output_file)
 
 

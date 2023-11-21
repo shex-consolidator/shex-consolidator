@@ -49,6 +49,9 @@ class Constraint(object):
     def instances(self, value):
         self._instances = value
 
+    def incluides_zero_case(self):
+        return self.cardinality in ["?", "*"]
+
     def _parse_instances(self, original_lines):
         pieces = original_lines[0].replace(")", " ").replace("(", " ").replace("instances", "instance").split(" ")
         try:
