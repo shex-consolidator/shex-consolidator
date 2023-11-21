@@ -163,6 +163,7 @@ def _can_a_constraint_promote(a_constraint: Constraint, shape_instances: int, nu
 def _promote_constraint(a_constraint: Constraint, shape_instances: int):
     a_constraint.instances = shape_instances
     a_constraint.cardinality = "+" if a_constraint.cardinality == "*" else ""  # from opt (?) to exactly one ( )
+    print("promoted to ", a_constraint.cardinality, "!!")
 
 def _handle_noisy_cardinalities(list_of_shapes: list,
                                 number_of_files: int,
