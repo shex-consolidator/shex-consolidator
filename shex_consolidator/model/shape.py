@@ -58,19 +58,26 @@ class Shape(object):
                 return a_c
         return None
 
-    def constraint_only_different_cardinality(self, target_constraint):
+    def constraint_only_different_cardinality(self, target_constraint, strict_mode=True):
         for a_c in self._constraints:
             if target_constraint.predicate == a_c.predicate and \
-                    target_constraint.node_constraint == a_c.node_constraint and \
-                    target_constraint.cardinality != a_c.cardinality:
-                return a_c
+                    target_constraint.node_constraint == a_c.node_constraint:
+                if strict_mode:
+                    if target_constraint.cardinality != a_c.cardinality:
+                        return a_c
+                else:
+                    return a_c
         return None
 
-    def constraint_only_common_predicate(self, target_constraint):
+    def constraint_only_common_predicate(self, target_constraint, strict_mode=True):
         for a_c in self._constraints:
-            if target_constraint.predicate == a_c.predicate and \
-                    target_constraint.node_constraint != a_c.node_constraint:
-                return a_c
+            if target_constraint.predicate == a_c.predicate:
+                if strict_mode:
+                    if target_constraint.node_constraint != a_c.node_constraint and \
+                       target_constraint.cardinality != a_c.cardinality:
+                        return a_c
+                else:
+                    return a_c
         return None
 
     def _parse_constraints(self, shape_lines: list):
@@ -105,7 +112,7 @@ class Shape(object):
         return self.exact_constraint(a_constraint) is not None
 
     def has_p_o_equal_constraint(self, a_constraint: Constraint):
-        return self.constraint_only_different_cardinality(a_constraint) is not None
+        return self.constraint_only_different_cardinality(a_constraint, strict_mode=False) is not None
 
     def has_property_equal_constraint(self, a_constraint: Constraint):
-        return self.constraint_only_common_predicate(a_constraint) is not None
+        return self.constraint_only_common_predicate(a_constraint, strict_mode=False) is not None
