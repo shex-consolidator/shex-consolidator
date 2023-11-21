@@ -9,9 +9,9 @@ SHAPES_ONLY_IN_2;0
 Concept;Absolute value;Ratio;Concept explanation
 SHAPES_COMPLETELY_EQUAL;34;0.29310344827586204;Number of shapes completely equal in both files
 SHAPES_EQUAL_CONSTRAINT;19;0.16379310344827586;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
-SHAPES_EQUAL_P_O_PAIRS;0;0.0;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
-SHAPES_EQUAL_PROPERTY;0;0.0;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
-SHAPES_DIFFERENT_CONSTRAINTS;63;0.5431034482758621;Number of shapes including constraints that are not in both versions of the shape
+SHAPES_EQUAL_P_O_PAIRS;43;0.3706896551724138;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
+SHAPES_EQUAL_PROPERTY;14;0.1206896551724138;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
+SHAPES_DIFFERENT_CONSTRAINTS;6;0.05172413793103448;Number of shapes including constraints that are not in both versions of the shape
 CONSTRAINTS_COMPLETELY_EQUAL;230;0.575;Number of constraints completely equal in both files
 CONSTRAINTS_VALIDATION_EQUAL;86;0.215;Number of equal constraints but with a different number of annotated instances
 CONSTRAINTS_P_O_EQUAL;59;0.1475;Number of constraints that have the same predicate and node constraint, but different cardinality
