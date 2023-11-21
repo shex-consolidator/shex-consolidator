@@ -14,5 +14,5 @@ if __name__ == "__main__":
         files.append(template + "9" + complete_with_zeros(str(i), 3))
     # for path in files:
     #     print(path)
-    consolidate_files(files, "result_pdb_100000_v2.shex")
+    consolidate_files(files, "result_pdb_100000_v3.shex", 0.05)
     print("Done!")

@@ -1,4 +1,4 @@
-Comparison between classic and consolidation approahces for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 100000 line split
+Comparison between classic and consolidation approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 100000 line split
 
 
 SHARED_SHAPES;116
@@ -7,99 +7,24 @@ SHAPES_ONLY_IN_2;0
 
 
 Concept;Absolute value;Ratio;Concept explanation
-SHAPES_COMPLETELY_EQUAL;14;0.1206896551724138;Number of shapes completely equal in both files
-SHAPES_EQUAL_CONSTRAINT;10;0.08620689655172414;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
+SHAPES_COMPLETELY_EQUAL;34;0.29310344827586204;Number of shapes completely equal in both files
+SHAPES_EQUAL_CONSTRAINT;19;0.16379310344827586;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
 SHAPES_EQUAL_P_O_PAIRS;0;0.0;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
 SHAPES_EQUAL_PROPERTY;0;0.0;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
-SHAPES_DIFFERENT_CONSTRAINTS;92;0.7931034482758621;Number of shapes including constraints that are not in both versions of the shape
-CONSTRAINTS_COMPLETELY_EQUAL;230;0.4713114754098361;Number of constraints completely equal in both files
-CONSTRAINTS_VALIDATION_EQUAL;89;0.18237704918032788;Number of equal constraints but with a different number of annotated instances
-CONSTRAINTS_P_O_EQUAL;59;0.12090163934426229;Number of constraints that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PROPERTY_EQUAL;32;0.06557377049180328;Number of constraints that have the same predicate, but different node constraint
-CONSTRAINTS_DIFFERENT;77;0.15778688524590165;Number of constraints that are not in both versions of the shape
-CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;1.9827586206896552;0.4722792607802874;Average constraints in a shape that are completely equal in both files
-CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;0.7672413793103449;0.18275154004106775;Average constraints in a shape that are equal constraints but with a different number of annotated instances
-CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.5086206896551724;0.12114989733059546;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.27586206896551724;0.06570841889117042;Average constraints in a shape that have the same predicate, but different node constraint
-CONSTRAINTS_PER_SHAPE_DIFFERENT;0.6637931034482759;0.15811088295687883;Average constraints in a shape that are not in both versions of the shape
+SHAPES_DIFFERENT_CONSTRAINTS;63;0.5431034482758621;Number of shapes including constraints that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;230;0.575;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;86;0.215;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;59;0.1475;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;19;0.0475;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;2;0.005;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;1.9827586206896552;0.5808080808080808;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;0.7413793103448276;0.21717171717171715;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.5086206896551724;0.14898989898989895;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.16379310344827586;0.04797979797979797;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.017241379310344827;0.00505050505050505;Average constraints in a shape that are not in both versions of the shape
 
 
 CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
 Shape;predicate;node constraint
-:Statement;<http://purl.uniprot.org/core/citation>;IRI
-:Statement;<http://purl.uniprot.org/core/context>;IRI
-:Protein;<http://purl.uniprot.org/core/component>;@:Part
-:Protein;<http://purl.uniprot.org/core/domain>;@:Part
-:Protein;<http://purl.uniprot.org/core/encodedIn>;IRI
-:Subunit_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
 :Resource;rdfs:seeAlso;IRI
-:Structured_Name;<http://purl.uniprot.org/core/allergenName>;xsd:string
-:Structured_Name;<http://purl.uniprot.org/core/cdAntigenName>;xsd:string
-:Simple_Sequence;<http://purl.uniprot.org/core/fragment>;xsd:string
-:Subcellular_Location_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Modified_Residue_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
 :Transcript_Resource;rdfs:comment;xsd:string
-:Topological_Domain_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Mutagenesis_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Site_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Sequence_Conflict_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:PTM_Annotation;<http://purl.uniprot.org/core/sequence>;@:Chain_Annotation
-:Function_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Transmembrane_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Disulfide_Bond_Annotation;rdfs:comment;xsd:string
-:Disulfide_Bond_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Initiator_Methionine_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Natural_Variant_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:External_Sequence;rdfs:comment;xsd:string
-:External_Sequence;rdf:value;xsd:string
-:External_Sequence;<http://purl.uniprot.org/core/name>;xsd:string
-:External_Sequence;<http://purl.uniprot.org/core/md5Checksum>;xsd:string
-:External_Sequence;<http://purl.uniprot.org/core/mass>;xsd:int
-:External_Sequence;<http://purl.uniprot.org/core/version>;xsd:int
-:External_Sequence;<http://purl.uniprot.org/core/modified>;xsd:date
-:External_Sequence;<http://purl.uniprot.org/core/modification>;@:Alternative_Sequence_Annotation
-:External_Sequence;<http://purl.uniprot.org/core/basedOn>;IRI
-:External_Sequence;<http://purl.uniprot.org/core/precursor>;xsd:boolean
-:External_Sequence;<http://purl.uniprot.org/core/replaces>;IRI
-:Tissue_Specificity_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Modified_Sequence;<http://purl.uniprot.org/core/replaces>;IRI
-:Binding_Site_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Cross-link_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Glycosylation_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Developmental_Stage_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Region_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Disruption_Phenotype_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Disease_Annotation;<http://purl.uniprot.org/core/sequence>;@:Chain_Annotation
-:Erroneous_Initiation_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Induction_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Caution_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Signal_Peptide_Annotation;rdfs:comment;xsd:string
-:Motif_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Active_Site_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Domain_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Catalytic_Activity_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Kinetics_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Toxic_Dose_Annotation;<http://purl.uniprot.org/core/sequence>;@:Peptide_Annotation
-:Book_Citation;dc:identifier;xsd:string
-:Frameshift_Annotation;rdfs:comment;xsd:string
-:Frameshift_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Sequence_Caution_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Erroneous_Termination_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Erroneous_Gene_Model_Prediction_Annotation;rdfs:comment;xsd:string
-:Erroneous_Gene_Model_Prediction_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Pathway_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Coiled_Coil_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Cofactor_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Temperature_Dependence_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Transit_Peptide_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Observation_Citation;<http://purl.uniprot.org/core/title>;xsd:string
-:Activity_Regulation_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Pharmaceutical_Annotation;<http://purl.uniprot.org/core/sequence>;IRI
-:Biotechnology_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Lipidation_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Polymorphism_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:RNA_Editing_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:RNA_Editing_Annotation;<http://purl.uniprot.org/core/frameshift>;xsd:boolean
-:PH_Dependence_Annotation;<http://purl.uniprot.org/core/sequence>;@:Simple_Sequence
-:Intramembrane_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
-:Allergen_Annotation;<http://purl.uniprot.org/core/sequence>;@:Chain_Annotation

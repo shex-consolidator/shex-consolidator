@@ -177,9 +177,20 @@ def _handle_noisy_cardinalities(list_of_shapes: list,
                 _promote_constraint(a_constraint=a_constraint,
                                     shape_instances=a_shape.instances)
 
+def _clean_low_ratio_constraints(list_of_shapes: list, acceptance_threshold: float) -> None:
+    for a_shape in list_of_shapes:
+        cs_to_remove = []
+        for a_constraint in a_shape.yield_constraints():
+            if a_constraint.instances is not None and a_shape.instances is not None:
+                if a_constraint.instances / a_shape.instances < acceptance_threshold:
+                    cs_to_remove.append(a_constraint)
+        for a_constraint in cs_to_remove:
+            a_shape.remove_constraint(a_constraint)
+
 def _consolidate_shapes(list_of_shapes_groups: list,
                         number_of_files: int,
-                        minimum_ratio_to_promote: float) -> list:
+                        minimum_ratio_to_promote: float,
+                        acceptance_threshold: float) -> list:
     result = {}
     for a_gropup in list_of_shapes_groups:
         for a_shape in a_gropup:
@@ -189,6 +200,7 @@ def _consolidate_shapes(list_of_shapes_groups: list,
                 result[a_shape.label] = _merge_shapes(result[a_shape.label], a_shape)
 
     result = list(result.values())
+    _clean_low_ratio_constraints(result, acceptance_threshold)
     _handle_noisy_cardinalities(result,
                                 number_of_files,
                                 minimum_ratio_to_promote)
@@ -197,19 +209,24 @@ def _consolidate_shapes(list_of_shapes_groups: list,
 
 def _consolidate_prefix_shape_tuples(prefixes_shapes_tuples: list,
                                      number_of_files: int,
-                                     minimun_ratio_to_promote: float) -> (list, list):
+                                     minimun_ratio_to_promote: float,
+                                     acceptance_threshold: float) -> (list, list):
     prefixes = _consolidate_prefixes([a_tuple[0] for a_tuple in prefixes_shapes_tuples])
     shapes = _consolidate_shapes([a_tuple[1] for a_tuple in prefixes_shapes_tuples],
                                  number_of_files,
-                                 minimun_ratio_to_promote)
+                                 minimun_ratio_to_promote,
+                                 acceptance_threshold)
     return prefixes, shapes
 
 
-def consolidate_files(list_of_shex_files: list, output_file: str) -> None:
+def consolidate_files(list_of_shex_files: list, output_file: str, acceptance_threshold: float) -> None:
     targets = []
     for a_file in list_of_shex_files:
         targets.append(parse_file(a_file))
-    prefixes, shapes = _consolidate_prefix_shape_tuples(targets, len(targets), 0.97)
+    prefixes, shapes = _consolidate_prefix_shape_tuples(prefixes_shapes_tuples=targets,
+                                                        number_of_files=len(targets),
+                                                        minimun_ratio_to_promote=0.97,
+                                                        acceptance_threshold=acceptance_threshold)
     serialize(prefixes, shapes, output_file)
 
 

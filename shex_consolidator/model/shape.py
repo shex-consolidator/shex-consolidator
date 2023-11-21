@@ -47,6 +47,9 @@ class Shape(object):
     def add_constraint(self, constraint: Constraint):
         self._constraints.append(constraint)
 
+    def remove_constraint(self, constraint: Constraint):
+        self._constraints.remove(constraint)
+
     def exact_constraint(self, target_constraint):
         for a_c in self._constraints:
             if target_constraint.predicate == a_c.predicate and \
