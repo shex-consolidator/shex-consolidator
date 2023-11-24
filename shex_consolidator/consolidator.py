@@ -1,6 +1,6 @@
-from model import Constraint, Shape, Namespace
-from utils.shape_parser import parse_file
-from utils.shape_serializer import serialize
+from shex_consolidator.model import Constraint, Shape, Namespace
+from shex_consolidator.utils.shape_parser import parse_file
+from shex_consolidator.utils.shape_serializer import serialize
 
 def _consolidate_prefixes(list_of_prefixes_groups: list) -> list:
     if len(list_of_prefixes_groups) == 0:

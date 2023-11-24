@@ -1,0 +1,30 @@
+Comparison between classic and consolidation approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 1100000 line split
+
+
+SHARED_SHAPES;116
+SHAPES_ONLY_IN_1;0
+SHAPES_ONLY_IN_2;0
+
+
+Concept;Absolute value;Ratio;Concept explanation
+SHAPES_COMPLETELY_EQUAL;37;0.31896551724137934;Number of shapes completely equal in both files
+SHAPES_EQUAL_CONSTRAINT;21;0.1810344827586207;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
+SHAPES_EQUAL_P_O_PAIRS;9;0.07758620689655173;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
+SHAPES_EQUAL_PROPERTY;2;0.017241379310344827;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
+SHAPES_DIFFERENT_CONSTRAINTS;47;0.4051724137931034;Number of shapes including constraints that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;237;0.5325842696629214;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;92;0.20674157303370785;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;60;0.1348314606741573;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;51;0.1146067415730337;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;2;0.0044943820224719105;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.043103448275862;0.5361990950226244;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;0.7931034482758621;0.2081447963800905;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.5172413793103449;0.13574660633484165;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.4396551724137931;0.11538461538461538;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.017241379310344827;0.004524886877828055;Average constraints in a shape that are not in both versions of the shape
+
+
+CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
+Shape;predicate;node constraint
+:Resource;rdfs:seeAlso;IRI
+:Transcript_Resource;rdfs:comment;xsd:string
