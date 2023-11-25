@@ -14,17 +14,18 @@ PREFIX : <http://weso.es/shapes/>
     rdf:subject  IRI  +;        #   100.0  % (4483339 instances)
     rdf:predicate  IRI  +;        #   100.0  % (4483339 instances)
     rdf:type  [rdf:Statement]  ;        #   100.0  % (4483339 instances)
-    rdf:object  IRI  ?;        #   88.158  % (3952422 instances)
-    <http://purl.uniprot.org/core/attribution>  IRI  *;        #   85.029  % (3812126 instances)
-    rdf:object  xsd:string  *;        #   11.841  % (530888 instances)
-    rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ?;        #   11.062  % (495943 instances)
-    <http://purl.uniprot.org/core/scope>  xsd:string  *        #   11.062  % (495942 instances)
+    rdf:object  IRI  ?;        #   88.156  % (3952351 instances)
+    <http://purl.uniprot.org/core/attribution>  IRI  *;        #   84.453  % (3786329 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ?;        #   10.941  % (490541 instances)
+    <http://purl.uniprot.org/core/scope>  xsd:string  *;        #   10.941  % (490536 instances)
+    rdf:object  xsd:string  *        #   11.83  % (530369 instances)
 }
 
 
 :Protein  [<http://purl.uniprot.org/uniprot/>~]  AND         #  109488 instances
 {
     <http://purl.uniprot.org/core/annotation>  IRI  +;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/attribution>  IRI  +;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/sequence>  IRI  +;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/created>  xsd:date  ;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/organism>  IRI  ;        #   100.0  % (109488 instances)
@@ -33,22 +34,21 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/existence>  IRI  ;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/modified>  xsd:date  ;        #   100.0  % (109488 instances)
     rdf:type  [<http://purl.uniprot.org/core/Protein>]  ;        #   100.0  % (109488 instances)
-    <http://purl.uniprot.org/core/recommendedName>  IRI  ?;        #   96.499  % (105655 instances)
+    <http://purl.uniprot.org/core/recommendedName>  IRI  ;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/reviewed>  xsd:boolean  ;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/citation>  IRI  +;        #   100.0  % (109488 instances)
-    <http://purl.uniprot.org/core/attribution>  IRI  +;        #   100.0  % (109488 instances)
+    rdfs:seeAlso  IRI  +;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/classifiedWith>  IRI  +;        #   100.0  % (109488 instances)
-    rdfs:seeAlso  IRI  *;        #   98.872  % (108253 instances)
-    <http://purl.uniprot.org/core/isolatedFrom>  IRI  *;        #   70.706  % (77415 instances)
-    <http://purl.uniprot.org/core/alternativeName>  IRI  *;        #   53.13  % (58171 instances)
-    <http://purl.uniprot.org/core/oldMnemonic>  xsd:string  *;        #   42.157  % (46157 instances)
-    <http://purl.uniprot.org/core/proteome>  IRI  *;        #   80.071  % (87668 instances)
-    <http://purl.uniprot.org/core/encodedBy>  IRI  *;        #   83.315  % (91220 instances)
-    <http://purl.uniprot.org/core/replaces>  IRI  *;        #   43.636  % (47776 instances)
-    <http://purl.uniprot.org/core/enzyme>  IRI  *;        #   23.853  % (26116 instances)
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  *;        #   12.384  % (13559 instances)
-    <http://purl.uniprot.org/core/potentialSequence>  IRI  *;        #   36.187  % (39620 instances)
-    <http://purl.uniprot.org/core/interaction>  IRI  *        #   15.123  % (16558 instances)
+    <http://purl.uniprot.org/core/proteome>  IRI  *;        #   79.789  % (87359 instances)
+    <http://purl.uniprot.org/core/encodedBy>  IRI  *;        #   83.575  % (91505 instances)
+    <http://purl.uniprot.org/core/isolatedFrom>  IRI  *;        #   70.625  % (77326 instances)
+    <http://purl.uniprot.org/core/alternativeName>  @:Structured_Name  *;        #   9.154  % (10022 instances)
+    <http://purl.uniprot.org/core/oldMnemonic>  xsd:string  *;        #   42.142  % (46140 instances)
+    <http://purl.uniprot.org/core/replaces>  IRI  *;        #   43.622  % (47761 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  *;        #   11.122  % (12177 instances)
+    <http://purl.uniprot.org/core/potentialSequence>  IRI  *;        #   36.055  % (39476 instances)
+    <http://purl.uniprot.org/core/interaction>  IRI  *;        #   14.897  % (16310 instances)
+    <http://purl.uniprot.org/core/enzyme>  IRI  *        #   23.554  % (25789 instances)
 }
 
 
@@ -65,8 +65,8 @@ PREFIX : <http://weso.es/shapes/>
 {
     <http://biohackathon.org/resource/faldo#reference>  IRI  ;        #   100.0  % (2936962 instances)
     rdf:type  [<http://biohackathon.org/resource/faldo#Position>]  ;        #   100.0  % (2936962 instances)
-    <http://biohackathon.org/resource/faldo#position>  xsd:int  ?;        #   99.773  % (2930291 instances)
-    rdf:type  [<http://biohackathon.org/resource/faldo#ExactPosition>]  ?        #   99.773  % (2930300 instances)
+    <http://biohackathon.org/resource/faldo#position>  xsd:int  ?;        #   99.77  % (2930198 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#ExactPosition>]  ?        #   99.772  % (2930259 instances)
 }
 
 
@@ -79,20 +79,20 @@ PREFIX : <http://weso.es/shapes/>
 
 :Region  [<http://purl.uniprot.org/>~]  AND         #  2040536 instances
 {
-    rdf:type  [<http://biohackathon.org/resource/faldo#Region>]  ;        #   100.0  % (2040536 instances)
-    <http://biohackathon.org/resource/faldo#end>  IRI  ?;        #   99.935  % (2039208 instances)
-    <http://biohackathon.org/resource/faldo#begin>  IRI  ?        #   99.944  % (2039403 instances)
+    <http://biohackathon.org/resource/faldo#end>  IRI  ;        #   100.0  % (2040536 instances)
+    <http://biohackathon.org/resource/faldo#begin>  IRI  ;        #   100.0  % (2040536 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#Region>]          #   100.0  % (2040536 instances)
 }
 
 
 :Resource
 {
-    rdf:type  [<http://purl.uniprot.org/core/Resource>]  ;
     <http://purl.uniprot.org/core/database>  IRI  *;
+    rdf:type  [<http://purl.uniprot.org/core/Resource>]  ;
     rdfs:comment  xsd:string  *;
     <http://purl.uniprot.org/core/signatureSequenceMatch>  IRI  *;
-    rdfs:seeAlso  IRI  *;
-    <http://purl.uniprot.org/core/translatedFrom>  IRI  *
+    <http://purl.uniprot.org/core/translatedFrom>  IRI  *;
+    rdfs:seeAlso  IRI  *
 }
 
 
@@ -105,9 +105,9 @@ PREFIX : <http://weso.es/shapes/>
 :Structured_Name  [<http://purl.uniprot.org/uniprot/>~]  AND         #  255861 instances
 {
     rdf:type  [<http://purl.uniprot.org/core/Structured_Name>]  ;        #   100.0  % (255861 instances)
-    <http://purl.uniprot.org/core/fullName>  xsd:string  ?;        #   99.281  % (254022 instances)
-    <http://purl.uniprot.org/core/shortName>  xsd:string  *;        #   23.023  % (58906 instances)
-    <http://purl.uniprot.org/core/ecName>  xsd:string  *        #   11.297  % (28905 instances)
+    <http://purl.uniprot.org/core/fullName>  xsd:string  ;        #   100.0  % (255861 instances)
+    <http://purl.uniprot.org/core/shortName>  xsd:string  *;        #   23.022  % (58904 instances)
+    <http://purl.uniprot.org/core/ecName>  xsd:string  *        #   10.997  % (28138 instances)
 }
 
 
@@ -116,9 +116,10 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/scope>  xsd:string  +;        #   100.0  % (496122 instances)
     rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ;        #   100.0  % (496122 instances)
     rdf:type  [rdf:Statement]  ;        #   100.0  % (496122 instances)
+    rdf:subject  IRI  ?;        #   98.844  % (490388 instances)
     rdf:predicate  IRI  ;        #   100.0  % (496122 instances)
     rdf:object  IRI  ;        #   100.0  % (496122 instances)
-    <http://purl.uniprot.org/core/context>  IRI  *        #   41.811  % (207433 instances)
+    <http://purl.uniprot.org/core/context>  IRI  *        #   41.809  % (207426 instances)
 }
 
 
@@ -130,14 +131,14 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/version>  xsd:int  ;        #   100.0  % (109488 instances)
     <http://purl.uniprot.org/core/modified>  xsd:date  ;        #   100.0  % (109488 instances)
     rdf:type  [<http://purl.uniprot.org/core/Simple_Sequence>]  ;        #   100.0  % (109488 instances)
-    <http://purl.uniprot.org/core/precursor>  xsd:boolean  ?;        #   25.058  % (27436 instances)
-    <http://purl.uniprot.org/core/name>  xsd:string  *        #   18.144  % (19865 instances)
+    <http://purl.uniprot.org/core/precursor>  xsd:boolean  ?;        #   24.843  % (27200 instances)
+    <http://purl.uniprot.org/core/name>  xsd:string  *        #   18.054  % (19767 instances)
 }
 
 
 :Chain_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  107128 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   96.437  % (103311 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ;        #   100.0  % (107128 instances)
     <http://purl.uniprot.org/core/mass>  xsd:int  ;        #   100.0  % (107128 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (107128 instances)
     rdf:type  [<http://purl.uniprot.org/core/Chain_Annotation>]          #   100.0  % (107128 instances)
@@ -149,8 +150,8 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/locatedOn>  IRI  +;        #   100.0  % (343921 instances)
     <http://purl.uniprot.org/core/database>  IRI  +;        #   100.0  % (343921 instances)
     rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Resource>]  ;        #   100.0  % (343921 instances)
-    <http://purl.uniprot.org/core/citation>  IRI  *;        #   14.164  % (48712 instances)
-    <http://purl.uniprot.org/core/sequenceDiscrepancy>  IRI  *        #   5.932  % (20403 instances)
+    <http://purl.uniprot.org/core/citation>  IRI  *;        #   14.026  % (48237 instances)
+    <http://purl.uniprot.org/core/sequenceDiscrepancy>  IRI  *        #   5.457  % (18769 instances)
 }
 
 
@@ -158,13 +159,13 @@ PREFIX : <http://weso.es/shapes/>
 {
     <http://purl.uniprot.org/core/locatedIn>  IRI  +;        #   100.0  % (97623 instances)
     rdf:type  [<http://purl.uniprot.org/core/Subcellular_Location_Annotation>]  ;        #   100.0  % (97623 instances)
-    rdfs:comment  xsd:string  ?        #   26.111  % (25490 instances)
+    rdfs:comment  xsd:string  ?        #   26.065  % (25445 instances)
 }
 
 
 :Modified_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  208049 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   10.95  % (22781 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   93.295  % (194100 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (208049 instances)
     rdf:type  [<http://purl.uniprot.org/core/Modified_Residue_Annotation>]          #   100.0  % (208049 instances)
 }
@@ -172,8 +173,8 @@ PREFIX : <http://weso.es/shapes/>
 
 :Transcript_Resource
 {
-    <http://purl.uniprot.org/core/translatedTo>  IRI  +;
-    <http://purl.uniprot.org/core/database>  IRI  +;
+    <http://purl.uniprot.org/core/translatedTo>  IRI  *;
+    <http://purl.uniprot.org/core/database>  IRI  *;
     rdf:type  [<http://purl.uniprot.org/core/Transcript_Resource>]  ;
     <http://purl.uniprot.org/core/transcribedFrom>  IRI  *;
     rdfs:seeAlso  IRI  ?;
@@ -184,7 +185,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Topological_Domain_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  84565 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   60.199  % (50907 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   24.574  % (20781 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (84565 instances)
     rdf:type  [<http://purl.uniprot.org/core/Topological_Domain_Annotation>]          #   100.0  % (84565 instances)
 }
@@ -201,7 +202,7 @@ PREFIX : <http://weso.es/shapes/>
 {
     owl:sameAs  IRI  +;        #   100.0  % (185917 instances)
     rdf:type  [<http://purl.uniprot.org/core/Participant>]  ;        #   100.0  % (185917 instances)
-    rdfs:label  xsd:string  *        #   92.14  % (171303 instances)
+    rdfs:label  xsd:string  *        #   91.235  % (169622 instances)
 }
 
 
@@ -214,7 +215,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Non_Self_Interaction  [<http://purl.uniprot.org/intact/>~]  AND         #  176663 instances
 {
-    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   60.259  % (106455 instances)
+    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   50.534  % (89275 instances)
     <http://purl.uniprot.org/core/experiments>  xsd:int  +;        #   100.0  % (176663 instances)
     <http://purl.uniprot.org/core/xeno>  xsd:boolean  +;        #   100.0  % (176663 instances)
     rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ;        #   100.0  % (176663 instances)
@@ -224,17 +225,17 @@ PREFIX : <http://weso.es/shapes/>
 
 :Interaction  [<http://purl.uniprot.org/intact/>~]  AND         #  178292 instances
 {
-    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   60.247  % (107416 instances)
+    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   49.529  % (88307 instances)
     <http://purl.uniprot.org/core/experiments>  xsd:int  +;        #   100.0  % (178292 instances)
     <http://purl.uniprot.org/core/xeno>  xsd:boolean  +;        #   100.0  % (178292 instances)
     rdf:type  [<http://purl.uniprot.org/core/Interaction>]  ;        #   100.0  % (178292 instances)
-    rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ?        #   99.086  % (176662 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]          #   100.0  % (178292 instances)
 }
 
 
 :Mutagenesis_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  51072 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   39.025  % (19931 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   32.595  % (16647 instances)
     <http://purl.uniprot.org/core/substitution>  xsd:string  +;        #   100.0  % (51072 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (51072 instances)
     rdf:type  [<http://purl.uniprot.org/core/Mutagenesis_Annotation>]          #   100.0  % (51072 instances)
@@ -243,7 +244,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  14283 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   83.106  % (11870 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   64.839  % (9261 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (14283 instances)
     rdf:type  [<http://purl.uniprot.org/core/Site_Annotation>]          #   100.0  % (14283 instances)
 }
@@ -251,25 +252,25 @@ PREFIX : <http://weso.es/shapes/>
 
 :Sequence_Conflict_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  107210 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   84.127  % (90193 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   90.948  % (97505 instances)
     <http://purl.uniprot.org/core/substitution>  xsd:string  ;        #   100.0  % (107210 instances)
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   9.738  % (10440 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  IRI  ?;        #   88.966  % (95380 instances)
     rdf:type  [<http://purl.uniprot.org/core/Sequence_Conflict_Annotation>]          #   100.0  % (107210 instances)
 }
 
 
 :Gene  [<http://purl.uniprot.org/uniprot/>~]  AND         #  94868 instances
 {
+    skos:prefLabel  xsd:string  ;        #   100.0  % (94868 instances)
     rdf:type  [<http://purl.uniprot.org/core/Gene>]  ;        #   100.0  % (94868 instances)
-    skos:prefLabel  xsd:string  ?;        #   97.269  % (92277 instances)
-    skos:altLabel  xsd:string  *;        #   45.126  % (42810 instances)
-    <http://purl.uniprot.org/core/orfName>  xsd:string  *        #   19.847  % (18828 instances)
+    skos:altLabel  xsd:string  *;        #   45.101  % (42786 instances)
+    <http://purl.uniprot.org/core/orfName>  xsd:string  *        #   19.695  % (18684 instances)
 }
 
 
 :Domain_Extent_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  82600 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   82.936  % (68505 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   15.619  % (12901 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (82600 instances)
     rdf:type  [<http://purl.uniprot.org/core/Domain_Extent_Annotation>]          #   100.0  % (82600 instances)
 }
@@ -292,16 +293,16 @@ PREFIX : <http://weso.es/shapes/>
 :Structure_Resource  [<http://rdf.wwpdb.org/pdb/>~]  AND         #  119480 instances
 {
     <http://purl.uniprot.org/core/chainSequenceMapping>  IRI  +;        #   100.0  % (119480 instances)
-    <http://purl.uniprot.org/core/database>  IRI  +;        #   100.0  % (119480 instances)
-    rdf:type  [<http://purl.uniprot.org/core/Structure_Resource>]  ;        #   100.0  % (119480 instances)
+    <http://purl.uniprot.org/core/resolution>  xsd:decimal  *;        #   93.445  % (111648 instances)
     <http://purl.uniprot.org/core/method>  IRI  +;        #   100.0  % (119480 instances)
-    <http://purl.uniprot.org/core/resolution>  xsd:decimal  *        #   93.45  % (111654 instances)
+    <http://purl.uniprot.org/core/database>  IRI  +;        #   100.0  % (119480 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Structure_Resource>]          #   100.0  % (119480 instances)
 }
 
 
 :Alternative_Sequence_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  48438 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   76.628  % (37117 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   21.871  % (10594 instances)
     <http://purl.uniprot.org/core/substitution>  xsd:string  ;        #   100.0  % (48438 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (48438 instances)
     rdf:type  [<http://purl.uniprot.org/core/Alternative_Sequence_Annotation>]          #   100.0  % (48438 instances)
@@ -317,7 +318,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Transmembrane_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  114041 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   69.763  % (79558 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   19.353  % (22070 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (114041 instances)
     rdf:type  [<http://purl.uniprot.org/core/Transmembrane_Annotation>]          #   100.0  % (114041 instances)
 }
@@ -325,7 +326,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Disulfide_Bond_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  105422 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  *;        #   37.486  % (39519 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  *;        #   28.52  % (30066 instances)
     rdf:type  [<http://purl.uniprot.org/core/Disulfide_Bond_Annotation>]          #   100.0  % (105422 instances)
 }
 
@@ -338,17 +339,17 @@ PREFIX : <http://weso.es/shapes/>
 
 :InRangePosition  [<http://purl.uniprot.org/position/>~]  AND         #  6530 instances
 {
-    <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ?;        #   80.919  % (5284 instances)
+    <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ?;        #   67.213  % (4389 instances)
     rdf:type  [<http://biohackathon.org/resource/faldo#InRangePosition>]  ;        #   100.0  % (6530 instances)
     rdf:type  [<http://biohackathon.org/resource/faldo#Position>]  ;        #   100.0  % (6530 instances)
-    <http://biohackathon.org/resource/faldo#end>  IRI  ?;        #   48.438  % (3163 instances)
-    <http://biohackathon.org/resource/faldo#begin>  IRI  ?        #   51.608  % (3370 instances)
+    <http://biohackathon.org/resource/faldo#begin>  IRI  ?;        #   51.547  % (3366 instances)
+    <http://biohackathon.org/resource/faldo#end>  IRI  ?        #   48.315  % (3155 instances)
 }
 
 
 :Initiator_Methionine_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  8564 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   64.012  % (5482 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   56.434  % (4833 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (8564 instances)
     rdf:type  [<http://purl.uniprot.org/core/Initiator_Methionine_Annotation>]          #   100.0  % (8564 instances)
 }
@@ -356,7 +357,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Helix_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  128821 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   77.592  % (99955 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   86.73  % (111726 instances)
     rdf:type  [<http://purl.uniprot.org/core/Helix_Annotation>]          #   100.0  % (128821 instances)
 }
 
@@ -367,35 +368,35 @@ PREFIX : <http://weso.es/shapes/>
     rdf:type  [<http://purl.uniprot.org/core/Submission_Citation>]  ;        #   100.0  % (52774 instances)
     <http://purl.uniprot.org/core/date>  xsd:gYearMonth  +;        #   100.0  % (52774 instances)
     <http://purl.uniprot.org/core/author>  xsd:string  *;        #   68.128  % (35954 instances)
-    <http://purl.uniprot.org/core/title>  xsd:string  *;        #   34.864  % (18399 instances)
-    <http://purl.uniprot.org/core/group>  xsd:string  *        #   32.243  % (17016 instances)
+    <http://purl.uniprot.org/core/group>  xsd:string  *;        #   32.228  % (17008 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  *        #   34.864  % (18399 instances)
 }
 
 
 :Natural_Variant_Annotation  [<http://purl.uniprot.org/>~]  AND         #  92028 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   80.96  % (74506 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   80.962  % (74508 instances)
     <http://purl.uniprot.org/core/substitution>  xsd:string  ;        #   100.0  % (92028 instances)
     rdf:type  [<http://purl.uniprot.org/core/Natural_Variant_Annotation>]  ;        #   100.0  % (92028 instances)
-    rdfs:comment  xsd:string  ?;        #   59.804  % (55036 instances)
-    rdfs:seeAlso  IRI  *;        #   73.01  % (67190 instances)
-    skos:related  IRI  *        #   42.953  % (39529 instances)
+    rdfs:comment  xsd:string  ?;        #   59.793  % (55026 instances)
+    rdfs:seeAlso  IRI  *;        #   73.003  % (67183 instances)
+    skos:related  IRI  *        #   42.848  % (39432 instances)
 }
 
 
 :External_Sequence  [<http://purl.uniprot.org/>~]  AND         #  68973 instances
 {
     rdf:type  [<http://purl.uniprot.org/core/External_Sequence>]  ;        #   100.0  % (68973 instances)
-    <http://purl.uniprot.org/core/translatedFrom>  IRI  ?        #   83.689  % (57723 instances)
+    <http://purl.uniprot.org/core/translatedFrom>  IRI  ?        #   81.667  % (56328 instances)
 }
 
 
 :Part  [<http://purl.uniprot.org/uniprot/>~]  AND         #  10206 instances
 {
-    <http://purl.uniprot.org/core/recommendedName>  @:Structured_Name  ?;        #   67.999  % (6940 instances)
+    <http://purl.uniprot.org/core/recommendedName>  @:Structured_Name  ?;        #   62.865  % (6416 instances)
     rdf:type  [<http://purl.uniprot.org/core/Part>]  ;        #   100.0  % (10206 instances)
-    <http://purl.uniprot.org/core/alternativeName>  @:Structured_Name  *;        #   16.245  % (1658 instances)
-    <http://purl.uniprot.org/core/enzyme>  IRI  *        #   7.368  % (752 instances)
+    <http://purl.uniprot.org/core/enzyme>  IRI  *;        #   7.819  % (798 instances)
+    <http://purl.uniprot.org/core/alternativeName>  @:Structured_Name  *        #   13.629  % (1391 instances)
 }
 
 
@@ -403,7 +404,7 @@ PREFIX : <http://weso.es/shapes/>
 {
     rdfs:comment  xsd:string  ;        #   100.0  % (14125 instances)
     rdf:type  [<http://purl.uniprot.org/core/Annotation>]  ;        #   100.0  % (14125 instances)
-    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   22.131  % (3126 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   7.604  % (1074 instances)
 }
 
 
@@ -416,14 +417,14 @@ PREFIX : <http://weso.es/shapes/>
 
 :Non-terminal_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  6785 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   75.829  % (5145 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   66.691  % (4525 instances)
     rdf:type  [<http://purl.uniprot.org/core/Non-terminal_Residue_Annotation>]          #   100.0  % (6785 instances)
 }
 
 
 :Turn_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  33851 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   46.486  % (15736 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   36.401  % (12322 instances)
     rdf:type  [<http://purl.uniprot.org/core/Turn_Annotation>]          #   100.0  % (33851 instances)
 }
 
@@ -439,9 +440,9 @@ PREFIX : <http://weso.es/shapes/>
 
 :Modified_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND         #  37354 instances
 {
-    <http://purl.uniprot.org/core/modification>  IRI  *;        #   70.424  % (26306 instances)
+    <http://purl.uniprot.org/core/modification>  @:Alternative_Sequence_Annotation  *;        #   34.245  % (12792 instances)
     rdf:value  xsd:string  ;        #   100.0  % (37354 instances)
-    <http://purl.uniprot.org/core/basedOn>  IRI  ?;        #   67.074  % (25055 instances)
+    <http://purl.uniprot.org/core/basedOn>  IRI  ?;        #   68.948  % (25755 instances)
     <http://purl.uniprot.org/core/name>  xsd:string  +;        #   100.0  % (37354 instances)
     rdf:type  [<http://purl.uniprot.org/core/Modified_Sequence>]          #   100.0  % (37354 instances)
 }
@@ -449,17 +450,17 @@ PREFIX : <http://weso.es/shapes/>
 
 :Binding_Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  162893 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   67.358  % (109722 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   17.827  % (29039 instances)
     <http://purl.uniprot.org/core/ligand>  IRI  ;        #   100.0  % (162893 instances)
     rdf:type  [<http://purl.uniprot.org/core/Binding_Site_Annotation>]  ;        #   100.0  % (162893 instances)
-    rdfs:comment  xsd:string  ?;        #   7.526  % (12259 instances)
-    <http://purl.uniprot.org/core/ligandPart>  IRI  ?        #   6.235  % (10156 instances)
+    rdfs:comment  xsd:string  ?;        #   8.161  % (13293 instances)
+    <http://purl.uniprot.org/core/ligandPart>  IRI  ?        #   6.64  % (10816 instances)
 }
 
 
 :Cross-link_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  20886 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  *;        #   73.054  % (15258 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  *;        #   57.292  % (11966 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (20886 instances)
     rdf:type  [<http://purl.uniprot.org/core/Cross-link_Annotation>]          #   100.0  % (20886 instances)
 }
@@ -474,7 +475,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Self_Interaction  [<http://purl.uniprot.org/intact/>~]  AND         #  1629 instances
 {
-    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   95.58  % (1557 instances)
+    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   92.081  % (1500 instances)
     <http://purl.uniprot.org/core/experiments>  xsd:int  ;        #   100.0  % (1629 instances)
     <http://purl.uniprot.org/core/xeno>  xsd:boolean  ;        #   100.0  % (1629 instances)
     rdf:type  [<http://purl.uniprot.org/core/Self_Interaction>]  ;        #   100.0  % (1629 instances)
@@ -484,7 +485,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Glycosylation_Annotation  [<http://purl.uniprot.org/>~]  AND         #  73347 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   64.601  % (47383 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   24.82  % (18205 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (73347 instances)
     rdf:type  [<http://purl.uniprot.org/core/Glycosylation_Annotation>]          #   100.0  % (73347 instances)
 }
@@ -499,7 +500,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Compositional_Bias_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  94110 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   72.59  % (68314 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   16.55  % (15575 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (94110 instances)
     rdf:type  [<http://purl.uniprot.org/core/Compositional_Bias_Annotation>]          #   100.0  % (94110 instances)
 }
@@ -514,18 +515,18 @@ PREFIX : <http://weso.es/shapes/>
 
 :Mass_Spectrometry_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  5632 instances
 {
+    <http://purl.uniprot.org/core/method>  IRI  ;        #   100.0  % (5632 instances)
     <http://purl.uniprot.org/core/measuredValue>  xsd:decimal  ;        #   100.0  % (5632 instances)
     rdf:type  [<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation>]  ;        #   100.0  % (5632 instances)
-    <http://purl.uniprot.org/core/method>  IRI  ;        #   100.0  % (5632 instances)
-    <http://purl.uniprot.org/core/measuredError>  xsd:decimal  ?;        #   14.968  % (843 instances)
-    rdfs:comment  xsd:string  ?;        #   21.822  % (1229 instances)
-    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   13.956  % (786 instances)
+    <http://purl.uniprot.org/core/measuredError>  xsd:decimal  ?;        #   14.933  % (841 instances)
+    rdfs:comment  xsd:string  ?;        #   21.839  % (1230 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Peptide_Annotation  ?        #   12.482  % (703 instances)
 }
 
 
 :Region_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  140500 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   91.914  % (129139 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   93.422  % (131258 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (140500 instances)
     rdf:type  [<http://purl.uniprot.org/core/Region_Annotation>]          #   100.0  % (140500 instances)
 }
@@ -533,7 +534,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Non-adjacent_Residues_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1644 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ;        #   100.0  % (1644 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   64.842  % (1066 instances)
     rdf:type  [<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation>]          #   100.0  % (1644 instances)
 }
 
@@ -547,22 +548,22 @@ PREFIX : <http://weso.es/shapes/>
 
 :Disease_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  8281 instances
 {
+    <http://purl.uniprot.org/core/disease>  IRI  ?;        #   82.949  % (6869 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (8281 instances)
-    rdf:type  [<http://purl.uniprot.org/core/Disease_Annotation>]  ;        #   100.0  % (8281 instances)
-    <http://purl.uniprot.org/core/disease>  IRI  ?        #   82.961  % (6870 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Disease_Annotation>]          #   100.0  % (8281 instances)
 }
 
 
 :Beta_Strand_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  135401 instances
 {
-    <http://purl.uniprot.org/core/range>  IRI  ?;        #   75.576  % (102331 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   86.852  % (117599 instances)
     rdf:type  [<http://purl.uniprot.org/core/Beta_Strand_Annotation>]          #   100.0  % (135401 instances)
 }
 
 
 :Erroneous_Initiation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  13408 instances
 {
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   69.086  % (9263 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   60.098  % (8058 instances)
     rdf:type  [<http://purl.uniprot.org/core/Erroneous_Initiation_Annotation>]  ;        #   100.0  % (13408 instances)
     rdfs:comment  xsd:string  ?        #   55.638  % (7460 instances)
 }
@@ -584,14 +585,14 @@ PREFIX : <http://weso.es/shapes/>
 
 :Signal_Peptide_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  22964 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   57.111  % (13115 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   44.021  % (10109 instances)
     rdf:type  [<http://purl.uniprot.org/core/Signal_Peptide_Annotation>]          #   100.0  % (22964 instances)
 }
 
 
 :Motif_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  15771 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   53.155  % (8383 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   51.404  % (8107 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (15771 instances)
     rdf:type  [<http://purl.uniprot.org/core/Motif_Annotation>]          #   100.0  % (15771 instances)
 }
@@ -599,7 +600,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Peptide_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  10862 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   84.257  % (9152 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   65.43  % (7107 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (10862 instances)
     rdf:type  [<http://purl.uniprot.org/core/Peptide_Annotation>]          #   100.0  % (10862 instances)
 }
@@ -607,17 +608,17 @@ PREFIX : <http://weso.es/shapes/>
 
 :Propeptide_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  9945 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   72.318  % (7192 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   51.131  % (5085 instances)
     rdf:type  [<http://purl.uniprot.org/core/Propeptide_Annotation>]  ;        #   100.0  % (9945 instances)
-    rdfs:comment  xsd:string  ?        #   26.476  % (2633 instances)
+    rdfs:comment  xsd:string  ?        #   26.616  % (2647 instances)
 }
 
 
 :Active_Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  21024 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   65.363  % (13742 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   44.245  % (9302 instances)
     rdf:type  [<http://purl.uniprot.org/core/Active_Site_Annotation>]  ;        #   100.0  % (21024 instances)
-    rdfs:comment  xsd:string  ?        #   71.461  % (15024 instances)
+    rdfs:comment  xsd:string  ?        #   71.399  % (15011 instances)
 }
 
 
@@ -630,27 +631,27 @@ PREFIX : <http://weso.es/shapes/>
 
 :Catalytic_Activity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  56893 instances
 {
-    <http://purl.uniprot.org/core/catalyticActivity>  @:Catalytic_Activity  ?;        #   47.857  % (27227 instances)
+    <http://purl.uniprot.org/core/catalyticActivity>  @:Catalytic_Activity  ?;        #   27.553  % (15676 instances)
     rdf:type  [<http://purl.uniprot.org/core/Catalytic_Activity_Annotation>]  ;        #   100.0  % (56893 instances)
-    <http://purl.uniprot.org/core/catalyzedPhysiologicalReaction>  IRI  *        #   44.858  % (25521 instances)
+    <http://purl.uniprot.org/core/catalyzedPhysiologicalReaction>  IRI  *        #   44.656  % (25406 instances)
 }
 
 
 :Kinetics_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  2422 instances
 {
+    <http://purl.uniprot.org/core/measuredActivity>  xsd:string  *;        #   41.742  % (1011 instances)
     <http://purl.uniprot.org/core/measuredAffinity>  xsd:string  *;        #   95.128  % (2304 instances)
     rdf:type  [<http://purl.uniprot.org/core/Kinetics_Annotation>]  ;        #   100.0  % (2422 instances)
-    <http://purl.uniprot.org/core/measuredActivity>  xsd:string  *;        #   41.784  % (1012 instances)
-    rdfs:comment  xsd:string  ?        #   19.86  % (481 instances)
+    rdfs:comment  xsd:string  ?        #   20.025  % (485 instances)
 }
 
 
 :Catalytic_Activity  [<http://purl.uniprot.org/uniprot/>~]  AND         #  56647 instances
 {
+    <http://purl.uniprot.org/core/catalyzedReaction>  IRI  ?;        #   92.508  % (52403 instances)
     rdf:type  [<http://purl.uniprot.org/core/Catalytic_Activity>]  ;        #   100.0  % (56647 instances)
-    <http://purl.uniprot.org/core/catalyzedReaction>  IRI  ?;        #   92.52  % (52410 instances)
-    <http://purl.uniprot.org/core/enzymeClass>  IRI  ?;        #   51.609  % (29235 instances)
-    skos:closeMatch  IRI  ?        #   6.198  % (3511 instances)
+    <http://purl.uniprot.org/core/enzymeClass>  IRI  ?;        #   51.561  % (29208 instances)
+    skos:closeMatch  IRI  ?        #   7.022  % (3978 instances)
 }
 
 
@@ -670,7 +671,7 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/name>  xsd:string  +;        #   100.0  % (226 instances)
     <http://purl.uniprot.org/core/date>  xsd:gYear  +;        #   100.0  % (226 instances)
     rdf:type  [<http://purl.uniprot.org/core/Book_Citation>]  ;        #   100.0  % (226 instances)
-    <http://purl.uniprot.org/core/volume>  xsd:string  *;        #   8.407  % (19 instances)
+    <http://purl.uniprot.org/core/volume>  xsd:string  ?;        #   8.407  % (19 instances)
     <http://purl.uniprot.org/core/pages>  xsd:string  +;        #   100.0  % (226 instances)
     <http://purl.uniprot.org/core/title>  xsd:string  *        #   80.088  % (181 instances)
 }
@@ -678,7 +679,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Repeat_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  59070 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   53.801  % (31780 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   58.749  % (34703 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (59070 instances)
     rdf:type  [<http://purl.uniprot.org/core/Repeat_Annotation>]          #   100.0  % (59070 instances)
 }
@@ -686,16 +687,16 @@ PREFIX : <http://weso.es/shapes/>
 
 :Frameshift_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  4383 instances
 {
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   78.827  % (3455 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   78.166  % (3426 instances)
     rdf:type  [<http://purl.uniprot.org/core/Frameshift_Annotation>]          #   100.0  % (4383 instances)
 }
 
 
 :Sequence_Caution_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  2404 instances
 {
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   95.3  % (2291 instances)
-    rdf:type  [<http://purl.uniprot.org/core/Sequence_Caution_Annotation>]  ;        #   100.0  % (2404 instances)
-    rdfs:comment  xsd:string          #   100.0  % (2404 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  IRI  ?;        #   13.519  % (325 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (2404 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Sequence_Caution_Annotation>]          #   100.0  % (2404 instances)
 }
 
 
@@ -712,7 +713,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Erroneous_Termination_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  573 instances
 {
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;        #   100.0  % (573 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   94.764  % (543 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (573 instances)
     rdf:type  [<http://purl.uniprot.org/core/Erroneous_Termination_Annotation>]          #   100.0  % (573 instances)
 }
@@ -720,7 +721,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Erroneous_Gene_Model_Prediction_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1772 instances
 {
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   93.849  % (1663 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   91.366  % (1619 instances)
     rdf:type  [<http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation>]          #   100.0  % (1772 instances)
 }
 
@@ -734,7 +735,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Coiled_Coil_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  11698 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   74.654  % (8733 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   59.779  % (6993 instances)
     rdf:type  [<http://purl.uniprot.org/core/Coiled_Coil_Annotation>]          #   100.0  % (11698 instances)
 }
 
@@ -743,7 +744,7 @@ PREFIX : <http://weso.es/shapes/>
 {
     <http://purl.uniprot.org/core/cofactor>  IRI  +;        #   100.0  % (13388 instances)
     rdf:type  [<http://purl.uniprot.org/core/Cofactor_Annotation>]  ;        #   100.0  % (13388 instances)
-    rdfs:comment  xsd:string  ?        #   64.02  % (8571 instances)
+    rdfs:comment  xsd:string  ?        #   63.953  % (8562 instances)
 }
 
 
@@ -756,7 +757,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Transit_Peptide_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  2979 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   95.166  % (2835 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   72.172  % (2150 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (2979 instances)
     rdf:type  [<http://purl.uniprot.org/core/Transit_Peptide_Annotation>]          #   100.0  % (2979 instances)
 }
@@ -779,7 +780,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Sequence_Uncertainty_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  4714 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ;        #   100.0  % (4714 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   49.427  % (2330 instances)
     rdf:type  [<http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation>]  ;        #   100.0  % (4714 instances)
     rdfs:comment  xsd:string  ?        #   96.797  % (4563 instances)
 }
@@ -807,7 +808,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Lipidation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  5793 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   75.177  % (4355 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   62.248  % (3606 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (5793 instances)
     rdf:type  [<http://purl.uniprot.org/core/Lipidation_Annotation>]          #   100.0  % (5793 instances)
 }
@@ -843,7 +844,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Zinc_Finger_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  21852 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   42.435  % (9273 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   23.247  % (5080 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (21852 instances)
     rdf:type  [<http://purl.uniprot.org/core/Zinc_Finger_Annotation>]          #   100.0  % (21852 instances)
 }
@@ -851,15 +852,15 @@ PREFIX : <http://weso.es/shapes/>
 
 :Nucleotide_Binding_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  3815 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   89.41  % (3411 instances)
-    rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Binding_Annotation>]  ;        #   100.0  % (3815 instances)
-    rdfs:comment  xsd:string  ?        #   92.32  % (3522 instances)
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   61.389  % (2342 instances)
+    rdfs:comment  xsd:string  ?;        #   92.32  % (3522 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Binding_Annotation>]          #   100.0  % (3815 instances)
 }
 
 
 :Erroneous_Translation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  375 instances
 {
-    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;        #   100.0  % (375 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   92.533  % (347 instances)
     rdfs:comment  xsd:string  ;        #   100.0  % (375 instances)
     rdf:type  [<http://purl.uniprot.org/core/Erroneous_Translation_Annotation>]          #   100.0  % (375 instances)
 }
@@ -874,7 +875,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Intramembrane_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1822 instances
 {
-    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   89.078  % (1623 instances)
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   51.207  % (933 instances)
     rdfs:comment  xsd:string  ?;        #   82.053  % (1495 instances)
     rdf:type  [<http://purl.uniprot.org/core/Intramembrane_Annotation>]          #   100.0  % (1822 instances)
 }
@@ -915,7 +916,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :OneOfPosition  [<http://purl.uniprot.org/position/>~]  AND         #  128 instances
 {
-    <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ;        #   100.0  % (128 instances)
+    <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ?;        #   74.219  % (95 instances)
     <http://biohackathon.org/resource/faldo#possiblePosition>  IRI  ;        #   100.0  % (128 instances)
     rdf:type  [<http://biohackathon.org/resource/faldo#OneOfPosition>]  ;        #   100.0  % (128 instances)
     rdf:type  [<http://biohackathon.org/resource/faldo#Position>]          #   100.0  % (128 instances)
@@ -936,7 +937,7 @@ PREFIX : <http://weso.es/shapes/>
 
 :Ribosomal_Frameshifting  [<http://purl.uniprot.org/uniprot/>~]  AND         #  48 instances
 {
-    <http://purl.uniprot.org/core/sequence>  IRI  *;        #   72.917  % (35 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  *;        #   70.833  % (34 instances)
     rdf:type  [<http://purl.uniprot.org/core/Ribosomal_Frameshifting>]  ;        #   100.0  % (48 instances)
     rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;        #   6.25  % (3 instances)
     rdfs:comment  xsd:string  ?        #   93.75  % (45 instances)
@@ -968,7 +969,7 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/maximum>  xsd:int  ;        #   100.0  % (68 instances)
     rdf:type  [<http://purl.uniprot.org/core/Absorption_Annotation>]  ;        #   100.0  % (68 instances)
     rdfs:comment  xsd:string  ?;        #   17.647  % (12 instances)
-    <http://purl.uniprot.org/core/certain>  xsd:boolean  ?        #   7.353  % (5 instances)
+    <http://purl.uniprot.org/core/certain>  xsd:boolean  ?        #   5.882  % (4 instances)
 }
 
 

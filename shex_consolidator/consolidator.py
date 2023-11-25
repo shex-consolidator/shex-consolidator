@@ -2,6 +2,7 @@ from shex_consolidator.model import Constraint, Shape, Namespace
 from shex_consolidator.utils.shape_parser import parse_file
 from shex_consolidator.utils.shape_serializer import serialize
 
+_ABS_TOLERANCE_PER_FILE_SPLITS = 5
 def _consolidate_prefixes(list_of_prefixes_groups: list) -> list:
     if len(list_of_prefixes_groups) == 0:
         return []
@@ -135,6 +136,7 @@ def _add_merged_constraints_to_shape(result_shape, shape1, shape2) -> None:
 
     for a_constraint in [a_c for a_c in shape2.yield_constraints() if a_c not in merged_constraints]:
         result_shape.add_constraint(_constraint_with_zero_case(a_constraint))
+    a = 2
 
 
 def _merge_shapes(shape1, shape2) -> Shape:
@@ -153,11 +155,11 @@ def _merge_shapes(shape1, shape2) -> Shape:
 
     return result_shape
 
-def _can_a_constraint_promote(a_constraint: Constraint, shape_instances: int, number_of_files: int, minimum_ratio_to_promote: float):
+def _can_a_constraint_promote(a_constraint: Constraint, shape_instances: int, instances_tolerance: int, minimum_ratio_to_promote: float):
     if a_constraint.instances in [None, 0] or shape_instances in [None, 0]:
         return False
     return a_constraint.incluides_zero_case() and \
-           a_constraint.instances >= shape_instances - number_of_files and \
+           a_constraint.instances >= shape_instances - instances_tolerance and \
            a_constraint.instances / shape_instances > minimum_ratio_to_promote
 
 def _promote_constraint(a_constraint: Constraint, shape_instances: int):
@@ -171,7 +173,7 @@ def _handle_noisy_cardinalities(list_of_shapes: list,
     for a_shape in list_of_shapes:
         for a_constraint in a_shape.yield_constraints():
             if _can_a_constraint_promote(a_constraint=a_constraint,
-                                         number_of_files=number_of_files,
+                                         instances_tolerance=number_of_files*_ABS_TOLERANCE_PER_FILE_SPLITS,
                                          minimum_ratio_to_promote=minimum_ratio_to_promote,
                                          shape_instances=a_shape.instances):
                 _promote_constraint(a_constraint=a_constraint,

@@ -14,8 +14,8 @@ if __name__ == "__main__":
     #     files.append(template + "9" + complete_with_zeros(str(i), 3))
 
     files = []
-    template = r"C:\Users\Dani\datasets\shex-consolidator\pdb_11_split\11_split\result_{}"
+    template = r"C:\Users\Dani\datasets\shex-consolidator\pdb_11_split_t0\result_{}"
     for i in range(1,78):
         files.append(template.format(i))
-    consolidate_files(files, "result_pdb_11_files_half_gb.shex", 0.05)
+    consolidate_files(files, "result_pdb_11_files_t0.shex", 0)
     print("Done!")

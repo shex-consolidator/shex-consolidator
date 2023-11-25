@@ -216,27 +216,33 @@ def _run_ratio_constraint_likeliness(n_constraints: int, stats_dict:dict, n_shap
             stats_dict[a_key][ABS] / accumulated_absolute_avgs_per_shape
 
 def _classify_constraint_likeliness(shape1: Shape, shape2: Shape, stats_dict: dict) -> int:
-    n_constraints = shape1.n_constraints
+
     c_equal = 0
     c_validation = 0
     c_p_o = 0
     c_property = 0
     c_diff = 0
+
+    s2_used = set()
     for a_constraint in shape1.yield_constraints():
-        stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += 1
+        # stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += 1
         if shape2.has_completely_equal_constraint(a_constraint):
+            s2_used.add(shape2.exact_constraint(a_constraint))
             stats_dict[CONSTRAINTS_COMPLETELY_EQUAL][ABS] += 1
             stats_dict[CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL][ABS] += 1
             c_equal += 1
-        elif shape2.has_constraint_equal_no_stats(a_constraint):
+        elif shape2.has_constraint_equal_no_stats(a_constraint, exclude=s2_used):
+            s2_used.add(shape2.exact_constraint(a_constraint,  exclude=s2_used))
             stats_dict[CONSTRAINTS_VALIDATION_EQUAL][ABS] += 1
             stats_dict[CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL][ABS] += 1
             c_validation += 1
-        elif shape2.has_p_o_equal_constraint(a_constraint):
+        elif shape2.has_p_o_equal_constraint(a_constraint, exclude=s2_used):
+            s2_used.add(shape2.exact_constraint(a_constraint, exclude=s2_used))
             stats_dict[CONSTRAINTS_P_O_EQUAL][ABS] += 1
             stats_dict[CONSTRAINTS_PER_SHAPE_P_O_EQUAL][ABS] += 1
             c_p_o += 1
-        elif shape2.has_property_equal_constraint(a_constraint):
+        elif shape2.has_property_equal_constraint(a_constraint, exclude=s2_used):
+            s2_used.add(shape2.exact_constraint(a_constraint, exclude=s2_used))
             stats_dict[CONSTRAINTS_PROPERTY_EQUAL][ABS] += 1
             stats_dict[CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL][ABS] += 1
             c_property += 1
@@ -245,10 +251,13 @@ def _classify_constraint_likeliness(shape1: Shape, shape2: Shape, stats_dict: di
             stats_dict[CONSTRAINTS_PER_SHAPE_DIFFERENT][ABS] += 1
             c_diff += 1
             stats_dict[DIFF_CONST_IN_SCHEMA_1].append( (shape1.label, a_constraint.predicate, a_constraint.node_constraint) )
-    constraints_in_shape2_not_in_shape1 = shape2.n_constraints - (shape1.n_constraints - c_diff)
+    constraints_in_shape2_not_in_shape1 = len([a_c for a_c in shape2.yield_constraints() if a_c not in s2_used])
+    n_constraints = shape1.n_constraints
     if constraints_in_shape2_not_in_shape1 > 0:
-        stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += constraints_in_shape2_not_in_shape1
+        # stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += constraints_in_shape2_not_in_shape1
         c_diff += constraints_in_shape2_not_in_shape1
+        stats_dict[CONSTRAINTS_DIFFERENT][ABS] += constraints_in_shape2_not_in_shape1
+        stats_dict[CONSTRAINTS_PER_SHAPE_DIFFERENT][ABS] += constraints_in_shape2_not_in_shape1
         n_constraints += constraints_in_shape2_not_in_shape1
     _compute_constraints_per_shape_case(n_constraints=n_constraints,
                                         n_equal=c_equal,
@@ -257,6 +266,9 @@ def _classify_constraint_likeliness(shape1: Shape, shape2: Shape, stats_dict: di
                                         n_property=c_property,
                                         n_diff=c_diff,
                                         stats_dict=stats_dict)
+    if n_constraints != c_equal + c_validation + c_p_o + c_property + c_diff:
+        a = 2
+    stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += n_constraints
     return n_constraints
 
 
