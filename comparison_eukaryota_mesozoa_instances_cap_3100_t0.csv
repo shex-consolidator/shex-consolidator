@@ -1,0 +1,46 @@
+Comparison between classic and sampling approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 3100 instances per shape sample and 0 threshold
+
+
+SHARED_SHAPES;116
+SHAPES_ONLY_IN_1;0
+SHAPES_ONLY_IN_2;0
+
+
+Concept;Absolute value;Ratio;Concept explanation
+SHAPES_COMPLETELY_EQUAL;11;0.09482758620689655;Number of shapes completely equal in both files
+SHAPES_EQUAL_CONSTRAINT;36;0.3103448275862069;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
+SHAPES_EQUAL_P_O_PAIRS;5;0.04310344827586207;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
+SHAPES_EQUAL_PROPERTY;47;0.4051724137931034;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
+SHAPES_DIFFERENT_CONSTRAINTS;17;0.14655172413793102;Number of shapes including constraints that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;234;0.39661016949152544;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;157;0.26610169491525426;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;20;0.03389830508474576;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;73;0.12372881355932204;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;106;0.17966101694915254;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.0172413793103448;0.3966101694915254;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.353448275862069;0.2661016949152542;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.1724137931034483;0.03389830508474576;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.6293103448275862;0.12372881355932203;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.9137931034482759;0.17966101694915254;Average constraints in a shape that are not in both versions of the shape
+
+
+CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
+Shape;predicate;node constraint
+:Protein;<http://purl.uniprot.org/core/encodedIn>;IRI
+:Position;<http://biohackathon.org/resource/faldo#possiblePosition>;IRI
+:Structured_Name;<http://purl.uniprot.org/core/allergenName>;xsd:string
+:Structured_Name;<http://purl.uniprot.org/core/internationalNonproprietaryName>;xsd:string
+:Simple_Sequence;<http://purl.uniprot.org/core/replaces>;IRI
+:Topological_Domain_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:Site_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:Gene;<http://purl.uniprot.org/core/locusName>;xsd:string
+:Transmembrane_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:Disulfide_Bond_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:External_Sequence;<http://purl.uniprot.org/core/precursor>;xsd:boolean
+:External_Sequence;<http://purl.uniprot.org/core/replaces>;IRI
+:External_Sequence;<http://purl.uniprot.org/core/fragment>;xsd:string
+:Binding_Site_Annotation;<http://purl.uniprot.org/core/ligandPart>;IRI
+:Binding_Site_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:Region_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:Active_Site_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence
+:Coiled_Coil_Annotation;<http://purl.uniprot.org/core/sequence>;@:Modified_Sequence

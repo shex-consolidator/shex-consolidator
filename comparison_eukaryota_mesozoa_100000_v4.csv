@@ -1,0 +1,31 @@
+Comparison between classic and consolidation approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 100000 line split
+
+
+SHARED_SHAPES;116
+SHAPES_ONLY_IN_1;0
+SHAPES_ONLY_IN_2;0
+
+
+Concept;Absolute value;Ratio;Concept explanation
+SHAPES_COMPLETELY_EQUAL;34;0.29310344827586204;Number of shapes completely equal in both files
+SHAPES_EQUAL_CONSTRAINT;16;0.13793103448275862;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
+SHAPES_EQUAL_P_O_PAIRS;46;0.39655172413793105;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
+SHAPES_EQUAL_PROPERTY;14;0.1206896551724138;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
+SHAPES_DIFFERENT_CONSTRAINTS;6;0.05172413793103448;Number of shapes including constraints that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;239;0.5975;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;74;0.185;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;62;0.155;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;20;0.05;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;3;0.0075;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.060344827586207;0.6005025125628141;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;0.6379310344827587;0.18592964824120606;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.5344827586206896;0.1557788944723618;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.1724137931034483;0.05025125628140704;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.02586206896551724;0.007537688442211056;Average constraints in a shape that are not in both versions of the shape
+
+
+CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
+Shape;predicate;node constraint
+:Citation_Statement;<http://purl.uniprot.org/core/attribution>;IRI
+:External_Sequence;<http://purl.uniprot.org/core/citation>;IRI
+:Alternative_Splicing_Annotation;rdfs:comment;xsd:string

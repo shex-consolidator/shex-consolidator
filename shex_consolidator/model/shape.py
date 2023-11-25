@@ -50,33 +50,35 @@ class Shape(object):
     def remove_constraint(self, constraint: Constraint):
         self._constraints.remove(constraint)
 
-    def exact_constraint(self, target_constraint):
+    def exact_constraint(self, target_constraint, exclude: [None, list] = None):
         for a_c in self._constraints:
             if target_constraint.predicate == a_c.predicate and \
                     target_constraint.node_constraint == a_c.node_constraint and \
                     target_constraint.cardinality == a_c.cardinality:
-                return a_c
+                if exclude is None or target_constraint not in exclude:
+                    return a_c
         return None
 
-    def constraint_only_different_cardinality(self, target_constraint, strict_mode=True):
+    def constraint_only_different_cardinality(self, target_constraint, strict_mode=True, exclude: [None, list] = None):
         for a_c in self._constraints:
             if target_constraint.predicate == a_c.predicate and \
                     target_constraint.node_constraint == a_c.node_constraint:
                 if strict_mode:
-                    if target_constraint.cardinality != a_c.cardinality:
+                    if target_constraint.cardinality != a_c.cardinality and \
+                            (exclude is None or target_constraint not in exclude):
                         return a_c
-                else:
+                elif exclude is None or target_constraint not in exclude:
                     return a_c
         return None
 
-    def constraint_only_common_predicate(self, target_constraint, strict_mode=True):
+    def constraint_only_common_predicate(self, target_constraint, strict_mode=True, exclude: [None, list] = None):
         for a_c in self._constraints:
             if target_constraint.predicate == a_c.predicate:
                 if strict_mode:
                     if target_constraint.node_constraint != a_c.node_constraint and \
-                       target_constraint.cardinality != a_c.cardinality:
+                            (exclude is None or target_constraint not in exclude):
                         return a_c
-                else:
+                elif exclude is None or target_constraint not in exclude:
                     return a_c
         return None
 
@@ -108,11 +110,11 @@ class Shape(object):
             return False
         return candidate_constraint.instances == self._instances
 
-    def has_constraint_equal_no_stats(self, a_constraint: Constraint):
-        return self.exact_constraint(a_constraint) is not None
+    def has_constraint_equal_no_stats(self, a_constraint: Constraint, exclude: [None, list] = None):
+        return self.exact_constraint(a_constraint, exclude=exclude) is not None
 
-    def has_p_o_equal_constraint(self, a_constraint: Constraint):
-        return self.constraint_only_different_cardinality(a_constraint, strict_mode=False) is not None
+    def has_p_o_equal_constraint(self, a_constraint: Constraint, exclude: [None, list] = None):
+        return self.constraint_only_different_cardinality(a_constraint, strict_mode=False, exclude=exclude) is not None
 
-    def has_property_equal_constraint(self, a_constraint: Constraint):
-        return self.constraint_only_common_predicate(a_constraint, strict_mode=False) is not None
+    def has_property_equal_constraint(self, a_constraint: Constraint, exclude: [None, list] = None):
+        return self.constraint_only_common_predicate(a_constraint, strict_mode=False, exclude=exclude) is not None

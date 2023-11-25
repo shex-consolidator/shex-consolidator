@@ -1,0 +1,1091 @@
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://weso.es/shapes/>
+:Statement  [<http://purl.uniprot.org/uniprot/#>~]  AND         #  4483339 instances
+{
+    rdf:subject  IRI  +;        #   100.0  % (4483339 instances)
+    rdf:predicate  IRI  +;        #   100.0  % (4483339 instances)
+    rdf:type  [rdf:Statement]  ;        #   100.0  % (4483339 instances)
+    rdf:object  IRI  ?;        #   88.158  % (3952422 instances)
+    <http://purl.uniprot.org/core/attribution>  IRI  *;        #   85.029  % (3812126 instances)
+    rdf:object  xsd:string  *;        #   11.841  % (530888 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ?;        #   11.062  % (495943 instances)
+    <http://purl.uniprot.org/core/scope>  xsd:string  *;        #   11.062  % (495942 instances)
+    <http://purl.uniprot.org/core/context>  IRI  *;        #   4.626  % (207388 instances)
+    <http://purl.uniprot.org/core/citation>  IRI  *;        #   4.466  % (200209 instances)
+    rdf:object  xsd:int  ?        #   0.0  % (22 instances)
+}
+
+
+:Protein  [<http://purl.uniprot.org/uniprot/>~]  AND         #  109488 instances
+{
+    <http://purl.uniprot.org/core/annotation>  IRI  +;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  +;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/created>  xsd:date  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/organism>  IRI  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/version>  xsd:int  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/mnemonic>  xsd:string  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/existence>  IRI  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/modified>  xsd:date  ;        #   100.0  % (109488 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Protein>]  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/recommendedName>  IRI  ?;        #   96.499  % (105655 instances)
+    <http://purl.uniprot.org/core/reviewed>  xsd:boolean  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/citation>  IRI  +;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/attribution>  IRI  +;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/classifiedWith>  IRI  +;        #   100.0  % (109488 instances)
+    rdfs:seeAlso  IRI  *;        #   98.872  % (108253 instances)
+    <http://purl.uniprot.org/core/isolatedFrom>  IRI  *;        #   70.706  % (77415 instances)
+    <http://purl.uniprot.org/core/alternativeName>  IRI  *;        #   53.13  % (58171 instances)
+    <http://purl.uniprot.org/core/oldMnemonic>  xsd:string  *;        #   42.157  % (46157 instances)
+    <http://purl.uniprot.org/core/proteome>  IRI  *;        #   80.071  % (87668 instances)
+    <http://purl.uniprot.org/core/encodedBy>  IRI  *;        #   83.315  % (91220 instances)
+    <http://purl.uniprot.org/core/replaces>  IRI  *;        #   43.636  % (47776 instances)
+    <http://purl.uniprot.org/core/enzyme>  IRI  *;        #   23.909  % (26178 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  *;        #   12.384  % (13559 instances)
+    <http://purl.uniprot.org/core/potentialSequence>  IRI  *;        #   36.272  % (39713 instances)
+    <http://purl.uniprot.org/core/interaction>  IRI  *;        #   15.171  % (16610 instances)
+    <http://purl.uniprot.org/core/component>  @:Part  *;        #   3.735  % (4089 instances)
+    <http://purl.uniprot.org/core/domain>  @:Part  *;        #   0.33  % (361 instances)
+    <http://purl.uniprot.org/core/encodedIn>  IRI  ?        #   3.192  % (3495 instances)
+}
+
+
+:ExactPosition  [<http://purl.uniprot.org/position/>~]  AND         #  2930304 instances
+{
+    <http://biohackathon.org/resource/faldo#reference>  IRI  ;        #   100.0  % (2930304 instances)
+    <http://biohackathon.org/resource/faldo#position>  xsd:int  ;        #   100.0  % (2930304 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#ExactPosition>]  ;        #   100.0  % (2930304 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#Position>]          #   100.0  % (2930304 instances)
+}
+
+
+:Position  [<http://purl.uniprot.org/position/>~]  AND         #  2936962 instances
+{
+    <http://biohackathon.org/resource/faldo#reference>  IRI  ;        #   100.0  % (2936962 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#Position>]  ;        #   100.0  % (2936962 instances)
+    <http://biohackathon.org/resource/faldo#position>  xsd:int  ?;        #   99.773  % (2930291 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#ExactPosition>]  ?;        #   99.773  % (2930300 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#InRangePosition>]  ?;        #   0.222  % (6530 instances)
+    <http://biohackathon.org/resource/faldo#end>  IRI  ?;        #   0.108  % (3163 instances)
+    <http://biohackathon.org/resource/faldo#begin>  IRI  ?;        #   0.115  % (3370 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#OneOfPosition>]  ?;        #   0.004  % (128 instances)
+    <http://biohackathon.org/resource/faldo#possiblePosition>  IRI  ?        #   0.004  % (128 instances)
+}
+
+
+:Subunit_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  62755 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (62755 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Subunit_Annotation>]  ;        #   100.0  % (62755 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Simple_Sequence  ?        #   0.01  % (6 instances)
+}
+
+
+:Region  [<http://purl.uniprot.org/>~]  AND         #  2040536 instances
+{
+    rdf:type  [<http://biohackathon.org/resource/faldo#Region>]  ;        #   100.0  % (2040536 instances)
+    <http://biohackathon.org/resource/faldo#end>  IRI  ?;        #   99.935  % (2039208 instances)
+    <http://biohackathon.org/resource/faldo#begin>  IRI  ?        #   99.944  % (2039403 instances)
+}
+
+
+:Resource
+{
+    rdf:type  [<http://purl.uniprot.org/core/Resource>]  ;
+    <http://purl.uniprot.org/core/database>  IRI  *;
+    rdfs:comment  xsd:string  *;
+    <http://purl.uniprot.org/core/signatureSequenceMatch>  IRI  *;
+    <http://purl.uniprot.org/core/translatedFrom>  IRI  *;
+    rdfs:seeAlso  IRI  *
+}
+
+
+:MRNA  [<http://purl.uniprot.org/embl/>~]  AND         #  221425 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/MRNA>]  ;        #   100.0  % (221425 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]  ?        #   0.004  % (8 instances)
+}
+
+
+:Structured_Name  [<http://purl.uniprot.org/uniprot/>~]  AND         #  255861 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Structured_Name>]  ;        #   100.0  % (255861 instances)
+    <http://purl.uniprot.org/core/fullName>  xsd:string  ?;        #   99.281  % (254022 instances)
+    <http://purl.uniprot.org/core/shortName>  xsd:string  *;        #   23.137  % (59198 instances)
+    <http://purl.uniprot.org/core/ecName>  xsd:string  *;        #   11.575  % (29616 instances)
+    <http://purl.uniprot.org/core/cdAntigenName>  xsd:string  ?;        #   0.61  % (1562 instances)
+    <http://purl.uniprot.org/core/allergenName>  xsd:string  ?;        #   0.099  % (254 instances)
+    <http://purl.uniprot.org/core/internationalNonproprietaryName>  xsd:string  ?        #   0.009  % (23 instances)
+}
+
+
+:Citation_Statement  [<http://purl.uniprot.org/uniprot/#>~]  AND         #  496122 instances
+{
+    <http://purl.uniprot.org/core/scope>  xsd:string  +;        #   100.0  % (496122 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ;        #   100.0  % (496122 instances)
+    rdf:type  [rdf:Statement]  ;        #   100.0  % (496122 instances)
+    rdf:subject  @:Protein  ?;        #   3.901  % (19356 instances)
+    rdf:predicate  IRI  ;        #   100.0  % (496122 instances)
+    rdf:object  IRI  ;        #   100.0  % (496122 instances)
+    <http://purl.uniprot.org/core/context>  IRI  *;        #   41.811  % (207433 instances)
+    <http://purl.uniprot.org/core/attribution>  IRI  *        #   5.706  % (28307 instances)
+}
+
+
+:Simple_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND         #  109488 instances
+{
+    rdf:value  xsd:string  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/md5Checksum>  xsd:string  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/mass>  xsd:int  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/version>  xsd:int  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/modified>  xsd:date  ;        #   100.0  % (109488 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Simple_Sequence>]  ;        #   100.0  % (109488 instances)
+    <http://purl.uniprot.org/core/precursor>  xsd:boolean  ?;        #   25.142  % (27527 instances)
+    <http://purl.uniprot.org/core/fragment>  xsd:string  ?;        #   4.343  % (4755 instances)
+    <http://purl.uniprot.org/core/name>  xsd:string  *;        #   18.253  % (19985 instances)
+    rdf:type  [<http://purl.uniprot.org/core/External_Sequence>]  ?;        #   0.195  % (214 instances)
+    <http://purl.uniprot.org/core/replaces>  IRI  *        #   0.071  % (78 instances)
+}
+
+
+:Chain_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  107128 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   96.437  % (103311 instances)
+    <http://purl.uniprot.org/core/mass>  xsd:int  ;        #   100.0  % (107128 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (107128 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Chain_Annotation>]          #   100.0  % (107128 instances)
+}
+
+
+:Nucleotide_Resource  [<http://purl.uniprot.org/>~]  AND         #  343921 instances
+{
+    <http://purl.uniprot.org/core/locatedOn>  IRI  +;        #   100.0  % (343921 instances)
+    <http://purl.uniprot.org/core/database>  IRI  +;        #   100.0  % (343921 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Resource>]  ;        #   100.0  % (343921 instances)
+    <http://purl.uniprot.org/core/citation>  IRI  *;        #   14.164  % (48712 instances)
+    <http://purl.uniprot.org/core/sequenceDiscrepancy>  IRI  *        #   6.524  % (22436 instances)
+}
+
+
+:Subcellular_Location_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  97623 instances
+{
+    <http://purl.uniprot.org/core/locatedIn>  IRI  +;        #   100.0  % (97623 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Subcellular_Location_Annotation>]  ;        #   100.0  % (97623 instances)
+    rdfs:comment  xsd:string  ?;        #   26.191  % (25568 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   4.54  % (4432 instances)
+}
+
+
+:Modified_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  208049 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   10.95  % (22781 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (208049 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Modified_Residue_Annotation>]  ;        #   100.0  % (208049 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.586  % (1219 instances)
+}
+
+
+:Transcript_Resource
+{
+    <http://purl.uniprot.org/core/translatedTo>  IRI  +;
+    <http://purl.uniprot.org/core/database>  IRI  +;
+    rdf:type  [<http://purl.uniprot.org/core/Transcript_Resource>]  ;
+    <http://purl.uniprot.org/core/transcribedFrom>  IRI  *;
+    rdfs:seeAlso  IRI  ?;
+    owl:sameAs  @:Transcript_Resource  ?;
+    rdfs:comment  xsd:string  ?
+}
+
+
+:Topological_Domain_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  84565 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   60.199  % (50907 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (84565 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Topological_Domain_Annotation>]  ;        #   100.0  % (84565 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.022  % (19 instances)
+}
+
+
+:Tissue  [<http://purl.uniprot.org/uniprot/>~]  AND         #  200303 instances
+{
+    rdfs:label  xsd:string  ;        #   100.0  % (200303 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Tissue>]          #   100.0  % (200303 instances)
+}
+
+
+:Participant  [<http://purl.uniprot.org/intact/>~]  AND         #  185917 instances
+{
+    owl:sameAs  IRI  +;        #   100.0  % (185917 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Participant>]  ;        #   100.0  % (185917 instances)
+    rdfs:label  xsd:string  *        #   92.14  % (171303 instances)
+}
+
+
+:Strain  [<http://purl.uniprot.org/uniprot/>~]  AND         #  67279 instances
+{
+    rdfs:label  xsd:string  ;        #   100.0  % (67279 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Strain>]          #   100.0  % (67279 instances)
+}
+
+
+:Non_Self_Interaction  [<http://purl.uniprot.org/intact/>~]  AND         #  176663 instances
+{
+    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   60.259  % (106455 instances)
+    <http://purl.uniprot.org/core/experiments>  xsd:int  +;        #   100.0  % (176663 instances)
+    <http://purl.uniprot.org/core/xeno>  xsd:boolean  +;        #   100.0  % (176663 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ;        #   100.0  % (176663 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Interaction>]          #   100.0  % (176663 instances)
+}
+
+
+:Interaction  [<http://purl.uniprot.org/intact/>~]  AND         #  178292 instances
+{
+    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   60.247  % (107416 instances)
+    <http://purl.uniprot.org/core/experiments>  xsd:int  +;        #   100.0  % (178292 instances)
+    <http://purl.uniprot.org/core/xeno>  xsd:boolean  +;        #   100.0  % (178292 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Interaction>]  ;        #   100.0  % (178292 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ?;        #   99.086  % (176662 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Self_Interaction>]  ?        #   0.914  % (1629 instances)
+}
+
+
+:Mutagenesis_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  51072 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   39.025  % (19931 instances)
+    <http://purl.uniprot.org/core/substitution>  xsd:string  +;        #   100.0  % (51072 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (51072 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Mutagenesis_Annotation>]  ;        #   100.0  % (51072 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.159  % (81 instances)
+}
+
+
+:Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  14283 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   83.106  % (11870 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (14283 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Site_Annotation>]  ;        #   100.0  % (14283 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.035  % (5 instances)
+}
+
+
+:Sequence_Conflict_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  107210 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   84.127  % (90193 instances)
+    <http://purl.uniprot.org/core/substitution>  xsd:string  ;        #   100.0  % (107210 instances)
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   9.738  % (10440 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Sequence_Conflict_Annotation>]  ;        #   100.0  % (107210 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.543  % (582 instances)
+}
+
+
+:Gene  [<http://purl.uniprot.org/uniprot/>~]  AND         #  94868 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Gene>]  ;        #   100.0  % (94868 instances)
+    skos:prefLabel  xsd:string  ?;        #   97.269  % (92277 instances)
+    skos:altLabel  xsd:string  *;        #   45.126  % (42810 instances)
+    <http://purl.uniprot.org/core/orfName>  xsd:string  *;        #   19.869  % (18849 instances)
+    <http://purl.uniprot.org/core/locusName>  xsd:string  ?        #   0.009  % (9 instances)
+}
+
+
+:Domain_Extent_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  82600 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   82.936  % (68505 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (82600 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Domain_Extent_Annotation>]          #   100.0  % (82600 instances)
+}
+
+
+:PTM_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  36666 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (36666 instances)
+    rdf:type  [<http://purl.uniprot.org/core/PTM_Annotation>]  ;        #   100.0  % (36666 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   1.985  % (728 instances)
+}
+
+
+:Similarity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  87958 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (87958 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Similarity_Annotation>]          #   100.0  % (87958 instances)
+}
+
+
+:Structure_Resource  [<http://rdf.wwpdb.org/pdb/>~]  AND         #  119480 instances
+{
+    <http://purl.uniprot.org/core/chainSequenceMapping>  IRI  +;        #   100.0  % (119480 instances)
+    <http://purl.uniprot.org/core/database>  IRI  +;        #   100.0  % (119480 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Structure_Resource>]  ;        #   100.0  % (119480 instances)
+    <http://purl.uniprot.org/core/method>  IRI  +;        #   100.0  % (119480 instances)
+    <http://purl.uniprot.org/core/resolution>  xsd:decimal  *        #   93.45  % (111654 instances)
+}
+
+
+:Alternative_Sequence_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  48438 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   76.628  % (37117 instances)
+    <http://purl.uniprot.org/core/substitution>  xsd:string  ;        #   100.0  % (48438 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (48438 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Sequence_Annotation>]          #   100.0  % (48438 instances)
+}
+
+
+:Function_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  99979 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (99979 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Function_Annotation>]  ;        #   100.0  % (99979 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   3.215  % (3214 instances)
+}
+
+
+:Transmembrane_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  114041 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   69.763  % (79558 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (114041 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Transmembrane_Annotation>]  ;        #   100.0  % (114041 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.004  % (5 instances)
+}
+
+
+:Disulfide_Bond_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  105422 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  *;        #   37.486  % (39519 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Disulfide_Bond_Annotation>]  ;        #   100.0  % (105422 instances)
+    rdfs:comment  xsd:string  ?;        #   4.369  % (4606 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.006  % (6 instances)
+}
+
+
+:Genomic_DNA  [<http://purl.uniprot.org/embl/>~]  AND         #  125380 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]  ;        #   100.0  % (125380 instances)
+    rdf:type  [<http://purl.uniprot.org/core/MRNA>]  ?;        #   0.012  % (15 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Unassigned_DNA>]  ?        #   0.001  % (1 instances)
+}
+
+
+:InRangePosition  [<http://purl.uniprot.org/position/>~]  AND         #  6530 instances
+{
+    <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ?;        #   79.127  % (5167 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#InRangePosition>]  ;        #   100.0  % (6530 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#Position>]  ;        #   100.0  % (6530 instances)
+    <http://biohackathon.org/resource/faldo#end>  IRI  ?;        #   48.438  % (3163 instances)
+    <http://biohackathon.org/resource/faldo#begin>  IRI  ?        #   51.608  % (3370 instances)
+}
+
+
+:Initiator_Methionine_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  8564 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   64.012  % (5482 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (8564 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Initiator_Methionine_Annotation>]  ;        #   100.0  % (8564 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   1.133  % (97 instances)
+}
+
+
+:Helix_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  128821 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   77.592  % (99955 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Helix_Annotation>]          #   100.0  % (128821 instances)
+}
+
+
+:Submission_Citation  [<http://purl.uniprot.org/citations/>~]  AND         #  52774 instances
+{
+    <http://purl.uniprot.org/core/submittedTo>  xsd:string  +;        #   100.0  % (52774 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Submission_Citation>]  ;        #   100.0  % (52774 instances)
+    <http://purl.uniprot.org/core/date>  xsd:gYearMonth  +;        #   100.0  % (52774 instances)
+    <http://purl.uniprot.org/core/author>  xsd:string  *;        #   68.128  % (35954 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  *;        #   34.864  % (18399 instances)
+    <http://purl.uniprot.org/core/group>  xsd:string  *        #   32.243  % (17016 instances)
+}
+
+
+:Natural_Variant_Annotation  [<http://purl.uniprot.org/>~]  AND         #  92028 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   80.96  % (74506 instances)
+    <http://purl.uniprot.org/core/substitution>  xsd:string  ;        #   100.0  % (92028 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Natural_Variant_Annotation>]  ;        #   100.0  % (92028 instances)
+    rdfs:comment  xsd:string  ?;        #   59.804  % (55036 instances)
+    rdfs:seeAlso  IRI  *;        #   73.01  % (67190 instances)
+    skos:related  IRI  *;        #   42.953  % (39529 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.201  % (185 instances)
+}
+
+
+:External_Sequence  [<http://purl.uniprot.org/>~]  AND         #  68973 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/External_Sequence>]  ;        #   100.0  % (68973 instances)
+    <http://purl.uniprot.org/core/translatedFrom>  IRI  ?;        #   83.689  % (57723 instances)
+    <http://purl.uniprot.org/core/citation>  IRI  ?;        #   5.653  % (3899 instances)
+    rdfs:comment  xsd:string  ?;        #   3.323  % (2292 instances)
+    <http://purl.uniprot.org/core/name>  xsd:string  *;        #   0.957  % (660 instances)
+    rdf:value  xsd:string  ?;        #   0.686  % (473 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Simple_Sequence>]  ?;        #   0.345  % (238 instances)
+    <http://purl.uniprot.org/core/md5Checksum>  xsd:string  ?;        #   0.345  % (238 instances)
+    <http://purl.uniprot.org/core/mass>  xsd:int  ?;        #   0.345  % (238 instances)
+    <http://purl.uniprot.org/core/version>  xsd:int  ?;        #   0.345  % (238 instances)
+    <http://purl.uniprot.org/core/modified>  xsd:date  ?;        #   0.345  % (238 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Modified_Sequence>]  ?;        #   0.341  % (235 instances)
+    <http://purl.uniprot.org/core/modification>  @:Alternative_Sequence_Annotation  *;        #   0.341  % (235 instances)
+    <http://purl.uniprot.org/core/basedOn>  IRI  ?;        #   0.339  % (234 instances)
+    <http://purl.uniprot.org/core/precursor>  xsd:boolean  ?;        #   0.115  % (79 instances)
+    <http://purl.uniprot.org/core/replaces>  IRI  *;        #   0.054  % (37 instances)
+    <http://purl.uniprot.org/core/fragment>  xsd:string  ?        #   0.003  % (2 instances)
+}
+
+
+:Part  [<http://purl.uniprot.org/uniprot/>~]  AND         #  10206 instances
+{
+    <http://purl.uniprot.org/core/recommendedName>  @:Structured_Name  ?;        #   67.999  % (6940 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Part>]  ;        #   100.0  % (10206 instances)
+    <http://purl.uniprot.org/core/alternativeName>  @:Structured_Name  *;        #   16.784  % (1713 instances)
+    <http://purl.uniprot.org/core/enzyme>  IRI  *        #   7.848  % (801 instances)
+}
+
+
+:Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  14125 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (14125 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Annotation>]  ;        #   100.0  % (14125 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   22.131  % (3126 instances)
+}
+
+
+:Tissue_Specificity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  40735 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (40735 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Tissue_Specificity_Annotation>]  ;        #   100.0  % (40735 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   1.76  % (717 instances)
+}
+
+
+:Non-terminal_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  6785 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   75.829  % (5145 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Non-terminal_Residue_Annotation>]          #   100.0  % (6785 instances)
+}
+
+
+:Turn_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  33851 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   46.486  % (15736 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Turn_Annotation>]          #   100.0  % (33851 instances)
+}
+
+
+:Alternative_Initiation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  359 instances
+{
+    <http://purl.uniprot.org/core/sequence>  IRI  +;        #   100.0  % (359 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ;        #   100.0  % (359 instances)
+    rdfs:comment  xsd:string  ?;        #   7.521  % (27 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;        #   35.097  % (126 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation>]  ?;        #   2.786  % (10 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Ribosomal_Frameshifting>]  ?        #   0.279  % (1 instances)
+}
+
+
+:Modified_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND         #  37354 instances
+{
+    <http://purl.uniprot.org/core/modification>  IRI  *;        #   70.424  % (26306 instances)
+    rdf:value  xsd:string  ;        #   100.0  % (37354 instances)
+    <http://purl.uniprot.org/core/basedOn>  IRI  ?;        #   81.054  % (30277 instances)
+    <http://purl.uniprot.org/core/name>  xsd:string  +;        #   100.0  % (37354 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Modified_Sequence>]  ;        #   100.0  % (37354 instances)
+    rdf:type  [<http://purl.uniprot.org/core/External_Sequence>]  ?;        #   0.53  % (198 instances)
+    <http://purl.uniprot.org/core/replaces>  IRI  *        #   0.412  % (154 instances)
+}
+
+
+:Binding_Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  162893 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   67.358  % (109722 instances)
+    <http://purl.uniprot.org/core/ligand>  IRI  ;        #   100.0  % (162893 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Binding_Site_Annotation>]  ;        #   100.0  % (162893 instances)
+    rdfs:comment  xsd:string  ?;        #   8.283  % (13492 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?;        #   0.007  % (11 instances)
+    <http://purl.uniprot.org/core/ligandPart>  IRI  ?        #   6.74  % (10979 instances)
+}
+
+
+:Cross-link_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  20886 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  *;        #   73.054  % (15258 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (20886 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Cross-link_Annotation>]  ;        #   100.0  % (20886 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.469  % (98 instances)
+}
+
+
+:Ontology  [<http://purl.uniprot.org/uniprot/>~]  AND   # 1 instance
+{
+   owl:imports  IRI  ;                                         # 100.0 % (1 instance).
+   rdf:type  [owl:Ontology]                                    # 100.0 % (1 instance).
+}
+
+
+:Self_Interaction  [<http://purl.uniprot.org/intact/>~]  AND         #  1629 instances
+{
+    <http://purl.uniprot.org/core/participant>  @:Participant  *;        #   95.58  % (1557 instances)
+    <http://purl.uniprot.org/core/experiments>  xsd:int  ;        #   100.0  % (1629 instances)
+    <http://purl.uniprot.org/core/xeno>  xsd:boolean  ;        #   100.0  % (1629 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Self_Interaction>]  ;        #   100.0  % (1629 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Interaction>]          #   100.0  % (1629 instances)
+}
+
+
+:Glycosylation_Annotation  [<http://purl.uniprot.org/>~]  AND         #  73347 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   64.601  % (47383 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (73347 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Glycosylation_Annotation>]  ;        #   100.0  % (73347 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.04  % (29 instances)
+}
+
+
+:Developmental_Stage_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  9445 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (9445 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Developmental_Stage_Annotation>]  ;        #   100.0  % (9445 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Simple_Sequence  ?        #   0.021  % (2 instances)
+}
+
+
+:Compositional_Bias_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  94110 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   72.59  % (68314 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (94110 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Compositional_Bias_Annotation>]          #   100.0  % (94110 instances)
+}
+
+
+:Alternative_Splicing_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  19622 instances
+{
+    <http://purl.uniprot.org/core/sequence>  IRI  +;        #   100.0  % (19622 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ;        #   100.0  % (19622 instances)
+    rdfs:comment  xsd:string  ?;        #   5.27  % (1034 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ?;        #   0.642  % (126 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation>]  ?;        #   0.821  % (161 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Ribosomal_Frameshifting>]  ?        #   0.015  % (3 instances)
+}
+
+
+:Mass_Spectrometry_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  5632 instances
+{
+    <http://purl.uniprot.org/core/measuredValue>  xsd:decimal  ;        #   100.0  % (5632 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation>]  ;        #   100.0  % (5632 instances)
+    <http://purl.uniprot.org/core/method>  IRI  ;        #   100.0  % (5632 instances)
+    <http://purl.uniprot.org/core/measuredError>  xsd:decimal  ?;        #   15.128  % (852 instances)
+    rdfs:comment  xsd:string  ?;        #   22.017  % (1240 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   14.08  % (793 instances)
+}
+
+
+:Region_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  140500 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   91.914  % (129139 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (140500 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Region_Annotation>]  ;        #   100.0  % (140500 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.019  % (26 instances)
+}
+
+
+:Non-adjacent_Residues_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1644 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ;        #   100.0  % (1644 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation>]          #   100.0  % (1644 instances)
+}
+
+
+:Disruption_Phenotype_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  6889 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (6889 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Disruption_Phenotype_Annotation>]  ;        #   100.0  % (6889 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Simple_Sequence  ?        #   0.044  % (3 instances)
+}
+
+
+:Disease_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  8281 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (8281 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Disease_Annotation>]  ;        #   100.0  % (8281 instances)
+    <http://purl.uniprot.org/core/disease>  IRI  ?;        #   82.961  % (6870 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Chain_Annotation  ?        #   0.012  % (1 instances)
+}
+
+
+:Beta_Strand_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  135401 instances
+{
+    <http://purl.uniprot.org/core/range>  IRI  ?;        #   75.576  % (102331 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Beta_Strand_Annotation>]          #   100.0  % (135401 instances)
+}
+
+
+:Erroneous_Initiation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  13408 instances
+{
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   69.086  % (9263 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Erroneous_Initiation_Annotation>]  ;        #   100.0  % (13408 instances)
+    rdfs:comment  xsd:string  ?;        #   55.638  % (7460 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.045  % (6 instances)
+}
+
+
+:Induction_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  6011 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (6011 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Induction_Annotation>]  ;        #   100.0  % (6011 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Simple_Sequence  ?        #   0.2  % (12 instances)
+}
+
+
+:Caution_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  7272 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (7272 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Caution_Annotation>]  ;        #   100.0  % (7272 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Peptide_Annotation  ?        #   0.275  % (20 instances)
+}
+
+
+:Signal_Peptide_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  22964 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   57.111  % (13115 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Signal_Peptide_Annotation>]  ;        #   100.0  % (22964 instances)
+    rdfs:comment  xsd:string  ?        #   0.257  % (59 instances)
+}
+
+
+:Motif_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  15771 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   53.155  % (8383 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (15771 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Motif_Annotation>]  ;        #   100.0  % (15771 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.184  % (29 instances)
+}
+
+
+:Peptide_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  10862 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   84.257  % (9152 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (10862 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Peptide_Annotation>]          #   100.0  % (10862 instances)
+}
+
+
+:Propeptide_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND         #  9945 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   72.318  % (7192 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Propeptide_Annotation>]  ;        #   100.0  % (9945 instances)
+    rdfs:comment  xsd:string  ?        #   26.958  % (2681 instances)
+}
+
+
+:Active_Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  21024 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   65.363  % (13742 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Active_Site_Annotation>]  ;        #   100.0  % (21024 instances)
+    rdfs:comment  xsd:string  ?;        #   71.461  % (15024 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.005  % (1 instances)
+}
+
+
+:Domain_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  24276 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (24276 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Domain_Annotation>]  ;        #   100.0  % (24276 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Simple_Sequence  ?        #   0.049  % (12 instances)
+}
+
+
+:Catalytic_Activity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  56893 instances
+{
+    <http://purl.uniprot.org/core/catalyticActivity>  @:Catalytic_Activity  ?;        #   47.857  % (27227 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Catalytic_Activity_Annotation>]  ;        #   100.0  % (56893 instances)
+    <http://purl.uniprot.org/core/catalyzedPhysiologicalReaction>  IRI  *;        #   44.858  % (25521 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   1.141  % (649 instances)
+}
+
+
+:Kinetics_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  2422 instances
+{
+    <http://purl.uniprot.org/core/measuredAffinity>  xsd:string  *;        #   95.128  % (2304 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Kinetics_Annotation>]  ;        #   100.0  % (2422 instances)
+    <http://purl.uniprot.org/core/measuredActivity>  xsd:string  *;        #   41.784  % (1012 instances)
+    rdfs:comment  xsd:string  ?;        #   20.107  % (487 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.33  % (8 instances)
+}
+
+
+:Catalytic_Activity  [<http://purl.uniprot.org/uniprot/>~]  AND         #  56647 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Catalytic_Activity>]  ;        #   100.0  % (56647 instances)
+    <http://purl.uniprot.org/core/catalyzedReaction>  IRI  ?;        #   92.52  % (52410 instances)
+    <http://purl.uniprot.org/core/enzymeClass>  IRI  ?;        #   51.609  % (29235 instances)
+    skos:closeMatch  IRI  ?        #   7.48  % (4237 instances)
+}
+
+
+:Toxic_Dose_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  824 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (824 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Toxic_Dose_Annotation>]  ;        #   100.0  % (824 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Peptide_Annotation  ?        #   0.607  % (5 instances)
+}
+
+
+:Book_Citation  [<http://purl.uniprot.org/citations/>~]  AND         #  226 instances
+{
+    <http://purl.uniprot.org/core/author>  xsd:string  +;        #   100.0  % (226 instances)
+    <http://purl.uniprot.org/core/place>  xsd:string  +;        #   100.0  % (226 instances)
+    <http://purl.uniprot.org/core/publisher>  xsd:string  *;        #   92.035  % (208 instances)
+    <http://purl.uniprot.org/core/editor>  xsd:string  *;        #   91.15  % (206 instances)
+    <http://purl.uniprot.org/core/name>  xsd:string  +;        #   100.0  % (226 instances)
+    <http://purl.uniprot.org/core/date>  xsd:gYear  +;        #   100.0  % (226 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Book_Citation>]  ;        #   100.0  % (226 instances)
+    <http://purl.uniprot.org/core/volume>  xsd:string  *;        #   8.407  % (19 instances)
+    <http://purl.uniprot.org/core/pages>  xsd:string  +;        #   100.0  % (226 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  *;        #   80.088  % (181 instances)
+    dc:identifier  xsd:string  ?        #   1.327  % (3 instances)
+}
+
+
+:Repeat_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  59070 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   53.801  % (31780 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (59070 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Repeat_Annotation>]          #   100.0  % (59070 instances)
+}
+
+
+:Frameshift_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  4383 instances
+{
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   78.827  % (3455 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Frameshift_Annotation>]  ;        #   100.0  % (4383 instances)
+    rdfs:comment  xsd:string  ?;        #   0.707  % (31 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   2.053  % (90 instances)
+}
+
+
+:Sequence_Caution_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  2404 instances
+{
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   95.3  % (2291 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Sequence_Caution_Annotation>]  ;        #   100.0  % (2404 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (2404 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.25  % (6 instances)
+}
+
+
+:Thesis_Citation  [<http://purl.uniprot.org/citations/>~]  AND         #  162 instances
+{
+    <http://purl.uniprot.org/core/place>  xsd:string  +;        #   100.0  % (162 instances)
+    <http://purl.uniprot.org/core/institution>  xsd:string  +;        #   100.0  % (162 instances)
+    <http://purl.uniprot.org/core/date>  xsd:gYear  +;        #   100.0  % (162 instances)
+    <http://purl.uniprot.org/core/author>  xsd:string  +;        #   100.0  % (162 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Thesis_Citation>]  ;        #   100.0  % (162 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  *        #   58.642  % (95 instances)
+}
+
+
+:Erroneous_Termination_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  573 instances
+{
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;        #   100.0  % (573 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (573 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Erroneous_Termination_Annotation>]  ;        #   100.0  % (573 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   1.047  % (6 instances)
+}
+
+
+:Erroneous_Gene_Model_Prediction_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1772 instances
+{
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ?;        #   93.849  % (1663 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation>]  ;        #   100.0  % (1772 instances)
+    rdfs:comment  xsd:string  ?;        #   1.129  % (20 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.056  % (1 instances)
+}
+
+
+:Pathway_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  8063 instances
+{
+    rdfs:seeAlso  IRI  ;        #   100.0  % (8063 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Pathway_Annotation>]  ;        #   100.0  % (8063 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Simple_Sequence  ?        #   0.05  % (4 instances)
+}
+
+
+:Coiled_Coil_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  11698 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   74.654  % (8733 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Coiled_Coil_Annotation>]  ;        #   100.0  % (11698 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.026  % (3 instances)
+}
+
+
+:Cofactor_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  13388 instances
+{
+    <http://purl.uniprot.org/core/cofactor>  IRI  +;        #   100.0  % (13388 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Cofactor_Annotation>]  ;        #   100.0  % (13388 instances)
+    rdfs:comment  xsd:string  ?;        #   64.02  % (8571 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   0.142  % (19 instances)
+}
+
+
+:Temperature_Dependence_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  330 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (330 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Temperature_Dependence_Annotation>]  ;        #   100.0  % (330 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   0.606  % (2 instances)
+}
+
+
+:Transit_Peptide_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  2979 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   95.166  % (2835 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (2979 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Transit_Peptide_Annotation>]  ;        #   100.0  % (2979 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.034  % (1 instances)
+}
+
+
+:Observation_Citation  [<http://purl.uniprot.org/citations/>~]  AND         #  176 instances
+{
+    <http://purl.uniprot.org/core/date>  xsd:gYearMonth  +;        #   100.0  % (176 instances)
+    <http://purl.uniprot.org/core/author>  xsd:string  +;        #   100.0  % (176 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Observation_Citation>]  ;        #   100.0  % (176 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  ?        #   1.705  % (3 instances)
+}
+
+
+:Activity_Regulation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  6297 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (6297 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Activity_Regulation_Annotation>]  ;        #   100.0  % (6297 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   1.382  % (87 instances)
+}
+
+
+:Sequence_Uncertainty_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  4714 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ;        #   100.0  % (4714 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation>]  ;        #   100.0  % (4714 instances)
+    rdfs:comment  xsd:string  ?        #   96.797  % (4563 instances)
+}
+
+
+:Pharmaceutical_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  139 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (139 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Pharmaceutical_Annotation>]  ;        #   100.0  % (139 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Peptide_Annotation  ?        #   2.878  % (4 instances)
+}
+
+
+:Transcribed_RNA  [<http://purl.uniprot.org/embl/>~]  AND         #  346 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Transcribed_RNA>]          #   100.0  % (346 instances)
+}
+
+
+:Biotechnology_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  135 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (135 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Biotechnology_Annotation>]  ;        #   100.0  % (135 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.741  % (1 instances)
+}
+
+
+:Lipidation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  5793 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   75.177  % (4355 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (5793 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Lipidation_Annotation>]  ;        #   100.0  % (5793 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.863  % (50 instances)
+}
+
+
+:Polymorphism_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1147 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (1147 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Polymorphism_Annotation>]  ;        #   100.0  % (1147 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.087  % (1 instances)
+}
+
+
+:RNA_Editing_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  94 instances
+{
+    <http://biohackathon.org/resource/faldo#location>  IRI  *;        #   94.681  % (89 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (94 instances)
+    rdf:type  [<http://purl.uniprot.org/core/RNA_Editing_Annotation>]  ;        #   100.0  % (94 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?;        #   1.064  % (1 instances)
+    <http://purl.uniprot.org/core/frameshift>  xsd:boolean  ?        #   4.255  % (4 instances)
+}
+
+
+:PH_Dependence_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  907 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (907 instances)
+    rdf:type  [<http://purl.uniprot.org/core/PH_Dependence_Annotation>]  ;        #   100.0  % (907 instances)
+    <http://purl.uniprot.org/core/sequence>  IRI  ?        #   1.213  % (11 instances)
+}
+
+
+:Unassigned_DNA  [<http://purl.uniprot.org/embl/>~]  AND         #  203 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Unassigned_DNA>]  ;        #   100.0  % (203 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]  ?        #   0.493  % (1 instances)
+}
+
+
+:Zinc_Finger_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  21852 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   42.435  % (9273 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (21852 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Zinc_Finger_Annotation>]          #   100.0  % (21852 instances)
+}
+
+
+:Nucleotide_Binding_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  3815 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   89.41  % (3411 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Binding_Annotation>]  ;        #   100.0  % (3815 instances)
+    rdfs:comment  xsd:string  ?        #   92.32  % (3522 instances)
+}
+
+
+:Erroneous_Translation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  375 instances
+{
+    <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;        #   100.0  % (375 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (375 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Erroneous_Translation_Annotation>]          #   100.0  % (375 instances)
+}
+
+
+:Unknown_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND         #  189 instances
+{
+    <http://purl.uniprot.org/core/name>  xsd:string  +;        #   100.0  % (189 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Unknown_Sequence>]          #   100.0  % (189 instances)
+}
+
+
+:Intramembrane_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  1822 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ?;        #   89.078  % (1623 instances)
+    rdfs:comment  xsd:string  ?;        #   82.053  % (1495 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Intramembrane_Annotation>]  ;        #   100.0  % (1822 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Modified_Sequence  ?        #   0.494  % (9 instances)
+}
+
+
+:Allergen_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  291 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (291 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Allergen_Annotation>]  ;        #   100.0  % (291 instances)
+    <http://purl.uniprot.org/core/sequence>  @:Chain_Annotation  ?        #   0.344  % (1 instances)
+}
+
+
+:Alternative_Promoter_Usage_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  251 instances
+{
+    <http://purl.uniprot.org/core/sequence>  IRI  +;        #   100.0  % (251 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation>]  ;        #   100.0  % (251 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;        #   64.143  % (161 instances)
+    rdfs:comment  xsd:string  ?;        #   24.303  % (61 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ?        #   3.984  % (10 instances)
+}
+
+
+:Patent_Citation  [<http://purl.uniprot.org/citations/>~]  AND         #  89 instances
+{
+    skos:exactMatch  IRI  +;        #   100.0  % (89 instances)
+    <http://purl.uniprot.org/core/date>  xsd:date  +;        #   100.0  % (89 instances)
+    <http://purl.uniprot.org/core/author>  xsd:string  +;        #   100.0  % (89 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  *;        #   94.382  % (84 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Patent_Citation>]          #   100.0  % (89 instances)
+}
+
+
+:Redox_Potential_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  10 instances
+{
+    rdfs:comment  xsd:string  ;        #   100.0  % (10 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Redox_Potential_Annotation>]          #   100.0  % (10 instances)
+}
+
+
+:OneOfPosition  [<http://purl.uniprot.org/position/>~]  AND         #  128 instances
+{
+    <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ;        #   100.0  % (128 instances)
+    <http://biohackathon.org/resource/faldo#possiblePosition>  IRI  ;        #   100.0  % (128 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#OneOfPosition>]  ;        #   100.0  % (128 instances)
+    rdf:type  [<http://biohackathon.org/resource/faldo#Position>]          #   100.0  % (128 instances)
+}
+
+
+:Genomic_RNA  [<http://purl.uniprot.org/embl/>~]  AND         #  28 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Genomic_RNA>]          #   100.0  % (28 instances)
+}
+
+
+:Unassigned_RNA  [<http://purl.uniprot.org/embl/>~]  AND         #  7 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Unassigned_RNA>]          #   100.0  % (7 instances)
+}
+
+
+:Ribosomal_Frameshifting  [<http://purl.uniprot.org/uniprot/>~]  AND         #  48 instances
+{
+    <http://purl.uniprot.org/core/sequence>  IRI  *;        #   72.917  % (35 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Ribosomal_Frameshifting>]  ;        #   100.0  % (48 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;        #   6.25  % (3 instances)
+    rdfs:comment  xsd:string  ?;        #   93.75  % (45 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ?        #   2.083  % (1 instances)
+}
+
+
+:Electronic_Citation  [<http://purl.uniprot.org/citations/>~]  AND         #  7 instances
+{
+    skos:exactMatch  IRI  *;        #   85.714  % (6 instances)
+    <http://purl.uniprot.org/core/locator>  xsd:string  +;        #   100.0  % (7 instances)
+    <http://purl.uniprot.org/core/name>  xsd:string  *;        #   85.714  % (6 instances)
+    <http://purl.uniprot.org/core/date>  xsd:gYear  *;        #   85.714  % (6 instances)
+    <http://purl.uniprot.org/core/author>  xsd:string  +;        #   100.0  % (7 instances)
+    <http://purl.uniprot.org/core/title>  xsd:string  +;        #   100.0  % (7 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Electronic_Citation>]          #   100.0  % (7 instances)
+}
+
+
+:Non-standard_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  249 instances
+{
+    <http://purl.uniprot.org/core/range>  @:Region  ;        #   100.0  % (249 instances)
+    rdfs:comment  xsd:string  ;        #   100.0  % (249 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Non-standard_Residue_Annotation>]          #   100.0  % (249 instances)
+}
+
+
+:Absorption_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND         #  68 instances
+{
+    <http://purl.uniprot.org/core/maximum>  xsd:int  ;        #   100.0  % (68 instances)
+    rdf:type  [<http://purl.uniprot.org/core/Absorption_Annotation>]  ;        #   100.0  % (68 instances)
+    rdfs:comment  xsd:string  ?;        #   17.647  % (12 instances)
+    <http://purl.uniprot.org/core/certain>  xsd:boolean  ?        #   7.353  % (5 instances)
+}
+
+
+:Other_DNA  [<http://purl.uniprot.org/embl/>~]  AND         #  2 instances
+{
+    rdf:type  [<http://purl.uniprot.org/core/Other_DNA>]          #   100.0  % (2 instances)
+}
+
+
+:Other_RNA  [<http://purl.uniprot.org/embl/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://purl.uniprot.org/core/Other_RNA>]            # 100.0 % (1 instance).
+}
+
+
