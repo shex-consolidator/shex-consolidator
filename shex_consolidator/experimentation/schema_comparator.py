@@ -150,6 +150,7 @@ def _are_shapes_property_equal(shape1: Shape, shape2: Shape) -> bool:
 
 def _classify_shape_likeliness(shape1: Shape, shape2: Shape, stats_dict: dict) -> None:
     if shape1.n_constraints != shape2.n_constraints:
+        print(shape1.label)
         stats_dict[SHAPES_DIFFERENT_CONSTRAINTS][ABS] += 1
     elif _are_shapes_completely_equal(shape1, shape2):
         stats_dict[SHAPES_COMPLETELY_EQUAL][ABS] += 1
@@ -160,6 +161,7 @@ def _classify_shape_likeliness(shape1: Shape, shape2: Shape, stats_dict: dict) -
     elif _are_shapes_property_equal(shape1, shape2):
         stats_dict[SHAPES_EQUAL_PROPERTY][ABS] += 1
     else:  # They must be somehow different
+        print(shape1.label)
         stats_dict[SHAPES_DIFFERENT_CONSTRAINTS][ABS] += 1
 
 
@@ -226,35 +228,66 @@ def _classify_constraint_likeliness(shape1: Shape, shape2: Shape, stats_dict: di
     s2_used = set()
     for a_constraint in shape1.yield_constraints():
         # stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += 1
-        if shape2.has_completely_equal_constraint(a_constraint):
-            s2_used.add(shape2.exact_constraint(a_constraint))
-            stats_dict[CONSTRAINTS_COMPLETELY_EQUAL][ABS] += 1
-            stats_dict[CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL][ABS] += 1
-            c_equal += 1
-        elif shape2.has_constraint_equal_no_stats(a_constraint, exclude=s2_used):
-            s2_used.add(shape2.exact_constraint(a_constraint,  exclude=s2_used))
-            stats_dict[CONSTRAINTS_VALIDATION_EQUAL][ABS] += 1
-            stats_dict[CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL][ABS] += 1
-            c_validation += 1
-        elif shape2.has_p_o_equal_constraint(a_constraint, exclude=s2_used):
-            s2_used.add(shape2.exact_constraint(a_constraint, exclude=s2_used))
-            stats_dict[CONSTRAINTS_P_O_EQUAL][ABS] += 1
-            stats_dict[CONSTRAINTS_PER_SHAPE_P_O_EQUAL][ABS] += 1
-            c_p_o += 1
-        elif shape2.has_property_equal_constraint(a_constraint, exclude=s2_used):
-            s2_used.add(shape2.exact_constraint(a_constraint, exclude=s2_used))
-            stats_dict[CONSTRAINTS_PROPERTY_EQUAL][ABS] += 1
-            stats_dict[CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL][ABS] += 1
-            c_property += 1
-        else:  # this constraint is not among the constraints of shape2
-            stats_dict[CONSTRAINTS_DIFFERENT][ABS] += 1
-            stats_dict[CONSTRAINTS_PER_SHAPE_DIFFERENT][ABS] += 1
-            c_diff += 1
-            stats_dict[DIFF_CONST_IN_SCHEMA_1].append( (shape1.label, a_constraint.predicate, a_constraint.node_constraint) )
+        if a_constraint.predicate == "rdf:type":
+            if shape2.has_completely_equal_constraint(a_constraint):
+                s2_used.add(shape2.exact_constraint(a_constraint))
+                stats_dict[CONSTRAINTS_COMPLETELY_EQUAL][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL][ABS] += 1
+                c_equal += 1
+            elif shape2.has_constraint_equal_no_stats(a_constraint, exclude=s2_used):
+                s2_used.add(shape2.exact_constraint(a_constraint, exclude=s2_used))
+                stats_dict[CONSTRAINTS_VALIDATION_EQUAL][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL][ABS] += 1
+                c_validation += 1
+            else:  # this constraint is not among the constraints of shape2
+                # print("------")
+                # print(shape1.label)
+                # print(a_constraint.predicate)
+                stats_dict[CONSTRAINTS_DIFFERENT][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_DIFFERENT][ABS] += 1
+                c_diff += 1
+                stats_dict[DIFF_CONST_IN_SCHEMA_1].append( (shape1.label, a_constraint.predicate, a_constraint.node_constraint) )
+        else:
+            if shape2.has_completely_equal_constraint(a_constraint):
+                s2_used.add(shape2.exact_constraint(a_constraint))
+                stats_dict[CONSTRAINTS_COMPLETELY_EQUAL][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL][ABS] += 1
+                c_equal += 1
+            elif shape2.has_constraint_equal_no_stats(a_constraint, exclude=s2_used):
+                s2_used.add(shape2.exact_constraint(a_constraint,  exclude=s2_used))
+                stats_dict[CONSTRAINTS_VALIDATION_EQUAL][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL][ABS] += 1
+                c_validation += 1
+            elif shape2.has_p_o_equal_constraint(a_constraint, exclude=s2_used):
+                s2_used.add(shape2.constraint_only_different_cardinality(a_constraint, exclude=s2_used))
+                stats_dict[CONSTRAINTS_P_O_EQUAL][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_P_O_EQUAL][ABS] += 1
+                c_p_o += 1
+            elif shape2.has_property_equal_constraint(a_constraint, exclude=s2_used):
+                s2_used.add(shape2.constraint_only_common_predicate(a_constraint, exclude=s2_used))
+                stats_dict[CONSTRAINTS_PROPERTY_EQUAL][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL][ABS] += 1
+                c_property += 1
+            else:  # this constraint is not among the constraints of shape2
+                # print("------")
+                # print(shape1.label)
+                # print(a_constraint.predicate)
+                stats_dict[CONSTRAINTS_DIFFERENT][ABS] += 1
+                stats_dict[CONSTRAINTS_PER_SHAPE_DIFFERENT][ABS] += 1
+                c_diff += 1
+                stats_dict[DIFF_CONST_IN_SCHEMA_1].append( (shape1.label, a_constraint.predicate, a_constraint.node_constraint) )
     constraints_in_shape2_not_in_shape1 = len([a_c for a_c in shape2.yield_constraints() if a_c not in s2_used])
     n_constraints = shape1.n_constraints
+    if shape1.label == ":Genomic_DNA":
+        a = 2
     if constraints_in_shape2_not_in_shape1 > 0:
-        # stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += constraints_in_shape2_not_in_shape1
+        # print("####")
+        # print(shape1.label)
+        # print(constraints_in_shape2_not_in_shape1)
+        # print([a_c.predicate for a_c in shape2.yield_constraints() if a_c not in s2_used])
+        # print(shape1.n_constraints)
+        # print(shape2.n_constraints)
+        stats_dict[_TOTAL_NUMBER_OF_CONSTRAINTS] += constraints_in_shape2_not_in_shape1
         c_diff += constraints_in_shape2_not_in_shape1
         stats_dict[CONSTRAINTS_DIFFERENT][ABS] += constraints_in_shape2_not_in_shape1
         stats_dict[CONSTRAINTS_PER_SHAPE_DIFFERENT][ABS] += constraints_in_shape2_not_in_shape1

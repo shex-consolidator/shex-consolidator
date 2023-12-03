@@ -1,4 +1,4 @@
-Comparison between classic and consolidation approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 100000 line split, and 0 threshold
+Comparison between classic and consolidation approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 1100000 line split, and 0 threshold
 
 
 SHARED_SHAPES;116
@@ -12,17 +12,19 @@ SHAPES_EQUAL_CONSTRAINT;33;0.28448275862068967;Number of shapes with equal const
 SHAPES_EQUAL_P_O_PAIRS;31;0.2672413793103448;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
 SHAPES_EQUAL_PROPERTY;35;0.3017241379310345;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
 SHAPES_DIFFERENT_CONSTRAINTS;2;0.017241379310344827;Number of shapes including constraints that are not in both versions of the shape
-CONSTRAINTS_COMPLETELY_EQUAL;248;0.4232081911262799;Number of constraints completely equal in both files
-CONSTRAINTS_VALIDATION_EQUAL;168;0.28668941979522183;Number of equal constraints but with a different number of annotated instances
-CONSTRAINTS_P_O_EQUAL;46;0.07849829351535836;Number of constraints that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PROPERTY_EQUAL;40;0.06825938566552901;Number of constraints that have the same predicate, but different node constraint
-CONSTRAINTS_DIFFERENT;84;0.14334470989761092;Number of constraints that are not in both versions of the shape
-CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.1379310344827585;0.42320819112627983;Average constraints in a shape that are completely equal in both files
-CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.4482758620689655;0.28668941979522183;Average constraints in a shape that are equal constraints but with a different number of annotated instances
-CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.39655172413793105;0.07849829351535836;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.3448275862068966;0.06825938566552901;Average constraints in a shape that have the same predicate, but different node constraint
-CONSTRAINTS_PER_SHAPE_DIFFERENT;0.7241379310344828;0.14334470989761092;Average constraints in a shape that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;248;0.4940239043824701;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;168;0.3346613545816733;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;46;0.09163346613545817;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;38;0.07569721115537849;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;2;0.00398406374501992;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.1379310344827585;0.49402390438247;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.4482758620689655;0.33466135458167323;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.39655172413793105;0.09163346613545816;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.3275862068965517;0.07569721115537847;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.017241379310344827;0.003984063745019919;Average constraints in a shape that are not in both versions of the shape
 
 
 CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
 Shape;predicate;node constraint
+:Genomic_DNA;rdf:type;[<http://purl.uniprot.org/core/Genomic_RNA>]
+:Genomic_RNA;rdf:type;[<http://purl.uniprot.org/core/Genomic_DNA>]

@@ -12,17 +12,19 @@ SHAPES_EQUAL_CONSTRAINT;48;0.41379310344827586;Number of shapes with equal const
 SHAPES_EQUAL_P_O_PAIRS;32;0.27586206896551724;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
 SHAPES_EQUAL_PROPERTY;17;0.14655172413793102;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
 SHAPES_DIFFERENT_CONSTRAINTS;2;0.017241379310344827;Number of shapes including constraints that are not in both versions of the shape
-CONSTRAINTS_COMPLETELY_EQUAL;255;0.45293072824156305;Number of constraints completely equal in both files
-CONSTRAINTS_VALIDATION_EQUAL;184;0.3268206039076377;Number of equal constraints but with a different number of annotated instances
-CONSTRAINTS_P_O_EQUAL;43;0.0763765541740675;Number of constraints that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PROPERTY_EQUAL;20;0.035523978685612786;Number of constraints that have the same predicate, but different node constraint
-CONSTRAINTS_DIFFERENT;61;0.108348134991119;Number of constraints that are not in both versions of the shape
-CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.1982758620689653;0.45293072824156305;Average constraints in a shape that are completely equal in both files
-CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.5862068965517242;0.3268206039076377;Average constraints in a shape that are equal constraints but with a different number of annotated instances
-CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.3706896551724138;0.07637655417406751;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.1724137931034483;0.03552397868561279;Average constraints in a shape that have the same predicate, but different node constraint
-CONSTRAINTS_PER_SHAPE_DIFFERENT;0.5258620689655172;0.10834813499111902;Average constraints in a shape that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;255;0.5079681274900398;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;184;0.3665338645418327;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;43;0.08565737051792828;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;18;0.035856573705179286;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;2;0.00398406374501992;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.1982758620689653;0.5079681274900398;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.5862068965517242;0.3665338645418327;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.3706896551724138;0.0856573705179283;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.15517241379310345;0.035856573705179286;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.017241379310344827;0.00398406374501992;Average constraints in a shape that are not in both versions of the shape
 
 
 CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
 Shape;predicate;node constraint
+:Genomic_DNA;rdf:type;[<http://purl.uniprot.org/core/Genomic_RNA>]
+:Genomic_RNA;rdf:type;[<http://purl.uniprot.org/core/Genomic_DNA>]
