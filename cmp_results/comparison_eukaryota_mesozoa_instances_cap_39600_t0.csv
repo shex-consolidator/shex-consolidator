@@ -12,16 +12,16 @@ SHAPES_EQUAL_CONSTRAINT;50;0.43103448275862066;Number of shapes with equal const
 SHAPES_EQUAL_P_O_PAIRS;1;0.008620689655172414;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
 SHAPES_EQUAL_PROPERTY;51;0.4396551724137931;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
 SHAPES_DIFFERENT_CONSTRAINTS;3;0.02586206896551724;Number of shapes including constraints that are not in both versions of the shape
-CONSTRAINTS_COMPLETELY_EQUAL;240;0.43010752688172044;Number of constraints completely equal in both files
-CONSTRAINTS_VALIDATION_EQUAL;202;0.36200716845878134;Number of equal constraints but with a different number of annotated instances
-CONSTRAINTS_P_O_EQUAL;1;0.0017921146953405018;Number of constraints that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PROPERTY_EQUAL;58;0.1039426523297491;Number of constraints that have the same predicate, but different node constraint
-CONSTRAINTS_DIFFERENT;57;0.10215053763440861;Number of constraints that are not in both versions of the shape
-CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.0689655172413794;0.43010752688172044;Average constraints in a shape that are completely equal in both files
-CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.7413793103448276;0.36200716845878134;Average constraints in a shape that are equal constraints but with a different number of annotated instances
-CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.008620689655172414;0.0017921146953405016;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
-CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.5;0.1039426523297491;Average constraints in a shape that have the same predicate, but different node constraint
-CONSTRAINTS_PER_SHAPE_DIFFERENT;0.49137931034482757;0.1021505376344086;Average constraints in a shape that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;240;0.47808764940239046;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;202;0.40239043824701193;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;1;0.00199203187250996;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;58;0.11553784860557768;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;1;0.00199203187250996;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.0689655172413794;0.4780876494023904;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.7413793103448276;0.4023904382470119;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.008620689655172414;0.0019920318725099597;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.5;0.11553784860557767;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.008620689655172414;0.0019920318725099597;Average constraints in a shape that are not in both versions of the shape
 
 
 CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:

@@ -1,0 +1,1451 @@
+PREFIX dc: <http://purl.org/dc/terms/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX pav: <http://purl.org/pav/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX : <http://weso.es/shapes/>
+
+:Statement  [<http://purl.uniprot.org/uniprot/#>~]  AND   # 4483339 instances
+{
+   rdf:subject  IRI  +;                                        # 100.0 % (4483339 instances).
+            # 99.99618587842677 % (4483168 instances). obj: IRI. Cardinality: {1}
+            # 81.65081873130718 % (3660683 instances). obj: @:Protein. Cardinality: {1}
+   rdf:predicate  IRI  +;                                      # 100.0 % (4483339 instances).
+            # 99.99618587842677 % (4483168 instances). obj: IRI. Cardinality: {1}
+   rdf:type  [rdf:Statement]  ;                                # 100.0 % (4483339 instances).
+   rdf:object  IRI  ?;
+            # 88.1581562313267 % (3952429 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/attribution>  IRI  *;
+            # 85.09775861249841 % (3815221 instances). obj: IRI. Cardinality: +
+            # 79.92036738689625 % (3583101 instances). obj: IRI. Cardinality: {1}
+   rdf:object  xsd:string  *;
+            # 11.841353062973823 % (530888 instances). obj: xsd:string. Cardinality: +
+            # 11.837538941400595 % (530717 instances). obj: xsd:string. Cardinality: {1}
+   rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ?;
+            # 11.065904228968632 % (496122 instances). obj: <http://purl.uniprot.org/core/Citation_Statement>. Cardinality: {1}
+   <http://purl.uniprot.org/core/scope>  xsd:string  *
+            # 11.065904228968632 % (496122 instances). obj: xsd:string. Cardinality: +
+            # 6.847441159368052 % (306994 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Protein  [<http://purl.uniprot.org/uniprot/>~]  AND   # 109488 instances
+{
+   <http://purl.uniprot.org/core/annotation>  IRI  +;          # 100.0 % (109488 instances).
+            # 93.90344147303814 % (102813 instances). obj: @:Chain_Annotation. Cardinality: +
+            # 86.7903331871986 % (95025 instances). obj: @:Function_Annotation. Cardinality: +
+            # 86.11446003214964 % (94285 instances). obj: @:Subcellular_Location_Annotation. Cardinality: +
+            # 80.07909542598276 % (87677 instances). obj: @:Similarity_Annotation. Cardinality: +
+            # 55.53028642408301 % (60799 instances). obj: @:Subunit_Annotation. Cardinality: +
+            # 48.97523016220956 % (53622 instances). obj: @:Region_Annotation. Cardinality: +
+            # 37.55480052608505 % (41118 instances). obj: @:Modified_Residue_Annotation. Cardinality: +
+            # 36.720005845389444 % (40204 instances). obj: @:Tissue_Specificity_Annotation. Cardinality: +
+            # 34.86957474791758 % (38178 instances). obj: @:Domain_Extent_Annotation. Cardinality: +
+            # 30.37319158263919 % (33255 instances). obj: @:Compositional_Bias_Annotation. Cardinality: +
+            # 27.038579570363876 % (29604 instances). obj: @:Sequence_Conflict_Annotation. Cardinality: +
+            # 25.724280286424083 % (28165 instances). obj: @:Binding_Site_Annotation. Cardinality: +
+            # 23.023527692532515 % (25208 instances). obj: @:Transmembrane_Annotation. Cardinality: +
+            # 22.731258220078914 % (24888 instances). obj: @:Catalytic_Activity_Annotation. Cardinality: +
+            # 21.821569487067073 % (23892 instances). obj: @:Disulfide_Bond_Annotation. Cardinality: +
+            # 21.43887914657314 % (23473 instances). obj: @:PTM_Annotation. Cardinality: +
+            # 20.97398801695163 % (22964 instances). obj: @:Signal_Peptide_Annotation. Cardinality: {1}
+            # 18.872387841589948 % (20663 instances). obj: @:Glycosylation_Annotation. Cardinality: +
+            # 17.921598714014323 % (19622 instances). obj: @:Alternative_Splicing_Annotation. Cardinality: {1}
+            # 17.905158556188805 % (19604 instances). obj: @:Alternative_Sequence_Annotation. Cardinality: +
+            # 17.51516147888353 % (19177 instances). obj: @:Domain_Annotation. Cardinality: +
+            # 15.561522723951482 % (17038 instances). obj: @:Topological_Domain_Annotation. Cardinality: +
+            # 13.871839836329094 % (15188 instances). obj: @:Natural_Variant_Annotation. Cardinality: +
+            # 11.940121291831069 % (13073 instances). obj: @:Active_Site_Annotation. Cardinality: +
+            # 11.129073505772322 % (12185 instances). obj: @:Cofactor_Annotation. Cardinality: +
+            # 10.991158848458278 % (12034 instances). obj: @:Helix_Annotation. Cardinality: +
+            # 10.821277217594623 % (11848 instances). obj: @:Annotation. Cardinality: +
+            # 10.23947829899167 % (11211 instances). obj: @:Beta_Strand_Annotation. Cardinality: +
+            # 9.723440011690778 % (10646 instances). obj: @:Motif_Annotation. Cardinality: +
+            # 9.478664328510886 % (10378 instances). obj: @:Mutagenesis_Annotation. Cardinality: +
+            # 8.782697647230748 % (9616 instances). obj: @:Turn_Annotation. Cardinality: +
+            # 8.556188806079206 % (9368 instances). obj: @:Developmental_Stage_Annotation. Cardinality: +
+            # 8.497734911588486 % (9304 instances). obj: @:Erroneous_Initiation_Annotation. Cardinality: +
+            # 7.782588046178576 % (8521 instances). obj: @:Initiator_Methionine_Annotation. Cardinality: +
+            # 7.463831652783867 % (8172 instances). obj: @:Propeptide_Annotation. Cardinality: +
+            # 7.270203127283355 % (7960 instances). obj: @:Repeat_Annotation. Cardinality: +
+            # 7.128635101563642 % (7805 instances). obj: @:Coiled_Coil_Annotation. Cardinality: +
+            # 6.897559549905012 % (7552 instances). obj: @:Site_Annotation. Cardinality: +
+            # 6.702104340201666 % (7338 instances). obj: @:Peptide_Annotation. Cardinality: +
+            # 6.681097471869063 % (7315 instances). obj: @:Pathway_Annotation. Cardinality: +
+            # 6.455501972818939 % (7068 instances). obj: @:Caution_Annotation. Cardinality: +
+            # 6.263700131521263 % (6858 instances). obj: @:Disruption_Phenotype_Annotation. Cardinality: +
+            # 5.8161625018266845 % (6368 instances). obj: @:Cross-link_Annotation. Cardinality: +
+            # 5.686467923425399 % (6226 instances). obj: @:Activity_Regulation_Annotation. Cardinality: +
+            # 5.656327634078621 % (6193 instances). obj: @:Zinc_Finger_Annotation. Cardinality: +
+            # 5.425252082419991 % (5940 instances). obj: @:Induction_Annotation. Cardinality: +
+            # 5.091882215402601 % (5575 instances). obj: @:Disease_Annotation. Cardinality: +
+   <http://purl.uniprot.org/core/sequence>  IRI  +;            # 100.0 % (109488 instances).
+            # 81.87929270787666 % (89648 instances). obj: IRI. Cardinality: {1}
+            # 10.504347508402748 % (11501 instances). obj: IRI. Cardinality: {2}
+            # 100.0 % (109488 instances). obj: @:Simple_Sequence. Cardinality: +
+            # 17.95904574017244 % (19663 instances). obj: @:Modified_Sequence. Cardinality: +
+   <http://purl.uniprot.org/core/created>  xsd:date  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/organism>  IRI  ;             # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/version>  xsd:int  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/mnemonic>  xsd:string  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/existence>  IRI  ;            # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/modified>  xsd:date  ;          # 100.0 % (109488 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Protein>]  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/recommendedName>  @:Structured_Name  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/reviewed>  xsd:boolean  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/citation>  IRI  +;            # 100.0 % (109488 instances).
+            # 40.441874908665795 % (44279 instances). obj: IRI. Cardinality: {1}
+            # 14.858249305860003 % (16268 instances). obj: IRI. Cardinality: {2}
+            # 8.933399093964635 % (9781 instances). obj: IRI. Cardinality: {3}
+            # 6.918566418237615 % (7575 instances). obj: IRI. Cardinality: {4}
+            # 5.501972818939062 % (6024 instances). obj: IRI. Cardinality: {5}
+            # 39.966937015928686 % (43759 instances). obj: @:Submission_Citation. Cardinality: +
+   <http://purl.uniprot.org/core/classifiedWith>  IRI  *;
+            # 99.98264650007307 % (109469 instances). obj: IRI. Cardinality: +
+            # 7.678467046616981 % (8407 instances). obj: IRI. Cardinality: {10}
+            # 6.055458132398071 % (6630 instances). obj: IRI. Cardinality: {9}
+            # 5.932156948706708 % (6495 instances). obj: IRI. Cardinality: {11}
+            # 5.511106239953237 % (6034 instances). obj: IRI. Cardinality: {8}
+   <http://purl.uniprot.org/core/attribution>  IRI  *;
+            # 99.78445126406547 % (109252 instances). obj: IRI. Cardinality: +
+            # 11.254201373666522 % (12322 instances). obj: IRI. Cardinality: {7}
+            # 10.652308928832383 % (11663 instances). obj: IRI. Cardinality: {6}
+            # 8.712370305421599 % (9539 instances). obj: IRI. Cardinality: {8}
+            # 8.411880754055238 % (9210 instances). obj: IRI. Cardinality: {5}
+            # 7.194395732865702 % (7877 instances). obj: IRI. Cardinality: {9}
+            # 5.825295922840859 % (6378 instances). obj: IRI. Cardinality: {10}
+            # 5.490099371620634 % (6011 instances). obj: IRI. Cardinality: {4}
+   rdfs:seeAlso  IRI  *;
+            # 98.87476253105363 % (108256 instances). obj: IRI. Cardinality: +
+            # 98.86014905743095 % (108240 instances). obj: @:Resource. Cardinality: +
+            # 91.58355253543768 % (100273 instances). obj: @:Nucleotide_Resource. Cardinality: +
+            # 54.962187637001314 % (60177 instances). obj: @:Transcript_Resource. Cardinality: +
+            # 13.202360075990063 % (14455 instances). obj: @:Structure_Resource. Cardinality: +
+   <http://purl.uniprot.org/core/encodedBy>  @:Gene  *;
+            # 86.06239953236884 % (94228 instances). obj: @:Gene. Cardinality: +
+            # 85.88064445418676 % (94029 instances). obj: @:Gene. Cardinality: {1}
+   <http://purl.uniprot.org/core/proteome>  IRI  *;
+            # 80.09096887330118 % (87690 instances). obj: IRI. Cardinality: +
+            # 76.42116030980563 % (83672 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/isolatedFrom>  IRI  *;
+            # 70.71368551804764 % (77423 instances). obj: IRI. Cardinality: +
+            # 38.60423060061377 % (42267 instances). obj: IRI. Cardinality: {1}
+            # 11.478883530615228 % (12568 instances). obj: IRI. Cardinality: {2}
+            # 5.462699108578109 % (5981 instances). obj: IRI. Cardinality: {3}
+   <http://purl.uniprot.org/core/alternativeName>  @:Structured_Name  *;
+            # 64.34586438696478 % (70451 instances). obj: @:Structured_Name. Cardinality: +
+            # 32.821861756539526 % (35936 instances). obj: @:Structured_Name. Cardinality: {1}
+            # 17.117857664766913 % (18742 instances). obj: @:Structured_Name. Cardinality: {2}
+            # 7.352403916410931 % (8050 instances). obj: @:Structured_Name. Cardinality: {3}
+   <http://purl.uniprot.org/core/replaces>  IRI  *;
+            # 43.63674557942423 % (47777 instances). obj: IRI. Cardinality: +
+            # 17.81656437235131 % (19507 instances). obj: IRI. Cardinality: {1}
+            # 9.321569487067077 % (10206 instances). obj: IRI. Cardinality: {2}
+            # 5.765015344147304 % (6312 instances). obj: IRI. Cardinality: {3}
+   <http://purl.uniprot.org/core/oldMnemonic>  xsd:string  *;
+            # 42.1589580593307 % (46159 instances). obj: xsd:string. Cardinality: +
+            # 30.783282186175654 % (33704 instances). obj: xsd:string. Cardinality: {1}
+            # 9.13707438258074 % (10004 instances). obj: xsd:string. Cardinality: {2}
+   <http://purl.uniprot.org/core/potentialSequence>  IRI  *;
+            # 36.28342832091188 % (39726 instances). obj: IRI. Cardinality: +
+            # 13.76406546836183 % (15070 instances). obj: IRI. Cardinality: {1}
+            # 7.958863071752155 % (8714 instances). obj: IRI. Cardinality: {2}
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  *;
+            # 31.987980417945344 % (35023 instances). obj: @:External_Sequence. Cardinality: +
+            # 17.219238638024258 % (18853 instances). obj: @:External_Sequence. Cardinality: {1}
+            # 7.4702250474937895 % (8179 instances). obj: @:External_Sequence. Cardinality: {2}
+   <http://purl.uniprot.org/core/enzyme>  IRI  *;
+            # 23.914036241414586 % (26183 instances). obj: IRI. Cardinality: +
+            # 21.31466462078036 % (23337 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/interaction>  IRI  *
+            # 15.17426567295046 % (16614 instances). obj: IRI. Cardinality: +
+            # 15.17426567295046 % (16614 instances). obj: @:Interaction. Cardinality: +
+            # 14.990683910565542 % (16413 instances). obj: @:Non_Self_Interaction. Cardinality: +
+}
+
+
+:ExactPosition  [<http://purl.uniprot.org/position/>~]  AND   # 2930304 instances
+{
+   <http://biohackathon.org/resource/faldo#reference>  IRI  ;          # 100.0 % (2930304 instances).
+            # 99.91151088760756 % (2927711 instances). obj: @:Simple_Sequence. Cardinality: {1}
+   <http://biohackathon.org/resource/faldo#position>  xsd:int  ;          # 100.0 % (2930304 instances).
+   rdf:type  [<http://biohackathon.org/resource/faldo#ExactPosition>]  ;          # 100.0 % (2930304 instances).
+   rdf:type  [<http://biohackathon.org/resource/faldo#Position>]            # 100.0 % (2930304 instances).
+}
+
+
+:Position  [<http://purl.uniprot.org/position/>~]  AND   # 2936962 instances
+{
+   <http://biohackathon.org/resource/faldo#reference>  IRI  ;          # 100.0 % (2936962 instances).
+            # 99.91171148962772 % (2934369 instances). obj: @:Simple_Sequence. Cardinality: {1}
+   rdf:type  [<http://biohackathon.org/resource/faldo#Position>]  ;          # 100.0 % (2936962 instances).
+   <http://biohackathon.org/resource/faldo#position>  xsd:int  ?;
+            # 99.77330316156628 % (2930304 instances). obj: xsd:int. Cardinality: {1}
+   rdf:type  [<http://biohackathon.org/resource/faldo#ExactPosition>]  ?
+            # 99.77330316156628 % (2930304 instances). obj: <http://biohackathon.org/resource/faldo#ExactPosition>. Cardinality: {1}
+}
+
+
+:Subunit_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 62755 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (62755 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Subunit_Annotation>]            # 100.0 % (62755 instances).
+}
+
+
+:Region  [<http://purl.uniprot.org/>~]  AND   # 2040536 instances
+{
+   rdf:type  [<http://biohackathon.org/resource/faldo#Region>]  ;          # 100.0 % (2040536 instances).
+   <http://biohackathon.org/resource/faldo#begin>  IRI  ?;
+            # 99.9448184202582 % (2039410 instances). obj: IRI. Cardinality: {1}
+            # 99.9448184202582 % (2039410 instances). obj: @:Position. Cardinality: {1}
+            # 99.75511336237145 % (2035539 instances). obj: @:ExactPosition. Cardinality: {1}
+   <http://biohackathon.org/resource/faldo#end>  IRI  ?
+            # 99.93545813452936 % (2039219 instances). obj: IRI. Cardinality: {1}
+            # 99.93545813452936 % (2039219 instances). obj: @:Position. Cardinality: {1}
+            # 99.74041134290206 % (2035239 instances). obj: @:ExactPosition. Cardinality: {1}
+}
+
+
+:Resource   # 2996014 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Resource>]  ;          # 100.0 % (2996014 instances).
+   <http://purl.uniprot.org/core/database>  IRI  *;
+            # 99.84382582991935 % (2991335 instances). obj: IRI. Cardinality: +
+            # 80.18780953627052 % (2402438 instances). obj: IRI. Cardinality: {1}
+   rdfs:comment  xsd:string  *;
+            # 35.375235229207874 % (1059847 instances). obj: xsd:string. Cardinality: +
+            # 20.429076766663975 % (612058 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/signatureSequenceMatch>  IRI  *;
+            # 7.297028652069049 % (218620 instances). obj: IRI. Cardinality: +
+   <http://purl.uniprot.org/core/translatedFrom>  IRI  *
+            # 5.042499801402797 % (151074 instances). obj: IRI. Cardinality: +
+            # 5.034021870391793 % (150820 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:MRNA  [<http://purl.uniprot.org/embl/>~]  AND   # 221425 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/MRNA>]             # 100.0 % (221425 instances).
+}
+
+
+:Structured_Name  [<http://purl.uniprot.org/uniprot/>~]  AND   # 255861 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Structured_Name>]  ;          # 100.0 % (255861 instances).
+   <http://purl.uniprot.org/core/fullName>  xsd:string  ?;
+            # 99.28125036640989 % (254022 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/shortName>  xsd:string  *;
+            # 23.136781299221063 % (59198 instances). obj: xsd:string. Cardinality: +
+            # 19.151805081665437 % (49002 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/ecName>  xsd:string  *
+            # 11.575034882221207 % (29616 instances). obj: xsd:string. Cardinality: +
+            # 11.150585669562771 % (28530 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Citation_Statement  [<http://purl.uniprot.org/uniprot/#>~]  AND   # 496122 instances
+{
+   <http://purl.uniprot.org/core/scope>  xsd:string  +;          # 100.0 % (496122 instances).
+            # 61.878731441056836 % (306994 instances). obj: xsd:string. Cardinality: {1}
+            # 22.264684896053794 % (110460 instances). obj: xsd:string. Cardinality: {2}
+            # 7.631187490173788 % (37860 instances). obj: xsd:string. Cardinality: {3}
+   rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ;          # 100.0 % (496122 instances).
+   rdf:type  [rdf:Statement]  ;                                # 100.0 % (496122 instances).
+   rdf:subject  @:Protein  ;                                   # 100.0 % (496122 instances).
+   rdf:predicate  IRI  ;                                       # 100.0 % (496122 instances).
+   rdf:object  IRI  ;                                          # 100.0 % (496122 instances).
+            # 11.548369151136212 % (57294 instances). obj: @:Submission_Citation. Cardinality: +
+   <http://purl.uniprot.org/core/context>  IRI  *;
+            # 41.811288352461695 % (207435 instances). obj: IRI. Cardinality: +
+            # 29.667501138832787 % (147187 instances). obj: IRI. Cardinality: {1}
+            # 8.606350857248822 % (42698 instances). obj: IRI. Cardinality: {2}
+            # 34.4759958236079 % (171043 instances). obj: @:Tissue. Cardinality: +
+            # 14.954386219518586 % (74192 instances). obj: @:Strain. Cardinality: +
+   <http://purl.uniprot.org/core/attribution>  IRI  *
+            # 5.705653045017153 % (28307 instances). obj: IRI. Cardinality: +
+}
+
+
+:Simple_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND   # 109488 instances
+{
+   rdf:value  xsd:string  ;                                    # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/md5Checksum>  xsd:string  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/mass>  xsd:int  ;             # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/version>  xsd:int  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/modified>  xsd:date  ;          # 100.0 % (109488 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Simple_Sequence>]  ;          # 100.0 % (109488 instances).
+   <http://purl.uniprot.org/core/precursor>  xsd:boolean  ?;
+            # 25.141568025719714 % (27527 instances). obj: xsd:boolean. Cardinality: {1}
+   <http://purl.uniprot.org/core/name>  xsd:string  *
+            # 18.253141896828875 % (19985 instances). obj: xsd:string. Cardinality: +
+            # 15.042744410346339 % (16470 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Chain_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND   # 107128 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (107128 instances).
+   <http://purl.uniprot.org/core/mass>  xsd:int  ;             # 100.0 % (107128 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (107128 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Chain_Annotation>]            # 100.0 % (107128 instances).
+}
+
+
+:Nucleotide_Resource  [<http://purl.uniprot.org/>~]  AND   # 343921 instances
+{
+   <http://purl.uniprot.org/core/locatedOn>  IRI  +;           # 100.0 % (343921 instances).
+            # 98.52873188900939 % (338861 instances). obj: IRI. Cardinality: {1}
+            # 64.56366432988972 % (222048 instances). obj: @:MRNA. Cardinality: +
+            # 35.377310487001374 % (121670 instances). obj: @:Genomic_DNA. Cardinality: +
+   <http://purl.uniprot.org/core/database>  IRI  +;            # 100.0 % (343921 instances).
+            # 99.95493151043408 % (343766 instances). obj: IRI. Cardinality: {1}
+   rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Resource>]  ;          # 100.0 % (343921 instances).
+   <http://purl.uniprot.org/core/citation>  IRI  *;
+            # 14.167788532831668 % (48726 instances). obj: IRI. Cardinality: +
+            # 14.166043946138792 % (48720 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/sequenceDiscrepancy>  IRI  *
+            # 6.523881938003203 % (22437 instances). obj: IRI. Cardinality: +
+            # 6.4884086752480945 % (22315 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Subcellular_Location_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 97623 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Subcellular_Location_Annotation>]  ;          # 100.0 % (97623 instances).
+   <http://purl.uniprot.org/core/locatedIn>  IRI  *;
+            # 99.96722083935138 % (97591 instances). obj: IRI. Cardinality: +
+            # 65.370865472276 % (63817 instances). obj: IRI. Cardinality: {1}
+            # 19.546623234278808 % (19082 instances). obj: IRI. Cardinality: {2}
+            # 7.743052354465648 % (7559 instances). obj: IRI. Cardinality: {3}
+   rdfs:comment  xsd:string  ?
+            # 26.190549358245498 % (25568 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Modified_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 208049 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (208049 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (208049 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Modified_Residue_Annotation>]            # 100.0 % (208049 instances).
+}
+
+
+:Transcript_Resource   # 142688 instances
+{
+   <http://purl.uniprot.org/core/translatedTo>  IRI  +;          # 100.0 % (142688 instances).
+            # 99.95444606413994 % (142623 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/database>  IRI  +;            # 100.0 % (142688 instances).
+            # 99.95444606413994 % (142623 instances). obj: IRI. Cardinality: {1}
+   rdf:type  [<http://purl.uniprot.org/core/Transcript_Resource>]  ;          # 100.0 % (142688 instances).
+   <http://purl.uniprot.org/core/transcribedFrom>  IRI  *;
+            # 87.12365440681768 % (124315 instances). obj: IRI. Cardinality: +
+            # 87.07810047095761 % (124250 instances). obj: IRI. Cardinality: {1}
+   rdfs:seeAlso  IRI  ?;
+            # 39.639633325857815 % (56561 instances). obj: IRI. Cardinality: {1}
+            # 21.77408051132541 % (31069 instances). obj: @:Modified_Sequence. Cardinality: {1}
+            # 17.865552814532407 % (25492 instances). obj: @:Simple_Sequence. Cardinality: {1}
+   owl:sameAs  IRI  *
+            # 12.876345593182329 % (18373 instances). obj: IRI. Cardinality: {2}
+            # 12.849714061448756 % (18335 instances). obj: @:Transcript_Resource. Cardinality: {1}
+}
+
+
+:Topological_Domain_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 84565 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (84565 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (84565 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Topological_Domain_Annotation>]            # 100.0 % (84565 instances).
+}
+
+
+:Tissue  [<http://purl.uniprot.org/uniprot/>~]  AND   # 200303 instances
+{
+   rdfs:label  xsd:string  ;                                   # 100.0 % (200303 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Tissue>]            # 100.0 % (200303 instances).
+}
+
+
+:Participant  [<http://purl.uniprot.org/intact/>~]  AND   # 185917 instances
+{
+   owl:sameAs  IRI  +;                                         # 100.0 % (185917 instances).
+            # 7.10424544285891 % (13208 instances). obj: IRI. Cardinality: {2}
+            # 81.88223777276957 % (152233 instances). obj: @:Protein. Cardinality: +
+            # 12.475459479229979 % (23194 instances). obj: @:Modified_Sequence. Cardinality: +
+   rdf:type  [<http://purl.uniprot.org/core/Participant>]  ;          # 100.0 % (185917 instances).
+   rdfs:label  xsd:string  *
+            # 99.13025705018906 % (184300 instances). obj: xsd:string. Cardinality: +
+            # 7.2575396547921915 % (13493 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Strain  [<http://purl.uniprot.org/uniprot/>~]  AND   # 67279 instances
+{
+   rdfs:label  xsd:string  ;                                   # 100.0 % (67279 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Strain>]            # 100.0 % (67279 instances).
+}
+
+
+:Non_Self_Interaction  [<http://purl.uniprot.org/intact/>~]  AND   # 176663 instances
+{
+   <http://purl.uniprot.org/core/participant>  @:Participant  +;          # 100.0 % (176663 instances).
+   <http://purl.uniprot.org/core/experiments>  xsd:int  +;          # 100.0 % (176663 instances).
+            # 94.86479908073564 % (167591 instances). obj: xsd:int. Cardinality: {2}
+            # 5.135200919264362 % (9072 instances). obj: xsd:int. Cardinality: {1}
+   <http://purl.uniprot.org/core/xeno>  xsd:boolean  +;          # 100.0 % (176663 instances).
+            # 94.86479908073564 % (167591 instances). obj: xsd:boolean. Cardinality: {2}
+            # 5.135200919264362 % (9072 instances). obj: xsd:boolean. Cardinality: {1}
+   rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ;          # 100.0 % (176663 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Interaction>]            # 100.0 % (176663 instances).
+}
+
+
+:Interaction  [<http://purl.uniprot.org/intact/>~]  AND   # 178292 instances
+{
+   <http://purl.uniprot.org/core/participant>  @:Participant  +;          # 100.0 % (178292 instances).
+   <http://purl.uniprot.org/core/experiments>  xsd:int  +;          # 100.0 % (178292 instances).
+            # 93.99804814573845 % (167591 instances). obj: xsd:int. Cardinality: {2}
+            # 6.001951854261549 % (10701 instances). obj: xsd:int. Cardinality: {1}
+   <http://purl.uniprot.org/core/xeno>  xsd:boolean  +;          # 100.0 % (178292 instances).
+            # 93.99804814573845 % (167591 instances). obj: xsd:boolean. Cardinality: {2}
+            # 6.001951854261549 % (10701 instances). obj: xsd:boolean. Cardinality: {1}
+   rdf:type  [<http://purl.uniprot.org/core/Interaction>]  ;          # 100.0 % (178292 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ?
+            # 99.08633028963723 % (176663 instances). obj: <http://purl.uniprot.org/core/Non_Self_Interaction>. Cardinality: {1}
+}
+
+
+:Mutagenesis_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 51072 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (51072 instances).
+   <http://purl.uniprot.org/core/substitution>  xsd:string  +;          # 100.0 % (51072 instances).
+            # 96.28563596491229 % (49175 instances). obj: xsd:string. Cardinality: {1}
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (51072 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Mutagenesis_Annotation>]            # 100.0 % (51072 instances).
+}
+
+
+:Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 14283 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (14283 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (14283 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Site_Annotation>]            # 100.0 % (14283 instances).
+}
+
+
+:Sequence_Conflict_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 107210 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (107210 instances).
+   <http://purl.uniprot.org/core/substitution>  xsd:string  ;          # 100.0 % (107210 instances).
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (107210 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Sequence_Conflict_Annotation>]            # 100.0 % (107210 instances).
+}
+
+
+:Gene  [<http://purl.uniprot.org/uniprot/>~]  AND   # 94868 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Gene>]  ;          # 100.0 % (94868 instances).
+   skos:prefLabel  xsd:string  ?;
+            # 97.26883669941392 % (92277 instances). obj: xsd:string. Cardinality: {1}
+   skos:altLabel  xsd:string  *;
+            # 45.12585908841759 % (42810 instances). obj: xsd:string. Cardinality: +
+            # 28.029472530252562 % (26591 instances). obj: xsd:string. Cardinality: {1}
+            # 9.970696125142304 % (9459 instances). obj: xsd:string. Cardinality: {2}
+            # 5.957751823586457 % (5652 instances). obj: xsd:string. Cardinality: {3}
+   <http://purl.uniprot.org/core/orfName>  xsd:string  *
+            # 19.868659611249313 % (18849 instances). obj: xsd:string. Cardinality: +
+            # 18.87780916642071 % (17909 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Domain_Extent_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 82600 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (82600 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (82600 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Domain_Extent_Annotation>]            # 100.0 % (82600 instances).
+}
+
+
+:PTM_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 36666 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (36666 instances).
+   rdf:type  [<http://purl.uniprot.org/core/PTM_Annotation>]            # 100.0 % (36666 instances).
+}
+
+
+:Similarity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 87958 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (87958 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Similarity_Annotation>]            # 100.0 % (87958 instances).
+}
+
+
+:Structure_Resource  [<http://rdf.wwpdb.org/pdb/>~]  AND   # 119480 instances
+{
+   <http://purl.uniprot.org/core/chainSequenceMapping>  IRI  +;          # 100.0 % (119480 instances).
+            # 52.866588550384996 % (63165 instances). obj: IRI. Cardinality: {1}
+            # 19.911282222966186 % (23790 instances). obj: IRI. Cardinality: {2}
+            # 6.40358218948778 % (7651 instances). obj: IRI. Cardinality: {3}
+   <http://purl.uniprot.org/core/database>  IRI  +;            # 100.0 % (119480 instances).
+            # 55.147304988282556 % (65890 instances). obj: IRI. Cardinality: {1}
+            # 19.425845329762303 % (23210 instances). obj: IRI. Cardinality: {2}
+            # 5.518915299631737 % (6594 instances). obj: IRI. Cardinality: {3}
+   rdf:type  [<http://purl.uniprot.org/core/Structure_Resource>]  ;          # 100.0 % (119480 instances).
+   <http://purl.uniprot.org/core/method>  IRI  *;
+            # 99.94392366923334 % (119413 instances). obj: IRI. Cardinality: +
+            # 55.10713090056913 % (65842 instances). obj: IRI. Cardinality: {1}
+            # 19.412453967191162 % (23194 instances). obj: IRI. Cardinality: {2}
+            # 5.516404419149649 % (6591 instances). obj: IRI. Cardinality: {3}
+   <http://purl.uniprot.org/core/resolution>  xsd:decimal  *
+            # 93.45497154335453 % (111660 instances). obj: xsd:decimal. Cardinality: +
+            # 49.748074991630396 % (59439 instances). obj: xsd:decimal. Cardinality: {1}
+            # 18.41312353531972 % (22000 instances). obj: xsd:decimal. Cardinality: {2}
+            # 5.482089052561098 % (6550 instances). obj: xsd:decimal. Cardinality: {3}
+}
+
+
+:Alternative_Sequence_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND   # 48438 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (48438 instances).
+   <http://purl.uniprot.org/core/substitution>  xsd:string  ;          # 100.0 % (48438 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (48438 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Sequence_Annotation>]            # 100.0 % (48438 instances).
+}
+
+
+:Function_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 99979 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (99979 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Function_Annotation>]            # 100.0 % (99979 instances).
+}
+
+
+:Transmembrane_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 114041 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (114041 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Transmembrane_Annotation>]  ;          # 100.0 % (114041 instances).
+   rdfs:comment  xsd:string  ?
+            # 99.98596995817294 % (114025 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Disulfide_Bond_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 105422 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  +;          # 100.0 % (105422 instances).
+            # 97.43127620420785 % (102714 instances). obj: @:Region. Cardinality: {2}
+   rdf:type  [<http://purl.uniprot.org/core/Disulfide_Bond_Annotation>]            # 100.0 % (105422 instances).
+}
+
+
+:Genomic_DNA  [<http://purl.uniprot.org/embl/>~]  AND   # 125380 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]            # 100.0 % (125380 instances).
+}
+
+
+:InRangePosition  [<http://purl.uniprot.org/position/>~]  AND   # 6530 instances
+{
+   <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ;          # 100.0 % (6530 instances).
+   rdf:type  [<http://biohackathon.org/resource/faldo#InRangePosition>]  ;          # 100.0 % (6530 instances).
+   rdf:type  [<http://biohackathon.org/resource/faldo#Position>]  ;          # 100.0 % (6530 instances).
+   <http://biohackathon.org/resource/faldo#begin>  IRI  ?;
+            # 51.60796324655437 % (3370 instances). obj: IRI. Cardinality: {1}
+            # 51.60796324655437 % (3370 instances). obj: @:ExactPosition. Cardinality: {1}
+            # 51.60796324655437 % (3370 instances). obj: @:Position. Cardinality: {1}
+   <http://biohackathon.org/resource/faldo#end>  IRI  ?
+            # 48.437978560490045 % (3163 instances). obj: IRI. Cardinality: {1}
+            # 48.437978560490045 % (3163 instances). obj: @:ExactPosition. Cardinality: {1}
+            # 48.437978560490045 % (3163 instances). obj: @:Position. Cardinality: {1}
+}
+
+
+:Initiator_Methionine_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 8564 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (8564 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (8564 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Initiator_Methionine_Annotation>]            # 100.0 % (8564 instances).
+}
+
+
+:Helix_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 128821 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (128821 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Helix_Annotation>]            # 100.0 % (128821 instances).
+}
+
+
+:Submission_Citation  [<http://purl.uniprot.org/citations/>~]  AND   # 52774 instances
+{
+   <http://purl.uniprot.org/core/submittedTo>  xsd:string  +;          # 100.0 % (52774 instances).
+            # 30.38049039299655 % (16033 instances). obj: xsd:string. Cardinality: {1}
+            # 5.913896994732255 % (3121 instances). obj: xsd:string. Cardinality: {3122}
+            # 5.680827680297116 % (2998 instances). obj: xsd:string. Cardinality: {3000}
+   rdf:type  [<http://purl.uniprot.org/core/Submission_Citation>]  ;          # 100.0 % (52774 instances).
+   <http://purl.uniprot.org/core/date>  xsd:gYearMonth  +;          # 100.0 % (52774 instances).
+            # 30.38049039299655 % (16033 instances). obj: xsd:gYearMonth. Cardinality: {1}
+            # 5.913896994732255 % (3121 instances). obj: xsd:gYearMonth. Cardinality: {3123}
+            # 5.680827680297116 % (2998 instances). obj: xsd:gYearMonth. Cardinality: {3000}
+   <http://purl.uniprot.org/core/author>  xsd:string  *;
+            # 68.12824496911358 % (35954 instances). obj: xsd:string. Cardinality: +
+            # 6.239815060446432 % (3293 instances). obj: xsd:string. Cardinality: {3}
+            # 6.012430363436541 % (3173 instances). obj: xsd:string. Cardinality: {2}
+            # 5.913896994732255 % (3121 instances). obj: xsd:string. Cardinality: {115527}
+            # 5.680827680297116 % (2998 instances). obj: xsd:string. Cardinality: {110938}
+   <http://purl.uniprot.org/core/title>  xsd:string  *;
+            # 34.86375866904157 % (18399 instances). obj: xsd:string. Cardinality: +
+            # 21.59586159851442 % (11397 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/group>  xsd:string  *
+            # 32.243150036002575 % (17016 instances). obj: xsd:string. Cardinality: +
+}
+
+
+:Natural_Variant_Annotation  [<http://purl.uniprot.org/>~]  AND   # 92028 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (92028 instances).
+   <http://purl.uniprot.org/core/substitution>  xsd:string  ;          # 100.0 % (92028 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Natural_Variant_Annotation>]  ;          # 100.0 % (92028 instances).
+   rdfs:seeAlso  IRI  *;
+            # 73.0114747685487 % (67191 instances). obj: IRI. Cardinality: +
+            # 72.975616116834 % (67158 instances). obj: IRI. Cardinality: {1}
+   rdfs:comment  xsd:string  ?;
+            # 59.803538053635855 % (55036 instances). obj: xsd:string. Cardinality: {1}
+   skos:related  IRI  *
+            # 42.953231625157564 % (39529 instances). obj: IRI. Cardinality: +
+            # 41.947016125527014 % (38603 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:External_Sequence  [<http://purl.uniprot.org/>~]  AND   # 68973 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/External_Sequence>]  ;          # 100.0 % (68973 instances).
+   <http://purl.uniprot.org/core/translatedFrom>  @:Nucleotide_Resource  *;
+            # 93.3901671668624 % (64414 instances). obj: @:Nucleotide_Resource. Cardinality: +
+            # 93.28287880764937 % (64340 instances). obj: @:Nucleotide_Resource. Cardinality: {1}
+   <http://purl.uniprot.org/core/citation>  IRI  ?
+            # 5.652936656372783 % (3899 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Part  [<http://purl.uniprot.org/uniprot/>~]  AND   # 10206 instances
+{
+   <http://purl.uniprot.org/core/recommendedName>  @:Structured_Name  ;          # 100.0 % (10206 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Part>]  ;          # 100.0 % (10206 instances).
+   <http://purl.uniprot.org/core/alternativeName>  @:Structured_Name  *;
+            # 20.360572212424064 % (2078 instances). obj: @:Structured_Name. Cardinality: +
+            # 14.413090339016266 % (1471 instances). obj: @:Structured_Name. Cardinality: {1}
+   <http://purl.uniprot.org/core/enzyme>  IRI  *
+            # 7.848324514991181 % (801 instances). obj: IRI. Cardinality: +
+            # 7.495590828924162 % (765 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 14125 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (14125 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Annotation>]  ;          # 100.0 % (14125 instances).
+   <http://purl.uniprot.org/core/sequence>  IRI  ?
+            # 22.449557522123893 % (3171 instances). obj: IRI. Cardinality: {1}
+            # 19.53274336283186 % (2759 instances). obj: @:Modified_Sequence. Cardinality: {1}
+}
+
+
+:Tissue_Specificity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 40735 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (40735 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Tissue_Specificity_Annotation>]            # 100.0 % (40735 instances).
+}
+
+
+:Non-terminal_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 6785 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (6785 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Non-terminal_Residue_Annotation>]            # 100.0 % (6785 instances).
+}
+
+
+:Turn_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 33851 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (33851 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Turn_Annotation>]            # 100.0 % (33851 instances).
+}
+
+
+:Alternative_Initiation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 359 instances
+{
+   <http://purl.uniprot.org/core/sequence>  IRI  +;            # 100.0 % (359 instances).
+            # 59.888579387186624 % (215 instances). obj: IRI. Cardinality: {2}
+            # 16.434540389972145 % (59 instances). obj: IRI. Cardinality: {3}
+            # 10.584958217270195 % (38 instances). obj: IRI. Cardinality: {4}
+            # 100.0 % (359 instances). obj: @:Simple_Sequence. Cardinality: +
+            # 97.7715877437326 % (351 instances). obj: @:Modified_Sequence. Cardinality: +
+            # 7.520891364902507 % (27 instances). obj: @:External_Sequence. Cardinality: +
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ;          # 100.0 % (359 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;
+            # 35.097493036211695 % (126 instances). obj: <http://purl.uniprot.org/core/Alternative_Splicing_Annotation>. Cardinality: {1}
+   rdfs:comment  xsd:string  ?
+            # 7.520891364902507 % (27 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Modified_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND   # 37354 instances
+{
+   <http://purl.uniprot.org/core/modification>  @:Alternative_Sequence_Annotation  +;          # 100.0 % (37354 instances).
+            # 59.06194785029716 % (22062 instances). obj: @:Alternative_Sequence_Annotation. Cardinality: {1}
+            # 31.49863468437115 % (11766 instances). obj: @:Alternative_Sequence_Annotation. Cardinality: {2}
+            # 7.257589548642715 % (2711 instances). obj: @:Alternative_Sequence_Annotation. Cardinality: {3}
+   rdf:value  xsd:string  ;                                    # 100.0 % (37354 instances).
+   <http://purl.uniprot.org/core/basedOn>  @:Simple_Sequence  ;          # 100.0 % (37354 instances).
+   <http://purl.uniprot.org/core/name>  xsd:string  +;          # 100.0 % (37354 instances).
+            # 77.4830004818761 % (28943 instances). obj: xsd:string. Cardinality: {1}
+            # 18.423729721047277 % (6882 instances). obj: xsd:string. Cardinality: {2}
+   rdf:type  [<http://purl.uniprot.org/core/Modified_Sequence>]            # 100.0 % (37354 instances).
+}
+
+
+:Binding_Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 162893 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (162893 instances).
+   <http://purl.uniprot.org/core/ligand>  IRI  ;               # 100.0 % (162893 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Binding_Site_Annotation>]  ;          # 100.0 % (162893 instances).
+   rdfs:comment  xsd:string  ?;
+            # 8.282737748092305 % (13492 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/ligandPart>  IRI  ?
+            # 6.740007244019081 % (10979 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Cross-link_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 20886 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  +;          # 100.0 % (20886 instances).
+            # 98.53969165948482 % (20581 instances). obj: @:Region. Cardinality: {1}
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (20886 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Cross-link_Annotation>]            # 100.0 % (20886 instances).
+}
+
+
+:Ontology  [<http://purl.uniprot.org/uniprot/>~]  AND   # 1 instance
+{
+   owl:imports  IRI  ;                                         # 100.0 % (1 instance).
+   rdf:type  [owl:Ontology]                                    # 100.0 % (1 instance).
+}
+
+
+:Self_Interaction  [<http://purl.uniprot.org/intact/>~]  AND   # 1629 instances
+{
+   <http://purl.uniprot.org/core/participant>  @:Participant  +;          # 100.0 % (1629 instances).
+            # 17.863720073664823 % (291 instances). obj: @:Participant. Cardinality: {1}
+            # 12.52302025782689 % (204 instances). obj: @:Participant. Cardinality: {2}
+            # 7.980356046654389 % (130 instances). obj: @:Participant. Cardinality: {3}
+            # 6.20012277470841 % (101 instances). obj: @:Participant. Cardinality: {4}
+   <http://purl.uniprot.org/core/experiments>  xsd:int  ;          # 100.0 % (1629 instances).
+   <http://purl.uniprot.org/core/xeno>  xsd:boolean  ;          # 100.0 % (1629 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Self_Interaction>]  ;          # 100.0 % (1629 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Interaction>]            # 100.0 % (1629 instances).
+}
+
+
+:Glycosylation_Annotation  [<http://purl.uniprot.org/>~]  AND   # 73347 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (73347 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (73347 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Glycosylation_Annotation>]            # 100.0 % (73347 instances).
+}
+
+
+:Developmental_Stage_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 9445 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (9445 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Developmental_Stage_Annotation>]            # 100.0 % (9445 instances).
+}
+
+
+:Compositional_Bias_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 94110 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (94110 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (94110 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Compositional_Bias_Annotation>]            # 100.0 % (94110 instances).
+}
+
+
+:Alternative_Splicing_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 19622 instances
+{
+   <http://purl.uniprot.org/core/sequence>  IRI  +;            # 100.0 % (19622 instances).
+            # 57.15523392110896 % (11215 instances). obj: IRI. Cardinality: {2}
+            # 21.430027520130466 % (4205 instances). obj: IRI. Cardinality: {3}
+            # 9.856283763123026 % (1934 instances). obj: IRI. Cardinality: {4}
+            # 100.0 % (19622 instances). obj: @:Simple_Sequence. Cardinality: +
+            # 98.6545713994496 % (19358 instances). obj: @:Modified_Sequence. Cardinality: +
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ;          # 100.0 % (19622 instances).
+   rdfs:comment  xsd:string  ?
+            # 5.2695953521557435 % (1034 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Mass_Spectrometry_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 5632 instances
+{
+   <http://purl.uniprot.org/core/measuredValue>  xsd:decimal  ;          # 100.0 % (5632 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Mass_Spectrometry_Annotation>]  ;          # 100.0 % (5632 instances).
+   <http://purl.uniprot.org/core/method>  IRI  ?;
+            # 97.70951704545455 % (5503 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/sequence>  IRI  ?;
+            # 23.686079545454543 % (1334 instances). obj: IRI. Cardinality: {1}
+            # 18.44815340909091 % (1039 instances). obj: @:Peptide_Annotation. Cardinality: {1}
+   rdfs:comment  xsd:string  ?;
+            # 22.017045454545457 % (1240 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/measuredError>  xsd:decimal  ?
+            # 15.127840909090908 % (852 instances). obj: xsd:decimal. Cardinality: {1}
+}
+
+
+:Region_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 140500 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (140500 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Region_Annotation>]  ;          # 100.0 % (140500 instances).
+   rdfs:comment  xsd:string  ?
+            # 99.99928825622776 % (140499 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Non-adjacent_Residues_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 1644 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (1644 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Non-adjacent_Residues_Annotation>]            # 100.0 % (1644 instances).
+}
+
+
+:Disruption_Phenotype_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 6889 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (6889 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Disruption_Phenotype_Annotation>]            # 100.0 % (6889 instances).
+}
+
+
+:Disease_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 8281 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (8281 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Disease_Annotation>]  ;          # 100.0 % (8281 instances).
+   <http://purl.uniprot.org/core/disease>  IRI  ?
+            # 82.96099504890714 % (6870 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Beta_Strand_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 135401 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (135401 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Beta_Strand_Annotation>]            # 100.0 % (135401 instances).
+}
+
+
+:Erroneous_Initiation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 13408 instances
+{
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (13408 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Erroneous_Initiation_Annotation>]  ;          # 100.0 % (13408 instances).
+   rdfs:comment  xsd:string  ?
+            # 55.63842482100239 % (7460 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Induction_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 6011 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (6011 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Induction_Annotation>]            # 100.0 % (6011 instances).
+}
+
+
+:Caution_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 7272 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (7272 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Caution_Annotation>]            # 100.0 % (7272 instances).
+}
+
+
+:Signal_Peptide_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 22964 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (22964 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Signal_Peptide_Annotation>]            # 100.0 % (22964 instances).
+}
+
+
+:Motif_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 15771 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (15771 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (15771 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Motif_Annotation>]            # 100.0 % (15771 instances).
+}
+
+
+:Peptide_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND   # 10862 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (10862 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (10862 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Peptide_Annotation>]            # 100.0 % (10862 instances).
+}
+
+
+:Propeptide_Annotation  [<http://purl.uniprot.org/annotation/>~]  AND   # 9945 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (9945 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Propeptide_Annotation>]  ;          # 100.0 % (9945 instances).
+   rdfs:comment  xsd:string  ?
+            # 26.958270487682253 % (2681 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Active_Site_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 21024 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (21024 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Active_Site_Annotation>]  ;          # 100.0 % (21024 instances).
+   rdfs:comment  xsd:string  ?
+            # 71.46594368340944 % (15025 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Domain_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 24276 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (24276 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Domain_Annotation>]            # 100.0 % (24276 instances).
+}
+
+
+:Catalytic_Activity_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 56893 instances
+{
+   <http://purl.uniprot.org/core/catalyticActivity>  @:Catalytic_Activity  ;          # 100.0 % (56893 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Catalytic_Activity_Annotation>]  ;          # 100.0 % (56893 instances).
+   <http://purl.uniprot.org/core/catalyzedPhysiologicalReaction>  IRI  *
+            # 44.859648814441144 % (25522 instances). obj: IRI. Cardinality: +
+            # 43.26015502785931 % (24612 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Kinetics_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 2422 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Kinetics_Annotation>]  ;          # 100.0 % (2422 instances).
+   <http://purl.uniprot.org/core/measuredAffinity>  xsd:string  *;
+            # 95.12799339388934 % (2304 instances). obj: xsd:string. Cardinality: +
+            # 31.29644921552436 % (758 instances). obj: xsd:string. Cardinality: {1}
+            # 24.360033030553264 % (590 instances). obj: xsd:string. Cardinality: {2}
+            # 9.826589595375722 % (238 instances). obj: xsd:string. Cardinality: {3}
+            # 8.629232039636664 % (209 instances). obj: xsd:string. Cardinality: {4}
+            # 5.119735755573906 % (124 instances). obj: xsd:string. Cardinality: {5}
+   <http://purl.uniprot.org/core/measuredActivity>  xsd:string  *;
+            # 41.78364987613543 % (1012 instances). obj: xsd:string. Cardinality: +
+            # 16.804293971924032 % (407 instances). obj: xsd:string. Cardinality: {1}
+            # 9.372419488026425 % (227 instances). obj: xsd:string. Cardinality: {2}
+   rdfs:comment  xsd:string  ?
+            # 20.107349298100743 % (487 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Catalytic_Activity  [<http://purl.uniprot.org/uniprot/>~]  AND   # 56647 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Catalytic_Activity>]  ;          # 100.0 % (56647 instances).
+   <http://purl.uniprot.org/core/catalyzedReaction>  IRI  ?;
+            # 92.52034529630872 % (52410 instances). obj: IRI. Cardinality: {1}
+   <http://purl.uniprot.org/core/enzymeClass>  IRI  ?;
+            # 51.60908785990432 % (29235 instances). obj: IRI. Cardinality: {1}
+   skos:closeMatch  IRI  ?
+            # 7.479654703691281 % (4237 instances). obj: IRI. Cardinality: {1}
+}
+
+
+:Toxic_Dose_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 824 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (824 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Toxic_Dose_Annotation>]            # 100.0 % (824 instances).
+}
+
+
+:Book_Citation  [<http://purl.uniprot.org/citations/>~]  AND   # 226 instances
+{
+   <http://purl.uniprot.org/core/author>  xsd:string  +;          # 100.0 % (226 instances).
+            # 14.15929203539823 % (32 instances). obj: xsd:string. Cardinality: {4}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {52}
+            # 11.061946902654867 % (25 instances). obj: xsd:string. Cardinality: {3}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {63}
+            # 8.849557522123893 % (20 instances). obj: xsd:string. Cardinality: {5}
+            # 8.849557522123893 % (20 instances). obj: xsd:string. Cardinality: {6}
+            # 7.964601769911504 % (18 instances). obj: xsd:string. Cardinality: {2}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {28}
+   <http://purl.uniprot.org/core/place>  xsd:string  +;          # 100.0 % (226 instances).
+            # 52.21238938053098 % (118 instances). obj: xsd:string. Cardinality: {1}
+            # 13.274336283185843 % (30 instances). obj: xsd:string. Cardinality: {2}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {27}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {21}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {14}
+   <http://purl.uniprot.org/core/name>  xsd:string  +;          # 100.0 % (226 instances).
+            # 52.21238938053098 % (118 instances). obj: xsd:string. Cardinality: {1}
+            # 13.274336283185843 % (30 instances). obj: xsd:string. Cardinality: {2}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {27}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {21}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {14}
+   <http://purl.uniprot.org/core/date>  xsd:gYear  +;          # 100.0 % (226 instances).
+            # 52.21238938053098 % (118 instances). obj: xsd:gYear. Cardinality: {1}
+            # 13.274336283185843 % (30 instances). obj: xsd:gYear. Cardinality: {2}
+            # 11.504424778761061 % (26 instances). obj: xsd:gYear. Cardinality: {26}
+            # 9.29203539823009 % (21 instances). obj: xsd:gYear. Cardinality: {21}
+            # 6.1946902654867255 % (14 instances). obj: xsd:gYear. Cardinality: {14}
+   rdf:type  [<http://purl.uniprot.org/core/Book_Citation>]  ;          # 100.0 % (226 instances).
+   <http://purl.uniprot.org/core/pages>  xsd:string  *;
+            # 99.5575221238938 % (225 instances). obj: xsd:string. Cardinality: +
+            # 51.76991150442478 % (117 instances). obj: xsd:string. Cardinality: {1}
+            # 13.274336283185843 % (30 instances). obj: xsd:string. Cardinality: {2}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {27}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {21}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {14}
+   <http://purl.uniprot.org/core/publisher>  xsd:string  *;
+            # 92.03539823008849 % (208 instances). obj: xsd:string. Cardinality: +
+            # 44.24778761061947 % (100 instances). obj: xsd:string. Cardinality: {1}
+            # 13.274336283185843 % (30 instances). obj: xsd:string. Cardinality: {2}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {27}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {21}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {14}
+   <http://purl.uniprot.org/core/editor>  xsd:string  *;
+            # 91.1504424778761 % (206 instances). obj: xsd:string. Cardinality: +
+            # 19.911504424778762 % (45 instances). obj: xsd:string. Cardinality: {2}
+            # 18.58407079646018 % (42 instances). obj: xsd:string. Cardinality: {1}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {54}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {21}
+            # 7.52212389380531 % (17 instances). obj: xsd:string. Cardinality: {3}
+            # 7.079646017699115 % (16 instances). obj: xsd:string. Cardinality: {4}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {28}
+            # 5.752212389380531 % (13 instances). obj: xsd:string. Cardinality: {5}
+   <http://purl.uniprot.org/core/title>  xsd:string  *;
+            # 80.08849557522124 % (181 instances). obj: xsd:string. Cardinality: +
+            # 37.610619469026545 % (85 instances). obj: xsd:string. Cardinality: {1}
+            # 11.504424778761061 % (26 instances). obj: xsd:string. Cardinality: {26}
+            # 9.29203539823009 % (21 instances). obj: xsd:string. Cardinality: {21}
+            # 7.964601769911504 % (18 instances). obj: xsd:string. Cardinality: {2}
+            # 6.1946902654867255 % (14 instances). obj: xsd:string. Cardinality: {14}
+   <http://purl.uniprot.org/core/volume>  xsd:string  *
+            # 8.4070796460177 % (19 instances). obj: xsd:string. Cardinality: +
+            # 7.52212389380531 % (17 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Repeat_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 59070 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (59070 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Repeat_Annotation>]  ;          # 100.0 % (59070 instances).
+   rdfs:comment  xsd:string  ?
+            # 99.72913492466566 % (58910 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Frameshift_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 4383 instances
+{
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (4383 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Frameshift_Annotation>]            # 100.0 % (4383 instances).
+}
+
+
+:Sequence_Caution_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 2404 instances
+{
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (2404 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Sequence_Caution_Annotation>]  ;          # 100.0 % (2404 instances).
+   rdfs:comment  xsd:string  ?
+            # 97.58735440931781 % (2346 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Thesis_Citation  [<http://purl.uniprot.org/citations/>~]  AND   # 162 instances
+{
+   <http://purl.uniprot.org/core/place>  xsd:string  +;          # 100.0 % (162 instances).
+            # 66.66666666666666 % (108 instances). obj: xsd:string. Cardinality: {1}
+            # 14.19753086419753 % (23 instances). obj: xsd:string. Cardinality: {23}
+            # 8.641975308641975 % (14 instances). obj: xsd:string. Cardinality: {2}
+            # 6.172839506172839 % (10 instances). obj: xsd:string. Cardinality: {5}
+   <http://purl.uniprot.org/core/institution>  xsd:string  +;          # 100.0 % (162 instances).
+            # 66.66666666666666 % (108 instances). obj: xsd:string. Cardinality: {1}
+            # 14.19753086419753 % (23 instances). obj: xsd:string. Cardinality: {23}
+            # 8.641975308641975 % (14 instances). obj: xsd:string. Cardinality: {2}
+            # 6.172839506172839 % (10 instances). obj: xsd:string. Cardinality: {5}
+   <http://purl.uniprot.org/core/date>  xsd:gYear  +;          # 100.0 % (162 instances).
+            # 66.66666666666666 % (108 instances). obj: xsd:gYear. Cardinality: {1}
+            # 14.19753086419753 % (23 instances). obj: xsd:gYear. Cardinality: {23}
+            # 8.641975308641975 % (14 instances). obj: xsd:gYear. Cardinality: {2}
+            # 6.172839506172839 % (10 instances). obj: xsd:gYear. Cardinality: {5}
+   <http://purl.uniprot.org/core/author>  xsd:string  +;          # 100.0 % (162 instances).
+            # 63.580246913580254 % (103 instances). obj: xsd:string. Cardinality: {1}
+            # 14.19753086419753 % (23 instances). obj: xsd:string. Cardinality: {23}
+            # 10.493827160493826 % (17 instances). obj: xsd:string. Cardinality: {2}
+            # 6.172839506172839 % (10 instances). obj: xsd:string. Cardinality: {5}
+   rdf:type  [<http://purl.uniprot.org/core/Thesis_Citation>]  ;          # 100.0 % (162 instances).
+   <http://purl.uniprot.org/core/title>  xsd:string  *
+            # 58.64197530864198 % (95 instances). obj: xsd:string. Cardinality: +
+            # 33.33333333333333 % (54 instances). obj: xsd:string. Cardinality: {1}
+            # 14.19753086419753 % (23 instances). obj: xsd:string. Cardinality: {23}
+            # 8.641975308641975 % (14 instances). obj: xsd:string. Cardinality: {2}
+}
+
+
+:Erroneous_Termination_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 573 instances
+{
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (573 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (573 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Erroneous_Termination_Annotation>]            # 100.0 % (573 instances).
+}
+
+
+:Erroneous_Gene_Model_Prediction_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 1772 instances
+{
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (1772 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Erroneous_Gene_Model_Prediction_Annotation>]            # 100.0 % (1772 instances).
+}
+
+
+:Pathway_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 8063 instances
+{
+   rdfs:seeAlso  IRI  ;                                        # 100.0 % (8063 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Pathway_Annotation>]            # 100.0 % (8063 instances).
+}
+
+
+:Coiled_Coil_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 11698 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (11698 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Coiled_Coil_Annotation>]            # 100.0 % (11698 instances).
+}
+
+
+:Cofactor_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 13388 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Cofactor_Annotation>]  ;          # 100.0 % (13388 instances).
+   <http://purl.uniprot.org/core/cofactor>  IRI  *;
+            # 99.88048999103675 % (13372 instances). obj: IRI. Cardinality: +
+            # 92.82939946220496 % (12428 instances). obj: IRI. Cardinality: {1}
+            # 6.027786077083955 % (807 instances). obj: IRI. Cardinality: {2}
+   rdfs:comment  xsd:string  ?
+            # 64.02001792650135 % (8571 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Temperature_Dependence_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 330 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (330 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Temperature_Dependence_Annotation>]            # 100.0 % (330 instances).
+}
+
+
+:Transit_Peptide_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 2979 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (2979 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (2979 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Transit_Peptide_Annotation>]            # 100.0 % (2979 instances).
+}
+
+
+:Observation_Citation  [<http://purl.uniprot.org/citations/>~]  AND   # 176 instances
+{
+   <http://purl.uniprot.org/core/date>  xsd:gYearMonth  +;          # 100.0 % (176 instances).
+            # 26.704545454545453 % (47 instances). obj: xsd:gYearMonth. Cardinality: {1}
+            # 20.454545454545457 % (36 instances). obj: xsd:gYearMonth. Cardinality: {6}
+            # 17.045454545454543 % (30 instances). obj: xsd:gYearMonth. Cardinality: {3}
+            # 13.636363636363635 % (24 instances). obj: xsd:gYearMonth. Cardinality: {2}
+            # 9.090909090909092 % (16 instances). obj: xsd:gYearMonth. Cardinality: {4}
+            # 5.681818181818182 % (10 instances). obj: xsd:gYearMonth. Cardinality: {10}
+   <http://purl.uniprot.org/core/author>  xsd:string  +;          # 100.0 % (176 instances).
+            # 23.295454545454543 % (41 instances). obj: xsd:string. Cardinality: {6}
+            # 21.59090909090909 % (38 instances). obj: xsd:string. Cardinality: {1}
+            # 18.75 % (33 instances). obj: xsd:string. Cardinality: {3}
+            # 11.931818181818182 % (21 instances). obj: xsd:string. Cardinality: {2}
+            # 11.363636363636363 % (20 instances). obj: xsd:string. Cardinality: {4}
+            # 5.681818181818182 % (10 instances). obj: xsd:string. Cardinality: {10}
+   rdf:type  [<http://purl.uniprot.org/core/Observation_Citation>]            # 100.0 % (176 instances).
+}
+
+
+:Activity_Regulation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 6297 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (6297 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Activity_Regulation_Annotation>]            # 100.0 % (6297 instances).
+}
+
+
+:Sequence_Uncertainty_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 4714 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (4714 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Sequence_Uncertainty_Annotation>]  ;          # 100.0 % (4714 instances).
+   rdfs:comment  xsd:string  ?
+            # 96.79677556215528 % (4563 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Pharmaceutical_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 139 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (139 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Pharmaceutical_Annotation>]            # 100.0 % (139 instances).
+}
+
+
+:Transcribed_RNA  [<http://purl.uniprot.org/embl/>~]  AND   # 346 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Transcribed_RNA>]            # 100.0 % (346 instances).
+}
+
+
+:Biotechnology_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 135 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (135 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Biotechnology_Annotation>]            # 100.0 % (135 instances).
+}
+
+
+:Lipidation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 5793 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (5793 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (5793 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Lipidation_Annotation>]            # 100.0 % (5793 instances).
+}
+
+
+:Polymorphism_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 1147 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (1147 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Polymorphism_Annotation>]            # 100.0 % (1147 instances).
+}
+
+
+:RNA_Editing_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 94 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (94 instances).
+   rdf:type  [<http://purl.uniprot.org/core/RNA_Editing_Annotation>]  ;          # 100.0 % (94 instances).
+   <http://biohackathon.org/resource/faldo#location>  IRI  *
+            # 94.68085106382979 % (89 instances). obj: IRI. Cardinality: +
+            # 72.3404255319149 % (68 instances). obj: IRI. Cardinality: {1}
+            # 8.51063829787234 % (8 instances). obj: IRI. Cardinality: {3}
+            # 5.319148936170213 % (5 instances). obj: IRI. Cardinality: {2}
+            # 94.68085106382979 % (89 instances). obj: @:ExactPosition. Cardinality: +
+            # 94.68085106382979 % (89 instances). obj: @:Position. Cardinality: +
+}
+
+
+:PH_Dependence_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 907 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (907 instances).
+   rdf:type  [<http://purl.uniprot.org/core/PH_Dependence_Annotation>]            # 100.0 % (907 instances).
+}
+
+
+:Unassigned_DNA  [<http://purl.uniprot.org/embl/>~]  AND   # 203 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Unassigned_DNA>]            # 100.0 % (203 instances).
+}
+
+
+:Zinc_Finger_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 21852 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (21852 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Zinc_Finger_Annotation>]  ;          # 100.0 % (21852 instances).
+   rdfs:comment  xsd:string  ?
+            # 99.94050887790591 % (21839 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Nucleotide_Binding_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 3815 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (3815 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Nucleotide_Binding_Annotation>]  ;          # 100.0 % (3815 instances).
+   rdfs:comment  xsd:string  ?
+            # 92.31979030144167 % (3522 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Erroneous_Translation_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 375 instances
+{
+   <http://purl.uniprot.org/core/conflictingSequence>  @:External_Sequence  ;          # 100.0 % (375 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Erroneous_Translation_Annotation>]  ;          # 100.0 % (375 instances).
+   rdfs:comment  xsd:string  ?
+            # 97.06666666666666 % (364 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Unknown_Sequence  [<http://purl.uniprot.org/isoforms/>~]  AND   # 189 instances
+{
+   <http://purl.uniprot.org/core/name>  xsd:string  +;          # 100.0 % (189 instances).
+            # 70.37037037037037 % (133 instances). obj: xsd:string. Cardinality: {1}
+            # 26.455026455026452 % (50 instances). obj: xsd:string. Cardinality: {2}
+   rdf:type  [<http://purl.uniprot.org/core/Unknown_Sequence>]            # 100.0 % (189 instances).
+}
+
+
+:Intramembrane_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 1822 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (1822 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Intramembrane_Annotation>]  ;          # 100.0 % (1822 instances).
+   rdfs:comment  xsd:string  ?
+            # 82.05268935236005 % (1495 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Allergen_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 291 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (291 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Allergen_Annotation>]            # 100.0 % (291 instances).
+}
+
+
+:Alternative_Promoter_Usage_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 251 instances
+{
+   <http://purl.uniprot.org/core/sequence>  IRI  +;            # 100.0 % (251 instances).
+            # 34.26294820717131 % (86 instances). obj: IRI. Cardinality: {2}
+            # 20.717131474103585 % (52 instances). obj: IRI. Cardinality: {3}
+            # 13.147410358565736 % (33 instances). obj: IRI. Cardinality: {4}
+            # 6.772908366533864 % (17 instances). obj: IRI. Cardinality: {5}
+            # 5.9760956175298805 % (15 instances). obj: IRI. Cardinality: {6}
+            # 5.179282868525896 % (13 instances). obj: IRI. Cardinality: {7}
+            # 100.0 % (251 instances). obj: @:Simple_Sequence. Cardinality: +
+            # 95.2191235059761 % (239 instances). obj: @:Modified_Sequence. Cardinality: +
+            # 14.342629482071715 % (36 instances). obj: @:External_Sequence. Cardinality: +
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation>]  ;          # 100.0 % (251 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;
+            # 64.14342629482071 % (161 instances). obj: <http://purl.uniprot.org/core/Alternative_Splicing_Annotation>. Cardinality: {1}
+   rdfs:comment  xsd:string  ?
+            # 24.302788844621514 % (61 instances). obj: xsd:string. Cardinality: {1}
+}
+
+
+:Patent_Citation  [<http://purl.uniprot.org/citations/>~]  AND   # 89 instances
+{
+   skos:exactMatch  IRI  +;                                    # 100.0 % (89 instances).
+            # 57.30337078651685 % (51 instances). obj: IRI. Cardinality: {1}
+            # 13.48314606741573 % (12 instances). obj: IRI. Cardinality: {2}
+            # 13.48314606741573 % (12 instances). obj: IRI. Cardinality: {3}
+            # 8.98876404494382 % (8 instances). obj: IRI. Cardinality: {4}
+            # 6.741573033707865 % (6 instances). obj: IRI. Cardinality: {6}
+   <http://purl.uniprot.org/core/date>  xsd:date  +;           # 100.0 % (89 instances).
+            # 57.30337078651685 % (51 instances). obj: xsd:date. Cardinality: {1}
+            # 13.48314606741573 % (12 instances). obj: xsd:date. Cardinality: {2}
+            # 13.48314606741573 % (12 instances). obj: xsd:date. Cardinality: {3}
+            # 8.98876404494382 % (8 instances). obj: xsd:date. Cardinality: {4}
+            # 6.741573033707865 % (6 instances). obj: xsd:date. Cardinality: {6}
+   <http://purl.uniprot.org/core/author>  xsd:string  +;          # 100.0 % (89 instances).
+            # 12.359550561797752 % (11 instances). obj: xsd:string. Cardinality: {1}
+            # 12.359550561797752 % (11 instances). obj: xsd:string. Cardinality: {3}
+            # 10.112359550561797 % (9 instances). obj: xsd:string. Cardinality: {15}
+            # 10.112359550561797 % (9 instances). obj: xsd:string. Cardinality: {4}
+            # 8.98876404494382 % (8 instances). obj: xsd:string. Cardinality: {12}
+            # 8.98876404494382 % (8 instances). obj: xsd:string. Cardinality: {7}
+            # 6.741573033707865 % (6 instances). obj: xsd:string. Cardinality: {42}
+            # 5.617977528089887 % (5 instances). obj: xsd:string. Cardinality: {2}
+   rdf:type  [<http://purl.uniprot.org/core/Patent_Citation>]  ;          # 100.0 % (89 instances).
+   <http://purl.uniprot.org/core/title>  xsd:string  *
+            # 94.3820224719101 % (84 instances). obj: xsd:string. Cardinality: +
+            # 51.68539325842697 % (46 instances). obj: xsd:string. Cardinality: {1}
+            # 13.48314606741573 % (12 instances). obj: xsd:string. Cardinality: {2}
+            # 13.48314606741573 % (12 instances). obj: xsd:string. Cardinality: {3}
+            # 8.98876404494382 % (8 instances). obj: xsd:string. Cardinality: {4}
+            # 6.741573033707865 % (6 instances). obj: xsd:string. Cardinality: {6}
+}
+
+
+:Redox_Potential_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 10 instances
+{
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (10 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Redox_Potential_Annotation>]            # 100.0 % (10 instances).
+}
+
+
+:OneOfPosition  [<http://purl.uniprot.org/position/>~]  AND   # 128 instances
+{
+   <http://biohackathon.org/resource/faldo#reference>  @:Simple_Sequence  ;          # 100.0 % (128 instances).
+   <http://biohackathon.org/resource/faldo#possiblePosition>  IRI  ;          # 100.0 % (128 instances).
+            # 100.0 % (128 instances). obj: @:ExactPosition. Cardinality: {1}
+            # 100.0 % (128 instances). obj: @:Position. Cardinality: {1}
+   rdf:type  [<http://biohackathon.org/resource/faldo#OneOfPosition>]  ;          # 100.0 % (128 instances).
+   rdf:type  [<http://biohackathon.org/resource/faldo#Position>]            # 100.0 % (128 instances).
+}
+
+
+:Genomic_RNA  [<http://purl.uniprot.org/embl/>~]  AND   # 28 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Genomic_RNA>]  ;          # 100.0 % (28 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]  ?
+            # 7.142857142857142 % (2 instances). obj: <http://purl.uniprot.org/core/Genomic_DNA>. Cardinality: {1}
+}
+
+
+:Unassigned_RNA  [<http://purl.uniprot.org/embl/>~]  AND   # 7 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Unassigned_RNA>]            # 100.0 % (7 instances).
+}
+
+
+:Ribosomal_Frameshifting  [<http://purl.uniprot.org/uniprot/>~]  AND   # 48 instances
+{
+   <http://purl.uniprot.org/core/sequence>  IRI  +;            # 100.0 % (48 instances).
+            # 83.33333333333334 % (40 instances). obj: IRI. Cardinality: {1}
+            # 12.5 % (6 instances). obj: IRI. Cardinality: {2}
+            # 100.0 % (48 instances). obj: @:Simple_Sequence. Cardinality: +
+            # 12.5 % (6 instances). obj: @:Modified_Sequence. Cardinality: +
+   rdf:type  [<http://purl.uniprot.org/core/Ribosomal_Frameshifting>]  ;          # 100.0 % (48 instances).
+   rdfs:comment  xsd:string  ?;
+            # 93.75 % (45 instances). obj: xsd:string. Cardinality: {1}
+   rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?
+            # 6.25 % (3 instances). obj: <http://purl.uniprot.org/core/Alternative_Splicing_Annotation>. Cardinality: {1}
+}
+
+
+:Electronic_Citation  [<http://purl.uniprot.org/citations/>~]  AND   # 7 instances
+{
+   <http://purl.uniprot.org/core/locator>  xsd:string  +;          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: xsd:string. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {2}
+   <http://purl.uniprot.org/core/author>  xsd:string  +;          # 100.0 % (7 instances).
+            # 42.857142857142854 % (3 instances). obj: xsd:string. Cardinality: {2}
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {3}
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {8}
+   <http://purl.uniprot.org/core/title>  xsd:string  +;          # 100.0 % (7 instances).
+            # 71.42857142857143 % (5 instances). obj: xsd:string. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {2}
+   rdf:type  [<http://purl.uniprot.org/core/Electronic_Citation>]  ;          # 100.0 % (7 instances).
+   skos:exactMatch  IRI  *;
+            # 85.71428571428571 % (6 instances). obj: IRI. Cardinality: +
+            # 57.14285714285714 % (4 instances). obj: IRI. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: IRI. Cardinality: {2}
+   <http://purl.uniprot.org/core/name>  xsd:string  *;
+            # 85.71428571428571 % (6 instances). obj: xsd:string. Cardinality: +
+            # 57.14285714285714 % (4 instances). obj: xsd:string. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: xsd:string. Cardinality: {2}
+   <http://purl.uniprot.org/core/date>  xsd:gYear  *
+            # 85.71428571428571 % (6 instances). obj: xsd:gYear. Cardinality: +
+            # 57.14285714285714 % (4 instances). obj: xsd:gYear. Cardinality: {1}
+            # 28.57142857142857 % (2 instances). obj: xsd:gYear. Cardinality: {2}
+}
+
+
+:Non-standard_Residue_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 249 instances
+{
+   <http://purl.uniprot.org/core/range>  @:Region  ;           # 100.0 % (249 instances).
+   rdfs:comment  xsd:string  ;                                 # 100.0 % (249 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Non-standard_Residue_Annotation>]            # 100.0 % (249 instances).
+}
+
+
+:Absorption_Annotation  [<http://purl.uniprot.org/uniprot/>~]  AND   # 68 instances
+{
+   <http://purl.uniprot.org/core/maximum>  xsd:int  ;          # 100.0 % (68 instances).
+   rdf:type  [<http://purl.uniprot.org/core/Absorption_Annotation>]  ;          # 100.0 % (68 instances).
+   rdfs:comment  xsd:string  ?;
+            # 17.647058823529413 % (12 instances). obj: xsd:string. Cardinality: {1}
+   <http://purl.uniprot.org/core/certain>  xsd:boolean  ?
+            # 7.352941176470589 % (5 instances). obj: xsd:boolean. Cardinality: {1}
+}
+
+
+:Other_DNA  [<http://purl.uniprot.org/embl/>~]  AND   # 2 instances
+{
+   rdf:type  [<http://purl.uniprot.org/core/Other_DNA>]            # 100.0 % (2 instances).
+}
+
+
+:Other_RNA  [<http://purl.uniprot.org/embl/>~]  AND   # 1 instance
+{
+   rdf:type  [<http://purl.uniprot.org/core/Other_RNA>]            # 100.0 % (1 instance).
+}
+
+
