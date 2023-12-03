@@ -13,9 +13,11 @@ if __name__ == "__main__":
     # for i in range(749):
     #     files.append(template + "9" + complete_with_zeros(str(i), 3))
 
+    n_results = 7
+    split_size = 137
     files = []
-    template = r"C:\Users\Dani\datasets\shex-consolidator\pdb_11_split_t0\result_{}"
-    for i in range(1,78):
-        files.append(template.format(i))
-    consolidate_files(files, "result_pdb_11_files_t0.shex", 0)
+    template = r"C:\Users\Dani\OneDrive - Universidad de Oviedo\papers\yasunori\datasets\t0_split_results\t0_split_{}\result_{}"
+    for i in range(1,n_results + 1):
+        files.append(template.format(split_size, i))
+    consolidate_files(files, f"shex_results/result_pdb_{split_size}_files_t0.shex", 0)
     print("Done!")
