@@ -21,5 +21,4 @@ for a_path in files:
                     print(a_path)
                     break
 
-# print(guilty_ones)
 print(len(guilty_ones))

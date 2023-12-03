@@ -1,0 +1,28 @@
+Comparison between classic and consolidation approaches for the file in https://ftp.uniprot.org/pub/databases/uniprot/current_release/rdf/uniprotkb_reviewed_eukaryota_opisthokonta_metazoa_33208_0.rdf.xz using a 7700000 line split, and 0 threshold
+
+
+SHARED_SHAPES;116
+SHAPES_ONLY_IN_1;0
+SHAPES_ONLY_IN_2;0
+
+
+Concept;Absolute value;Ratio;Concept explanation
+SHAPES_COMPLETELY_EQUAL;17;0.14655172413793102;Number of shapes completely equal in both files
+SHAPES_EQUAL_CONSTRAINT;47;0.4051724137931034;Number of shapes with equal constraints w.r.t. validation, but some ended up having a different number of annotated instances
+SHAPES_EQUAL_P_O_PAIRS;28;0.2413793103448276;Number of shapes whose constraints have always the same predicate and node constraint, but at least one with different cardinality
+SHAPES_EQUAL_PROPERTY;22;0.1896551724137931;Number of shapes whose constraints have always the same predicate, but at least one has a different node constraint
+SHAPES_DIFFERENT_CONSTRAINTS;2;0.017241379310344827;Number of shapes including constraints that are not in both versions of the shape
+CONSTRAINTS_COMPLETELY_EQUAL;258;0.458259325044405;Number of constraints completely equal in both files
+CONSTRAINTS_VALIDATION_EQUAL;181;0.32149200710479575;Number of equal constraints but with a different number of annotated instances
+CONSTRAINTS_P_O_EQUAL;36;0.06394316163410302;Number of constraints that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PROPERTY_EQUAL;27;0.047957371225577264;Number of constraints that have the same predicate, but different node constraint
+CONSTRAINTS_DIFFERENT;61;0.108348134991119;Number of constraints that are not in both versions of the shape
+CONSTRAINTS_PER_SHAPE_COMPLETELY_EQUAL;2.2241379310344827;0.458259325044405;Average constraints in a shape that are completely equal in both files
+CONSTRAINTS_PER_SHAPE_VALIDATION_EQUAL;1.5603448275862069;0.32149200710479575;Average constraints in a shape that are equal constraints but with a different number of annotated instances
+CONSTRAINTS_PER_SHAPE_P_O_EQUAL;0.3103448275862069;0.06394316163410303;Average constraints in a shape that have the same predicate and node constraint, but different cardinality
+CONSTRAINTS_PER_SHAPE_PROPERTY_EQUAL;0.23275862068965517;0.04795737122557727;Average constraints in a shape that have the same predicate, but different node constraint
+CONSTRAINTS_PER_SHAPE_DIFFERENT;0.5258620689655172;0.10834813499111902;Average constraints in a shape that are not in both versions of the shape
+
+
+CONSTRAINTS ONLY IN SHAPES OF THE SCHEMA 1:
+Shape;predicate;node constraint
