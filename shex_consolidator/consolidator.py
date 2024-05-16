@@ -22,8 +22,10 @@ def _consolidate_prefixes(list_of_prefixes_groups: list) -> list:
 
     if len(dict_result) == len(list_of_prefixes_groups[0]):
         return list_of_prefixes_groups[0]
-    for a_prefix, an_url in dict_result:
-        return [Namespace("PREFIX {}: <{}>".format(a_prefix, an_url))]
+    result = []
+    for a_prefix, an_url in dict_result.items():
+        result.append(Namespace("PREFIX {}: <{}>".format(a_prefix, an_url)))
+    return result
 
 
 def _add_zero_case_to_cardinality(target_cardinality) -> str:
