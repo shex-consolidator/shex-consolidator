@@ -2,6 +2,13 @@ from shex_consolidator.model import Constraint, Shape, Namespace
 from shex_consolidator.utils.shape_parser import parse_file
 from shex_consolidator.utils.shape_serializer import serialize
 
+_IRI = "IRI"
+_BNODE = "BNODE"
+_LITERAL = "LITERAL"
+_NONLITERAL = "NONLITERAL"
+_ANY = "."
+_STARTING_SHAPE_LINK = "@"
+
 _ABS_TOLERANCE_PER_FILE_SPLITS = 5
 def _consolidate_prefixes(list_of_prefixes_groups: list) -> list:
     if len(list_of_prefixes_groups) == 0:
@@ -59,6 +66,32 @@ def _most_general_cardinality(card1, card2) -> str:
         return "?"
     else:  # "+" in grouped_cards or they both start with "{" but are different
         return "+"
+def _most_general_node_kind(kind1:str, kind2:str):
+    if kind1 == _ANY:  # wildcard
+        return _ANY
+    elif kind1.startswith(_STARTING_SHAPE_LINK) or kind1 == _IRI: # shape or IRI
+        if kind2.startswith(_STARTING_SHAPE_LINK) or kind2 == _IRI: # other shape or IRI
+            return _IRI
+        elif kind2 in [_BNODE, _NONLITERAL]: # bnode or nonliteral
+            return _NONLITERAL
+        else: # literal or wildcard
+            return _ANY
+    elif kind1 == _BNODE:  #bnode
+        if kind2 in [_IRI, _NONLITERAL] or kind2.startswith(_STARTING_SHAPE_LINK):  # iri, nonliteral, a shape
+            return _NONLITERAL
+        else:  # literal or wildcard
+            return _ANY
+    elif kind1 == _NONLITERAL:
+        if kind2 in [_IRI, _BNODE] or kind2.startswith(_STARTING_SHAPE_LINK):  # iri, bnode, a shape
+            return _NONLITERAL
+        else:  # literal or wildcard
+            return _ANY
+    else: # literal
+        if kind2 in [_ANY, _IRI, _BNODE, _NONLITERAL] or kind2.startswith(_STARTING_SHAPE_LINK):  # anything except another literal
+            return _ANY
+        else: # another literal or the macro literal
+            return _LITERAL
+
 
 
 def _constraint_exact_match(cons1, cons2) -> Constraint:
@@ -81,6 +114,14 @@ def _constraint_with_most_general_cardinality(cons1, cons2) -> Constraint:
         result.instances = cons1.instances + cons2.instances
     return result
 
+def _constraint_merged_node_kind(cons1, cons2) -> Constraint:
+    result = Constraint(constraint_lines=None)
+    result.predicate = cons1.predicate
+    result.node_constraint = _most_general_node_kind(cons1.node_constraint, cons2.node_constraint)
+    result.cardinality = _most_general_cardinality(cons1.cardinality, cons2.cardinality)
+    if cons1.instances is not None and cons2.instances is not None:
+        result.instances = cons1.instances + cons2.instances
+    return result
 
 def _longest_common_prefix(uri1, uri2) -> str:
     """
@@ -129,7 +170,7 @@ def _add_merged_constraints_to_shape(result_shape, shape1, shape2) -> None:
             else:
                 target = shape2.constraint_only_common_predicate(a_constraint)
                 if target is not None:
-                    result_shape.add_constraint(_constraint_with_zero_case(a_constraint))
+                    result_shape.add_constraint(_constraint_merged_node_kind(a_constraint, target))
                     merged_constraints.add(a_constraint)
                     merged_constraints.add(target)
                 else:

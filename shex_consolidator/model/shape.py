@@ -88,7 +88,7 @@ class Shape(object):
         for a_line in shape_lines:
             stripped = a_line.strip()
             if stripped not in ["{", "}"]:
-                if not stripped.startswith("# ") and len(current_group) != 0:
+                if not (stripped.startswith("# ") or stripped.startswith("// ")) and len(current_group) != 0:
                     result.append(Constraint(current_group))
                     current_group = []
                 current_group.append(a_line)
