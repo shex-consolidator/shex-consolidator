@@ -66,6 +66,7 @@ def _most_general_cardinality(card1, card2) -> str:
         return "?"
     else:  # "+" in grouped_cards or they both start with "{" but are different
         return "+"
+
 def _most_general_node_kind(kind1:str, kind2:str):
     if kind1 == _ANY:  # wildcard
         return _ANY
@@ -152,8 +153,12 @@ def _compute_longest_common_template(template1, template2) -> [None, str]:
         return candidate
     return None
 
+def _is_type_constraint(a_constraint):
+    return "[" in a_constraint.node_constraint and "]" in a_constraint.node_constraint
 
-def _add_merged_constraints_to_shape(result_shape, shape1, shape2) -> None:
+
+
+def _add_merged_constraints_to_shape(result_shape, shape1, shape2, ) -> None:
     merged_constraints = set()
     for a_constraint in shape1.yield_constraints():
         target = shape2.exact_constraint(a_constraint)
