@@ -55,15 +55,9 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/attribution>  IRI  *;
     rdf:object  IRI  ?;
     rdf:object  <http://www.w3.org/2001/XMLSchema#string>  *;
-    rdf:type  LITERAL  ?;
+    rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ?;
     <http://purl.uniprot.org/core/scope>  <http://www.w3.org/2001/XMLSchema#string>  *;
-    <http://purl.uniprot.org/core/context>  IRI  *;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  [<http://purl.uniprot.org/core/Citation_Statement>]  ?
+    <http://purl.uniprot.org/core/context>  IRI  *
 }
 
 
@@ -191,7 +185,7 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/precursor>  <http://www.w3.org/2001/XMLSchema#boolean>  ?;
     <http://purl.uniprot.org/core/fragment>  <http://www.w3.org/2001/XMLSchema#string>  ?;
     <http://purl.uniprot.org/core/name>  <http://www.w3.org/2001/XMLSchema#string>  *;
-    rdf:type  LITERAL  ?
+    rdf:type  [<http://purl.uniprot.org/core/External_Sequence>]  ?
 }
 
 
@@ -669,9 +663,8 @@ PREFIX : <http://weso.es/shapes/>
 {
     rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ;
     <http://purl.uniprot.org/core/sequence>  IRI  +;
-    rdf:type  LITERAL  ?;
-    rdfs:comment  <http://www.w3.org/2001/XMLSchema#string>  ?;
-    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;
+    rdfs:comment  <http://www.w3.org/2001/XMLSchema#string>  ?
 }
 
 
@@ -724,33 +717,6 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/experiments>  <http://www.w3.org/2001/XMLSchema#int>  ;
     <http://purl.uniprot.org/core/xeno>  <http://www.w3.org/2001/XMLSchema#boolean>  ;
     <http://purl.uniprot.org/core/participant>  @:Participant  +;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
     rdf:type  [<http://purl.uniprot.org/core/Non_Self_Interaction>]  ?;
     rdf:type  [<http://purl.uniprot.org/core/Self_Interaction>]  ?
 }
@@ -859,9 +825,7 @@ PREFIX : <http://weso.es/shapes/>
 :Unassigned_DNA  [<http://purl.uniprot.org/embl/>~]  AND
 {
     rdf:type  [<http://purl.uniprot.org/core/Unassigned_DNA>]  ;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?;
-    rdf:type  LITERAL  ?
+    rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]  ?
 }
 
 
@@ -975,7 +939,7 @@ PREFIX : <http://weso.es/shapes/>
 :Genomic_RNA  [<http://purl.uniprot.org/embl/>~]  AND
 {
     rdf:type  [<http://purl.uniprot.org/core/Genomic_RNA>]  ;
-    rdf:type  LITERAL  ?
+    rdf:type  [<http://purl.uniprot.org/core/Genomic_DNA>]  ?
 }
 
 
@@ -999,7 +963,7 @@ PREFIX : <http://weso.es/shapes/>
     rdf:type  [<http://purl.uniprot.org/core/Alternative_Promoter_Usage_Annotation>]  ;
     <http://purl.uniprot.org/core/sequence>  IRI  +;
     rdfs:comment  <http://www.w3.org/2001/XMLSchema#string>  ?;
-    rdf:type  LITERAL  ?;
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?;
     rdf:type  [<http://purl.uniprot.org/core/Alternative_Initiation_Annotation>]  ?
 }
 
@@ -1024,7 +988,7 @@ PREFIX : <http://weso.es/shapes/>
     <http://purl.uniprot.org/core/sequence>  IRI  +;
     rdf:type  [<http://purl.uniprot.org/core/Ribosomal_Frameshifting>]  ;
     rdfs:comment  <http://www.w3.org/2001/XMLSchema#string>  ?;
-    rdf:type  LITERAL  ?
+    rdf:type  [<http://purl.uniprot.org/core/Alternative_Splicing_Annotation>]  ?
 }
 
 

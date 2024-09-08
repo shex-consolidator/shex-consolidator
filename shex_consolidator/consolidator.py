@@ -160,25 +160,29 @@ def _is_type_constraint(a_constraint):
 
 def _add_merged_constraints_to_shape(result_shape, shape1, shape2, ) -> None:
     merged_constraints = set()
-    for a_constraint in shape1.yield_constraints():
+    for a_constraint in shape1.yield_constraints():  # Exact macth
         target = shape2.exact_constraint(a_constraint)
         if target is not None:
             result_shape.add_constraint(_constraint_exact_match(a_constraint, target))
             merged_constraints.add(a_constraint)
             merged_constraints.add(target)
-        else:
+        else:  # Try only different cardinality
             target = shape2.constraint_only_different_cardinality(a_constraint)
             if target is not None:
                 result_shape.add_constraint(_constraint_with_most_general_cardinality(a_constraint, target))
                 merged_constraints.add(a_constraint)
                 merged_constraints.add(target)
-            else:
+            elif _is_type_constraint(a_constraint): # check if its a typing constraint
+                                                    # Treat this as nothing in common at this point
+                result_shape.add_constraint(_constraint_with_zero_case(a_constraint))
+                merged_constraints.add(a_constraint)
+            else:  # Try only common property
                 target = shape2.constraint_only_common_predicate(a_constraint)
                 if target is not None:
                     result_shape.add_constraint(_constraint_merged_node_kind(a_constraint, target))
                     merged_constraints.add(a_constraint)
                     merged_constraints.add(target)
-                else:
+                else:  # Nothing in common, lets just add it
                     result_shape.add_constraint(_constraint_with_zero_case(a_constraint))
                     merged_constraints.add(a_constraint)
 
